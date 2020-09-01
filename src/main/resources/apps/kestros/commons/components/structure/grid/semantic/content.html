@@ -1,0 +1,27 @@
+<sly data-sly-use.component="${'io.kestros.cms.foundation.content.BaseComponent'}"
+     data-sly-use.templates="${component.containingPage.theme.uiFramework.templatesPath}"
+     data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"
+     data-sly-use.context="${'io.kestros.cms.foundation.content.ComponentRequestContext'}"/>
+
+<div class="ui equal width grid ${context.inlineVariations}">
+  <div class="column">
+    <sly
+        data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+  </div>
+  <div class="column"
+       data-sly-test="${grid.numberOfColumns >= 2}">
+    <sly
+        data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+  </div>
+  <div class="column"
+       data-sly-test="${grid.numberOfColumns >= 3}">
+    <sly
+        data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
+  </div>
+  <div class="column"
+       data-sly-test="${grid.numberOfColumns >= 4}">
+    <sly
+        data-sly-resource="${'column-4' @ resourceType='kestros/commons/components/content-area'}"/>
+  </div>
+
+</div>

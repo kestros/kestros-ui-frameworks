@@ -1,0 +1,7 @@
+{
+    "jcr:primaryType": "kes:VendorLibrary",
+    "jcr:title": "Font Awesome 5.11.2",
+    "jcr:description": "Font Awesome icon set. Version 5.11.2",
+    "documentationUrl": "https://fontawesome.com/",
+    "fontAwesomeIcon": "fab fa-font-awesome-flag"
+}

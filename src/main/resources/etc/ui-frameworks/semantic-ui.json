@@ -1,0 +1,10 @@
+{
+  "jcr:primaryType": "kes:UiFramework",
+  "jcr:title": "Generic Semantic w/ FontAwesome",
+  "jcr:description": "Generic usage of the Semantic framework, with FontAwesome providing icons.",
+  "kes:uiFrameworkCode": "semantic",
+  "kes:vendorLibraries": [
+    "jquery",
+    "semantic-ui"
+  ]
+}

@@ -1,0 +1,46 @@
+<sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"/>
+
+<div class="row">
+  <sly data-sly-test="${grid.numberOfColumns == 2}">
+    <div class="col-md-6">
+      <sly
+          data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="col-md-6">
+      <sly
+          data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+  </sly>
+  <sly data-sly-test="${grid.numberOfColumns == 3}">
+    <div class="col-md-4">
+      <sly
+          data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="col-md-4">
+      <sly
+          data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="col-md-4">
+      <sly
+          data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+  </sly>
+  <sly data-sly-test="${grid.numberOfColumns == 4}">
+    <div class="col-md-3">
+      <sly
+          data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="col-md-3">
+      <sly
+          data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="col-md-3">
+      <sly
+          data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="col-md-3">
+      <sly
+          data-sly-resource="${'column-4' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+  </sly>
+</div>

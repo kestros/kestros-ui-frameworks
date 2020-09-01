@@ -1,0 +1,22 @@
+<sly data-sly-use.component="${'io.kestros.cms.foundation.content.BaseComponent'}"
+     data-sly-use.templates="${component.containingPage.theme.uiFramework.templatesPath}"
+     data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.TopNavigation'}"
+     data-sly-use.context="${'io.kestros.cms.foundation.content.ComponentRequestContext'}"/>
+
+
+<div class="ui inverted vertical masthead center aligned segment">
+  <div class="ui container">
+    <div class="ui large secondary inverted pointing menu">
+      <a class="item ${navigation.rootPage.path == context.currentPage.path ? 'active' : ''}"
+         href="${navigation.rootPage.path}.html">
+        ${navigation.rootPage.title}
+      </a>
+      <sly data-sly-list.page="${navigation.navigationPages}">
+        <a class="item ${page.path == context.currentPage.path ? 'active' : ''}"
+           href="${page.path}.html">
+          ${page.title}
+        </a>
+      </sly>
+    </div>
+  </div>
+</div>

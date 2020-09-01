@@ -1,0 +1,5 @@
+{
+  "jcr:primaryType": "kes:Theme",
+  "jcr:title": "Default",
+  "jcr:description": "Generic Semantic UI Theme, dark text on light backgrounds."
+}

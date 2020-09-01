@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Expand Large",
+  "inline": true,
+  "default": true
+}
