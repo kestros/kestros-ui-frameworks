@@ -1,4 +1,5 @@
 {
   "jcr:primaryType": "kes:ComponentVariation",
-  "jcr:title": "No Padding"
+  "jcr:title": "No Padding",
+  "jcr:description": "Removes all padding from the top and bottom of the container"
 }

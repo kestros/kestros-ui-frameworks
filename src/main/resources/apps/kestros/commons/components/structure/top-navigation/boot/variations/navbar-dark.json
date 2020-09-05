@@ -1,5 +1,6 @@
 {
   "jcr:primaryType": "kes:ComponentVariation",
   "jcr:title": "Dark Navbar",
+  "jcr:description": "Contrasts text to dark backgrounds.",
   "inline": true
 }

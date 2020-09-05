@@ -1,5 +1,6 @@
 {
   "jcr:primaryType": "kes:ComponentVariation",
   "jcr:title": "Fluid",
+  "jcr:description": "Container will stretch to fit its parent.",
   "inline": true
 }

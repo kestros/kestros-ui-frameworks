@@ -1,5 +1,6 @@
 {
   "jcr:primaryType": "kes:ComponentVariation",
   "jcr:title": "Fluid Width",
+  "jcr:description": "Button stretches to fit its container.",
   "inline": true
 }
