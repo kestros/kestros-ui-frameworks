@@ -5,6 +5,7 @@
   "kes:uiFrameworkCode": "semantic",
   "kes:vendorLibraries": [
     "jquery",
-    "semantic-ui"
+    "semantic-ui",
+    "font-awesome-5-11-2"
   ]
 }
