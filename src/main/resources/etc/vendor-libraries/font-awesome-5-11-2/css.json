@@ -1,0 +1,9 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "include": [
+    "regular.less",
+    "solid.less",
+    "brands.less",
+    "fontawesome.less"
+  ]
+}
