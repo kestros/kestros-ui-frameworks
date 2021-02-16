@@ -1,7 +1,13 @@
 {
-  "jcr:primaryType": "kes:ManagedUiFramework",
+  "jcr:primaryType": "kes:UiFramework",
   "jcr:title": "Generic Bootstrap w/ FontAwesome",
   "jcr:description": "Generic usage of the Bootstrap framework, with FontAwesome providing icons.",
   "kes:uiFrameworkCode": "boot",
+  "kes:vendorLibraries": [
+    "jquery/3.3.1",
+    "popper",
+    "new-bootstrap/4.2.1",
+    "font-awesome-5-11-2"
+  ],
   "fontAwesomeIcon": "fab fa-bootstrap"
 }
