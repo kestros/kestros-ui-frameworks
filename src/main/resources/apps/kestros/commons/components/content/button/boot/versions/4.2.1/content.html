@@ -18,8 +18,9 @@
 <sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
      data-sly-use.templates="${component.containingPage.theme.uiFramework.templatesPath}"
      data-sly-use.button="${'io.kestros.cms.components.basic.content.button.Button'}"
-     data-sly-use.context="${'io.kestros.cms.foundation.content.ComponentRequestContext'}"/>
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
+<p>4.2.1</p>
 <sly data-sly-call="${templates.buttonbase @
      text=button.text,
      url=button.link,
