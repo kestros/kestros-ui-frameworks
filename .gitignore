@@ -1,0 +1,16 @@
+
+\.target/
+\.idea/
+
+\pom.xml.versionsBackup
+
+*.iml
+target/
+
+coverage/
+node/
+node_modules/
+.nyc_output/
+
+package-lock.json
+npm-debug.log`

@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Inverted",
+  "jcr:description": "Inverts colors of the container.",
+  "inline": true
+}

@@ -1,0 +1,5 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Hero Padding",
+  "jcr:description": "Applies a very large padding to the top and bottom of the container."
+}
