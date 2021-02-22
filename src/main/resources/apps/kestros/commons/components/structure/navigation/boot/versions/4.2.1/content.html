@@ -19,7 +19,7 @@
     data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.Navigation'}"/>
 
 <ul class="nav flex-column list-group" data-sly-list.page="${navigation.navigationPages}">
-  <li class="nav-item  list-group-item">
+  <li class="nav-item list-group-item">
     <a class="nav-link ${page.path == navigation.containingPage.path ? 'active' : ''}"
        href="${page.path}.html">${page.title}</a>
   </li>
