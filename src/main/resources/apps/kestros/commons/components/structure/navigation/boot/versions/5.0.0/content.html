@@ -16,11 +16,14 @@
   ~
   */-->
 <sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
-     data-sly-use.templates="${component.componentUiFrameworkView.uiFramework.templatesPath}"
-     data-sly-use.button="${'io.kestros.cms.components.basic.content.button.Button'}"
+     data-sly-use.templates="${component.containingPage.theme.uiFramework.templatesPath}"
+     data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.TopNavigation'}"
      data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<sly data-sly-call="${templates.buttonbase @
-     text=button.text,
-     url=button.link,
-     additionalClasses=context.inlineVariations}"/>
+
+<ul class="nav ${context.inlineVariations}" data-sly-list.page="${navigation.navigationPages}">
+  <li class="nav-item">
+    <a class="nav-link ${page.path == navigation.containingPage.path ? 'active' : ''}"
+       href="${page.path}.html">${page.title}</a>
+  </li>
+</ul>
