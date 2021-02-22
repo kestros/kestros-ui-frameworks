@@ -1,8 +1,0 @@
-{
-  "jcr:primaryType": "kes:ManagedVendorLibrary",
-  "jcr:title": "jQuery",
-  "jcr:description": "A fast, small, and feature-rich JavaScript library.",
-  "fontAwesomeIcon": "fab fa-js",
-  "documentationUrl": "https://jquery.com/"
-}
-

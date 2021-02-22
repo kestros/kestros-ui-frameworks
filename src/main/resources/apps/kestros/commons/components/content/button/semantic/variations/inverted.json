@@ -1,6 +1,0 @@
-{
-  "jcr:primaryType": "kes:ComponentVariation",
-  "jcr:title": "Inverted",
-  "jcr:description": "Inverts button styling.",
-  "inline": true
-}
