@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ManagedVendorLibrary",
+  "jcr:title": "Semantic UI",
+  "jcr:description": "Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.",
+  "documentationUrl": "https://semantic-ui.com/"
+}

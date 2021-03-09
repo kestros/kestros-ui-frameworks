@@ -1,0 +1,39 @@
+<!--/*
+  ~      Copyright (C) 2020  Kestros, Inc.
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ~
+  */-->
+<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
+     data-sly-use.templates="${component.componentUiFrameworkView.uiFramework.templatesPath}"
+     data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.TopNavigation'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+
+
+<div class="ui inverted vertical masthead center aligned segment">
+  <div class="ui container">
+    <div class="ui large secondary inverted pointing menu">
+      <a class="item ${navigation.rootPage.path == context.currentPage.path ? 'active' : ''}"
+         href="${navigation.rootPage.path}.html">
+        ${navigation.rootPage.title}
+      </a>
+      <sly data-sly-list.page="${navigation.navigationPages}">
+        <a class="item ${page.path == context.currentPage.path ? 'active' : ''}"
+           href="${page.path}.html">
+          ${page.title}
+        </a>
+      </sly>
+    </div>
+  </div>
+</div>

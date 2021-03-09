@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "kes:UiFramework",
+  "jcr:title": "Express 0.0.1",
+  "jcr:description": "Generic usage of the Bootstrap framework, with FontAwesome providing icons.",
+  "kes:uiFrameworkCode": "express",
+  "kes:vendorLibraries": [
+    "jquery/3.3.1",
+    "popper/1.14.6",
+    "bootstrap/4.2.1",
+    "font-awesome/5.11.2"
+  ],
+  "fontAwesomeIcon": "fab fa-bootstrap"
+}
