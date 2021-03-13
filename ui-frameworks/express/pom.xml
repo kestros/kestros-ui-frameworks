@@ -116,7 +116,6 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              /apps/kestros/commons/components/content/button/express;overwrite:=true;path:=/apps/kestros/commons/components/content/button/express,
               /apps/kestros/commons/components/structure/container/express;overwrite:=true;path:=/apps/kestros/commons/components/structure/container/express,
               /apps/kestros/commons/components/structure/grid/express;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/express,
               /apps/kestros/commons/components/structure/navigation/express;overwrite:=true;path:=/apps/kestros/commons/components/structure/navigation/express,
