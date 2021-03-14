@@ -22,6 +22,7 @@
     <module>font-awesome</module>
     <module>popper</module>
     <module>bootstrap</module>
+    <module>bulma</module>
     <module>semantic-ui</module>
   </modules>
 
