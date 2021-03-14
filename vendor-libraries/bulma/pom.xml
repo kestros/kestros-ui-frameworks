@@ -116,6 +116,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
+              /apps/kestros/commons/components/content/button/etc/vendor-libraries/bulma;overwrite:=true;path:=/apps/kestros/commons/components/content/button/etc/vendor-libraries/bulma,
               /etc/vendor-libraries;overwrite:=true;path:=/etc/vendor-libraries
             </Sling-Initial-Content>
           </instructions>
