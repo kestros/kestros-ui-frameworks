@@ -1,0 +1,8 @@
+<template data-sly-template.buttonBase="${ @ text, url, additionalClasses}"
+          data-title="Base Button"
+          data-description="Baseline extendable button with default styling."
+          data-text-description="Button text"
+          data-url-description="Requested page when the button is clicked"
+          data-additionalClasses-description="Additional CSS classes to apply">
+    <a class="button ${additionalClasses}" href="${url}">${text}</a>
+</template>
