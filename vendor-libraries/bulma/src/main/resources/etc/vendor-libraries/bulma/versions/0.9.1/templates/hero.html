@@ -1,0 +1,26 @@
+
+<template data-sly-template.buttonBase="${ @ title, subtitle, heroAdditionalClasses, buttonText, buttonLink, buttonAdditionalClasses}"
+          data-title="Base Hero"
+          data-description="Baseline Hero with default styling"
+          data-title-description="Main title for the Hero"
+          data-subtitle-description="Subtitle for the Hero"
+          data-heroAdditionalClasses-description="Additional CSS classes to apply to Hero"
+          data-buttonText-description="Text for the Call to Action"
+          data-buttonLink-description="Action or requested page when the CTA is clicked"
+          data-buttonAdditionalClasses-description="Additional CSS classes to apply to button or Call to Action">
+    <section class="hero ${heroAdditionalClasses}">
+        <div class="hero-body">
+            <p data-sly-test="${title}" class="title">
+                ${title}
+            </p>
+            <p data-sly-test="${subtitle}" class="subtitle">
+                ${subtitle}
+            </p>
+            <sly data-sly-test="${buttonText && buttonLink}"
+                 data-sly-call="${buttonBase @
+            text=buttonText,
+            url=buttonLink,
+            additionalClasses=buttonAdditionalClasses}"/>
+        </div>
+    </section>
+</template>

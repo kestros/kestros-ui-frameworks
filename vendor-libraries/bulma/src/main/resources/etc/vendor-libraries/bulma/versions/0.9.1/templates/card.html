@@ -1,0 +1,28 @@
+
+<template data-sly-template.cardBase="${ @
+    cardAdditionalClasses,
+    image,
+    imageAltText,
+    imageAdditionalClasses,
+    title,
+    description,
+    buttonText,
+    buttonLink,
+    buttonAdditionalClasses}">
+<div class="card ${cardAdditionalClasses}">
+    <div class="card-image">
+        <figure data-sly-test="${image}" class="image ${imageAdditionalClasses}">
+            <img src="${image}" alt="${imageAltText}">
+        </figure>
+    </div>
+    <div class="card-content">
+        <p class="title ${inlineVariationsTitle}">${title}</p>
+        <p class="content">${description}</p>
+        <sly data-sly-test="${buttonText && buttonLink}"
+             data-sly-call="${buttonBase @
+            text=buttonText,
+            url=buttonLink,
+            additionalClasses=buttonAdditionalClasses}"/>
+    </div>
+</div>
+</template>
