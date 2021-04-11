@@ -1,0 +1,21 @@
+
+<template
+    data-sly-template.cardBase="${ @ title,image, imageAltText, imageAdditionalClasses, description, callToActionText, url, additionalClasses, titleAdditionClasses, buttonAdditionalClasses, contentAreaName}"
+    data-title="Baseline Card">
+  <div class="card">
+    <sly data-sly-test="${image}"
+         data-sly-call="${imageBase @
+     image=image,
+     altText=imageAltText,
+     additionalClasses=imageAdditionalClasses}"/>
+    <div class="card-body">
+      <h5 data-sly-test="${title}"
+          class="card-title ${titleAdditionalClasses}">${title}</h5>
+      <sly data-sly-test="${description}">${description @ context='html'}</sly>
+      <sly data-sly-test="${contentAreaName}"
+           data-sly-resource="${contentAreaName @ resourceType='kestros/commons/components/content-area'}"/>
+      <a data-sly-test="${callToActionText}"
+         href="${url}" class="btn ${buttonAdditionalClasses}">${callToActionText}</a>
+    </div>
+  </div>
+</template>

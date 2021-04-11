@@ -1,0 +1,11 @@
+
+<template data-sly-template.baseLabel="${ @ icon, text, additionalClasses}"
+          data-title="Base Label"
+          data-description="Baseline label."
+          data-icon-description="Icon class to display in the label."
+          data-text-description="Label text."
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="ui label ${additionalClasses}">
+    <i class="${icon} icon"></i> ${text}
+  </div>
+</template>

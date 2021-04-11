@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Raised",
+  "jcr:description": "Primary Button styling.",
+  "inline": true
+}

@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Full Height",
+  "jcr:description": "Sets the Hero to full page height",
+  "inline": true,
+  "group": "size"
+}

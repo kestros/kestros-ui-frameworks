@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Pink",
+  "jcr:description": "Basic button styling.",
+  "inline": true
+}

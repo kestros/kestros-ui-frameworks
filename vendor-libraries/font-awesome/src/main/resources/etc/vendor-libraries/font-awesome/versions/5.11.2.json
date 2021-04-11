@@ -1,0 +1,24 @@
+{
+  "jcr:primaryType": "kes:VendorLibrary",
+  "jcr:title": "Font Awesome 5.11.2",
+  "jcr:description": "Font Awesome icon set. Version 5.11.2",
+  "documentationUrl": "https://fontawesome.com/",
+  "fontAwesomeIcon": "fab fa-font-awesome-flag",
+  "externalizedFiles": [
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-brands-400.eot",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-brands-400.svg",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-brands-400.ttf",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-brands-400.woff",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-brands-400.woff2",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-regular-400.eot",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-regular-400.svg",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-regular-400.ttf",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-regular-400.woff",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-regular-400.woff2",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-solid-900.eot",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-solid-900.svg",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-solid-900.ttf",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-solid-900.woff",
+    "/etc/vendor-libraries/font-awesome/versions/5.11.2/webfonts/fa-solid-900.woff2"
+  ]
+}

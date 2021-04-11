@@ -1,6 +1,0 @@
-{
-  "jcr:primaryType": "kes:UiLibrary",
-  "jcr:title": "Popper.js 1.14.6",
-  "jcr:description": "Tooltip & popover positioning engine.",
-  "documentationUrl": "https://popper.js.org/"
-}

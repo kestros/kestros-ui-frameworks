@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Very",
+  "jcr:description": "Secondary Button styling.",
+  "inline": true
+}

@@ -1,0 +1,30 @@
+
+<template data-sly-template.header="${ @ headerLevel, text, additionalClasses}"
+          data-title="Header"
+          data-description="Baseline Header."
+          data-text-description="Header text."
+          data-header-level-description="Header tag level."
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <h1 data-sly-element="${headerLevel}" class="ui header ${additionalClasses}">
+    ${text}
+  </h1>
+</template>
+
+<template
+    data-sly-template.iconHeader="${ @ headerLevel, icon, text, subheader, additionalClasses, iconAdditionalClasses}"
+    data-title="Icon Header"
+    data-description="Header with icon and optional descriptive subheader text."
+    data-text-description="Header text."
+    data-headerLevel-description="Header tag level."
+    data-icon-description="Icon class."
+    data-subheader-description="Descriptive text below the header."
+    data-additionalClasses-description="Additional CSS classes to apply."
+    data-iconAdditionalClasses-description="Additional CSS classes to apply to the icon.">
+  <h1 data-sly-element="${headerLevel}" class="ui icon header ${additionalClasses}">
+    <sly data-sly-call="${icon @ icon=icon, additionalClasses=iconAdditionalClasses}"/>
+    <div class="content">
+      ${text}
+      <div data-sly-test="${subheader}" class="sub header">${subheader}</div>
+    </div>
+  </h1>
+</template>

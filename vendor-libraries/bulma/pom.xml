@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~      Copyright (C) 2020  Kestros, Inc.
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.kestros.cms</groupId>
+    <artifactId>kestros-vendor-libraries</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <groupId>io.kestros.vendor-libraries</groupId>
+  <artifactId>kestros-bulma</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>Kestros Bulma</name>
+  <description></description>
+  <packaging>bundle</packaging>
+
+  <licenses>
+    <license>
+      <name>GPL-v3.0</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/kestros/kestros-ui-frameworks.git</connection>
+    <developerConnection>scm:git:ssh://github.com:kestros/kestros-ui-frameworks.git
+    </developerConnection>
+    <url>https://github.com/kestros/kestros-ui-frameworks/tree/master</url>
+  </scm>
+
+
+  <properties>
+    <bundleCategory>kestros</bundleCategory>
+    <skipTests>false</skipTests>
+    <sonar.language>js</sonar.language>
+    <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+    <sonar.javascript.lcov.reportPaths>coverage/lcov.info</sonar.javascript.lcov.reportPaths>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.scripting.sightly.runtime</artifactId>
+      <version>1.0.0-1.4.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+
+    <plugins>
+      <!--      <plugin>-->
+      <!--        <groupId>org.apache.rat</groupId>-->
+      <!--        <artifactId>apache-rat-plugin</artifactId>-->
+      <!--        <version>0.13</version>-->
+      <!--        <configuration>-->
+      <!--          <excludes>-->
+      <!--            &lt;!&ndash; don't check anything in target &ndash;&gt;-->
+      <!--            <exclude>target/*</exclude>-->
+      <!--            &lt;!&ndash; Fixing issues with deleted modules &ndash;&gt;-->
+      <!--            <exclude>**/target/*</exclude>-->
+      <!--            <exclude>**/target/**/*</exclude>-->
+      <!--            <exclude>**/*.json</exclude>-->
+      <!--            <exclude>node/**/*</exclude>-->
+      <!--            <exclude>node_modules/**/*</exclude>-->
+      <!--            <exclude>**/README.md</exclude>-->
+      <!--            <exclude>package.json</exclude>-->
+      <!--            <exclude>package-lock.json</exclude>-->
+      <!--            <exclude>*-maven-settings.xml</exclude>-->
+      <!--            <exclude>src/main/resources/etc/vendor-libraries/bootstrap/**/*</exclude>-->
+      <!--            <exclude>src/main/resources/etc/vendor-libraries/font-awesome-5-11-2/**/*</exclude>-->
+      <!--            <exclude>src/main/resources/etc/vendor-libraries/bulma/**/*</exclude>-->
+      <!--            <exclude>src/main/resources/etc/vendor-libraries/popper/**/*</exclude>-->
+      <!--            <exclude>src/main/resources/etc/vendor-libraries/semantic-ui/**/*</exclude>-->
+      <!--          </excludes>-->
+      <!--        </configuration>-->
+      <!--        <executions>-->
+      <!--          <execution>-->
+      <!--            <phase>verify</phase>-->
+      <!--            <goals>-->
+      <!--              <goal>check</goal>-->
+      <!--            </goals>-->
+      <!--          </execution>-->
+      <!--        </executions>-->
+      <!--      </plugin>-->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Sling-Initial-Content>
+              /apps/kestros/commons/components/content/button/etc/vendor-libraries/bulma;overwrite:=true;path:=/apps/kestros/commons/components/content/button/etc/vendor-libraries/bulma,
+              /etc/vendor-libraries;overwrite:=true;path:=/etc/vendor-libraries
+            </Sling-Initial-Content>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>

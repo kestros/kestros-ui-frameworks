@@ -1,0 +1,48 @@
+<template
+    data-sly-template.carousel="${ @ id, previousText, nextText,additionalClasses, slides, includeIndicators, includeControls }"
+    data-title="Carousel">
+  <div id="${id}" class="carousel slide ${additionalClasses}" data-ride="carousel">
+    <ol data-sly-test="${includeIndicators}" class="carousel-indicators"
+        data-sly-list.slide="${slides}">
+      <li data-target="#${id}" data-slide-to="${slideList.index}"></li>
+    </ol>
+    <div class="carousel-inner">
+      <sly data-sly-list.slide="${slides}">
+        <sly data-sly-call="${carouselslide @
+           image=slide.image,
+           imageAltText=slide.altText,
+           title=slide.title,
+           caption=slide.caption,
+           additionalClasses=slide.additionalClasses,
+           active=slideList.index == 0}"/>
+      </sly>
+    </div>
+    <sly data-sly-test="${includeControls}">
+      <a class="carousel-control-prev" href="#${id}" role="button"
+         data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">${previousText}</span>
+      </a>
+      <a class="carousel-control-next" href="#${id}" role="button"
+         data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">${nextText}</span>
+      </a>
+    </sly>
+  </div>
+</template>
+
+<template
+    data-sly-template.carouselSlide="${ @ image, imageAltText, title, caption, additionalClasses, active}"
+    data-title="Carousel Slide">
+  <div class="carousel-item ${additionalClasses} ${active ? 'active' : ''}">
+    <sly data-sly-call="${imagebase @
+     image=image,
+     altText=imageAltText,
+     additionalClasses='d-block w-100'}"/>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>${title}</h5>
+      <p>${caption}</p>
+    </div>
+  </div>
+</template>
