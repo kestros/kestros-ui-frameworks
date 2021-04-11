@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Tiny",
+  "jcr:description": "Basic button styling.",
+  "inline": true
+}

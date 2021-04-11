@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Padded",
+  "jcr:description": "Secondary Button styling.",
+  "inline": true
+}
