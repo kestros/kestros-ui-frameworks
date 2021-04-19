@@ -120,6 +120,7 @@
               /apps/kestros/commons/components/content/card/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/card/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/content/carousel/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/carousel/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/content/carousel-slide/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/carousel-slide/etc/vendor-libraries/bootstrap,
+              /apps/kestros/commons/components/content/text/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/text/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/structure/container/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/container/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/structure/grid/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/structure/navigation/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/navigation/etc/vendor-libraries/bootstrap,
