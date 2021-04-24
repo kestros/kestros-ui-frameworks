@@ -3,8 +3,8 @@
   "jcr:title": "Generic Semantic w/ FontAwesome",
   "kes:uiFrameworkCode": "semantic",
   "kes:vendorLibraries": [
-    "jquery",
+    "jquery/3.3.1",
     "semantic-ui/2.4.2",
-    "font-awesome-5-11-2"
+    "font-awesome/5.11.2"
   ]
 }

@@ -6,3 +6,11 @@
           data-additionalClasses-description="Additional CSS classes to apply.">
   <li class="item ${additionalClasses}">${text}</li>
 </template>
+
+<template data-sly-template.divListItem="${ @ text, additionalClasses}"
+          data-title="Div List Item"
+          data-description="List item with div instead of li."
+          data-text-description="List item text."
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="item ${additionalClasses}">${text}</div>
+</template>

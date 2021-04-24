@@ -1,0 +1,27 @@
+
+<template data-sly-template.divider="${ @  additionalClasses}"
+          data-title="Divider"
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="ui divider ${additionalClasses}"/>
+</template>
+
+
+<template data-sly-template.textDivider="${ @ dividerText, additionalClasses}"
+          data-title="Text Divider"
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="ui divider ${additionalClasses}">
+    ${dividerText}
+  </div>
+</template>
+
+
+<template
+    data-sly-template.headingDivider="${ @ dividerText, headingLevel, iconClass, iconAdditionalClasses, additionalClasses}"
+    data-title="Heading Divider"
+    data-additionalClasses-description="Additional CSS classes to apply.">
+  <h1 data-sly-element="${headingLevel}" class="ui horizontal divider ${additionalClasses}">
+    <sly data-sly-call="${icon @ icon=iconClass, additionalClasses=iconAdditionalClasses}"/>
+    ${dividerText}
+  </h1>
+</template>
+

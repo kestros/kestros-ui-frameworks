@@ -1,4 +1,3 @@
-
 <template data-sly-template.baseButton="${ @ text, url, additionalClasses}"
           data-title="Base Button"
           data-description="Baseline button."
@@ -8,4 +7,66 @@
   <a class="ui button ${additionalClasses}" href="${url}">
     ${text}
   </a>
+</template>
+
+<template
+    data-sly-template.animatedButton="${ @ originalText, hoverText, originalIcon, hoverIcon, url, additionalClasses}"
+    data-title="Animated Button"
+    data-description="Baseline button."
+    data-text-description="Button text."
+    data-url-description="Requested page when the button is clicked."
+    data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="ui animated button ${additionalClasses}" href="${url}">
+    <div class="visible content">
+      <i class="${originalIcon}"></i>
+      ${originalText}
+    </div>
+    <div class="hidden content">
+      <i class="${hoverIcon}"></i>
+      ${hoverText}
+    </div>
+  </div>
+</template>
+
+
+<template
+    data-sly-template.labeledButton="${ @ text, alternateText, originalIcon, hoverIcon, url, additionalClasses}"
+    data-title="Labeled Button"
+    data-description="Baseline button."
+    data-text-description="Button text."
+    data-url-description="Requested page when the button is clicked."
+    data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="ui labeled button ${additionalClasses}" href="${url}">
+    <div class="ui button ${buttonAdditionalClasses}">
+      <i class="${icon} icon"></i>${text}
+    </div>
+    <a class="ui ${labelAdditionalClasses} label">
+      ${labelText}
+    </a>
+  </div>
+</template>
+
+<template
+    data-sly-template.iconButton="${ @ icon, url, additionalClasses}"
+    data-title="Icon Button"
+    data-description="Baseline button."
+    data-text-description="Button text."
+    data-url-description="Requested page when the button is clicked."
+    data-additionalClasses-description="Additional CSS classes to apply.">
+  <button class="ui icon button ${additionalClasses}" href="${url}">
+    <i class="${icon} icon"></i>
+  </button>
+</template>
+
+<template
+    data-sly-template.labeledIconButton="${ @ label, icon, url, additionalClasses}"
+    data-title="Labeled Icon Button"
+    data-description="Baseline button."
+    data-text-description="Button text."
+    data-url-description="Requested page when the button is clicked."
+    data-additionalClasses-description="Additional CSS classes to apply.">
+  <button class="ui labeled icon button ${additionalClasses}" href="${url}">
+    <i class="${icon} icon"></i>
+    ${label}
+  </button>
 </template>

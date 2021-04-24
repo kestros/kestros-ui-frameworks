@@ -117,6 +117,8 @@
           <instructions>
             <Sling-Initial-Content>
               /apps/kestros/commons/components/content/button/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/button/etc/vendor-libraries/semantic-ui,
+              /apps/kestros/commons/components/content/heading/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/heading/etc/vendor-libraries/semantic-ui,
+              /apps/kestros/commons/components/content/page-list/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/page-list/etc/vendor-libraries/semantic-ui,
               /apps/kestros/commons/components/structure/container/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/structure/container/etc/vendor-libraries/semantic-ui,
               /apps/kestros/commons/components/structure/grid/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/etc/vendor-libraries/semantic-ui,
               /apps/kestros/commons/components/structure/top-navigation/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/structure/top-navigation/etc/vendor-libraries/semantic-ui,
