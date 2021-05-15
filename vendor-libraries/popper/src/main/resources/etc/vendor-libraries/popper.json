@@ -1,5 +1,5 @@
 {
-  "jcr:primaryType": "kes:VendorLibrary",
+  "jcr:primaryType": "kes:ManagedVendorLibrary",
   "jcr:title": "Popper.js",
   "jcr:description": "Tooltip & popover positioning engine.",
   "documentationUrl": "https://popper.js.org/"
