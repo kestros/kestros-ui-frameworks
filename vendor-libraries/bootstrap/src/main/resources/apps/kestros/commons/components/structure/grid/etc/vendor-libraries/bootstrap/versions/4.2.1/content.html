@@ -15,6 +15,10 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
+<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-test="${component.componentUiFrameworkView.templatesPath}"
+     data-sly-use.templates="${component.componentUiFrameworkView.templatesPath}"/>
 <sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"/>
 
 <div class="row">

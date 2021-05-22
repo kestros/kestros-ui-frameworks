@@ -1,0 +1,30 @@
+<template data-sly-template.messageBase="${ @ text, headingText, additionalClasses}"
+          data-title="Base Alert"
+          data-description="Alert with no styling."
+          data-text-description="Alert text."
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="ui message ${additionalClasses}">
+    <sly data-sly-call="${messageContent @ text=text, headingText=headingText}"/>
+  </div>
+</template>
+
+
+<template data-sly-template.iconMessage="${ @ text, heading, additionalClasses}">
+
+  <div class="ui icon message ${additionalClasses}">
+    <i class="inbox icon"></i>
+    <div class="content">
+      <sly data-sly-call="${messageContent @ text=text, headingText=headingText}"/>
+    </div>
+  </div>
+
+</template>
+
+<template data-sly-template.messageContent="${ @ text, headingText}"
+          data-title="Message Content"
+          data-additionalClasses-description="Additional CSS classes to apply.">
+  <div class="header" data-sly-test="${headingText}">
+    ${headingText}
+  </div>
+  <p data-sly-test="${text}">${text}</p>
+</template>

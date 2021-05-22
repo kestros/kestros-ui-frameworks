@@ -15,55 +15,58 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
+<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-test="${component.componentUiFrameworkView.templatesPath}"
+     data-sly-use.templates="${component.componentUiFrameworkView.templatesPath}"/>
 <sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"/>
 
-<div class="ui grid">
-  <sly data-sly-test="${grid.numberOfColumns == 2}">
-    <div class="two column row">
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
+
+<sly data-sly-test="${grid.numberOfColumns == 2}">
+  <div class="ui two column grid ${context.inlineVariations}">
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
     </div>
-  </sly>
-  <sly data-sly-test="${grid.numberOfColumns == 3}">
-    <div class="three column row">
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
     </div>
-  </sly>
-  <sly data-sly-test="${grid.numberOfColumns == 4}">
-    <div class="four column row">
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
-      <div class="column">
-        <sly
-            data-sly-resource="${'column-4' @ resourceType='kestros/commons/components/content-area'}"/>
-      </div>
+  </div>
+</sly>
+<sly data-sly-test="${grid.numberOfColumns == 3}">
+  <div class="ui three column grid ${context.inlineVariations}">
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
     </div>
-  </sly>
-</div>
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+  </div>
+</sly>
+<sly data-sly-test="${grid.numberOfColumns == 4}">
+  <div class="ui four column grid ${context.inlineVariations}">
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-3' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="column">
+      <sly
+          data-sly-resource="${'column-4' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+  </div>
+</sly>
