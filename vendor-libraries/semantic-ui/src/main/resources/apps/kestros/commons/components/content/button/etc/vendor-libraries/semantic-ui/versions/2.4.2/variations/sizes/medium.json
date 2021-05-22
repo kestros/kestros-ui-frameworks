@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Medium",
+  "jcr:description": "Basic button styling.",
+  "inline": true,
+  "default": true
+}

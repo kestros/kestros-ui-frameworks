@@ -15,9 +15,19 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<div class="container md">
-  <sly
-      data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.Container'}"/>
+<sly
+    data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.Container'}"/>
 
-  <sly data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+<div data-sly-test="${!container.backgroundImageStyle}"
+     class="container md ${context.inlineVariations}">
+  <sly
+      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
 </div>
+
+<div data-sly-test="${container.backgroundImageStyle}"
+     class="container md ${context.inlineVariations}"
+     style="${container.backgroundImageStyle @ context='attribute'}">
+  <sly
+      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+</div>
+

@@ -1,0 +1,11 @@
+<template data-sly-template.baseAccordionContent="${ @ isActive, contentAreaName}"
+          data-title="Base Accordion Content">
+  <div class="${isActive ? 'active': ''} title">
+    <i class="dropdown icon"></i>
+    ${title}
+  </div>
+  <div class="${isActive ? 'active': ''} content">
+    <sly
+        data-sly-resource="${contentAreaName @ resourceType='kestros/commons/components/content-area'}"/>
+  </div>
+</template>

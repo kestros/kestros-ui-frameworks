@@ -116,6 +116,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
+              /apps/kestros/commons/components/content/alert/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/alert/etc/vendor-libraries/semantic-ui,
               /apps/kestros/commons/components/content/button/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/button/etc/vendor-libraries/semantic-ui,
               /apps/kestros/commons/components/content/heading/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/heading/etc/vendor-libraries/semantic-ui,
               /apps/kestros/commons/components/content/page-list/etc/vendor-libraries/semantic-ui;overwrite:=true;path:=/apps/kestros/commons/components/content/page-list/etc/vendor-libraries/semantic-ui,

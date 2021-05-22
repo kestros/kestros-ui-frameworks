@@ -1,0 +1,46 @@
+<template data-sly-template.baseStep="${ @ text, additionalClasses}">
+  <div class="step ${additionalClasses}">
+    ${text}
+  </div>
+</template>
+
+<template data-sly-template.detailedStep="${ @ title, description, icon, additionalClasses}">
+  <div class="step ${additionalClasses}">
+    <i data-sly-test="${icon}" class="${icon} icon"></i>
+    <div class="content">
+      <div class="title">${title}</div>
+      <div class="description">${description}</div>
+    </div>
+  </div>
+</template>
+
+
+<template data-sly-template.completedStep="${ @ title, description, icon, additionalClasses}">
+  <sly data-sly-test.classes="${'{0} {1}' @ format=['completed', additionalClasses]}"/>
+  <sly data-sly-call="${detailedStep @
+    title=title,
+    description=description,
+    icon=icon,
+    additionalClasses=classes}">
+  </sly>
+</template>
+
+<template data-sly-template.activeStep="${ @ title, description, icon, additionalClasses}">
+  <sly data-sly-test.classes="${'{0} {1}' @ format=['active', additionalClasses]}"/>
+  <sly data-sly-call="${detailedStep @
+    title=title,
+    description=description,
+    icon=icon,
+    additionalClasses=classes}">
+  </sly>
+</template>
+
+<template data-sly-template.disabledStep="${ @ title, description, icon, additionalClasses}">
+  <sly data-sly-test.classes="${'{0} {1}' @ format=['disabled', additionalClasses]}"/>
+  <sly data-sly-call="${detailedStep @
+    title=title,
+    description=description,
+    icon=icon,
+    additionalClasses=classes}">
+  </sly>
+</template>

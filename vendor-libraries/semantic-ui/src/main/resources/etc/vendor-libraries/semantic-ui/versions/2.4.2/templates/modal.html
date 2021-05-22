@@ -1,0 +1,19 @@
+<template
+    data-sly-template.baseModal="${ @ title, contentAreaName, additionalClasses, contentAdditionalClasses}"
+    data-title="Base Modal">
+  <div class="ui modal ${additionalClasses}">
+    <div class="header">${title}</div>
+    <div class="content ${contentAdditionalClasses}">
+      <sly
+          data-sly-resource="${contentAreaName @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+  </div>
+</template>
+
+<template data-sly-template.scrollingModal="${ @ title, contentAreaName, additionalClasses}"
+          data-title="Scrolling Modal">
+  <sly data-sly-call="${baseModal @ title=title,
+          contentAreaName=contentAreaName,
+          additionalClasses=additionalClasses,
+          contentAdditionalClasses='scrolling'}"/>
+</template>

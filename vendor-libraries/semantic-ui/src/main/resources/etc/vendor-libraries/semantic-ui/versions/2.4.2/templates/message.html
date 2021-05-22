@@ -1,0 +1,14 @@
+<template data-sly-template.baseMessage="${ @ title, text, icon, additionalClasses}"
+          data-title="Base Message">
+  <div class="ui icon message ${additionalClasses}">
+    <i data-sly-test="${icon}" class="${icon} icon"></i>
+    <div class="content">
+      <div class="header">
+        ${title}
+      </div>
+      <p>${text}</p>
+    </div>
+  </div>
+</template>
+
+

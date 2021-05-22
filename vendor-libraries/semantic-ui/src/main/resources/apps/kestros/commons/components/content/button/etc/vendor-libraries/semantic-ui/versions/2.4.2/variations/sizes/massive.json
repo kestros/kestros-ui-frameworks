@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Massive",
+  "jcr:description": "Basic button styling.",
+  "inline": true
+}
