@@ -1,0 +1,28 @@
+<!--/*
+  ~      Copyright (C) 2020  Kestros, Inc.
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ~
+  */-->
+<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
+     data-sly-use.section="${'io.kestros.cms.components.basic.structure.section.SectionComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"
+     data-sly-use.parentComponentEditContext="${'io.kestros.cms.sitebuilding.api.models.ParentComponentEditContext'}"/>
+
+<div class="${context.inlineVariations}">
+  <h3>${section.heading}</h3>
+  <h3>${section.description}</h3>
+  <sly
+      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+</div>

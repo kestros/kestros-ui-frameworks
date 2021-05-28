@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "include": [
+    "animate-on-scroll.js",
+    "animate-on-scroll-init.js"
+  ]
+}

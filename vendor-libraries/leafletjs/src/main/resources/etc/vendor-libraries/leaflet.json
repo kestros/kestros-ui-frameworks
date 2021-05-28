@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:ManagedVendorLibrary",
+  "jcr:title": "Leaflet",
+  "jcr:description": "Open-source JavaScript library for mobile-friendly interactive maps.",
+  "fontAwesomeIcon": "fab fa-js",
+  "documentationUrl": "https://leafletjs.com/"
+}

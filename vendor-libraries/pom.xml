@@ -24,6 +24,9 @@
     <module>bootstrap</module>
     <module>bulma</module>
     <module>semantic-ui</module>
+    <module>rellax</module>
+    <module>animate-on-scroll</module>
+    <module>leafletjs</module>
   </modules>
 
 </project>

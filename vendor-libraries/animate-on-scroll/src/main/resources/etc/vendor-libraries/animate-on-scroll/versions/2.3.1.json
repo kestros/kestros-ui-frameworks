@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:VendorLibrary",
+  "jcr:title": "Animate On Scroll 2.3.1",
+  "jcr:description": "Animate on scroll library.",
+  "fontAwesomeIcon": "fab fa-js",
+  "documentationUrl": "https://github.com/michalsnik/aos"
+}
