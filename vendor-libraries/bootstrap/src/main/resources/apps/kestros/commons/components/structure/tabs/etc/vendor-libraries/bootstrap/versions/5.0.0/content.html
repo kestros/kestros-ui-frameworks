@@ -16,17 +16,21 @@
   ~
   */-->
 <sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
-     data-sly-use.section="${'io.kestros.cms.components.basic.structure.section.SectionComponent'}"
+     data-sly-use.tabs="${'io.kestros.cms.components.basic.structure.tabs.TabsComponent'}"
      data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-
-<div data-sly-test="${!section.backgroundImageStyle}" class="${context.inlineVariations}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
-</div>
-
-<div data-sly-test="${section.backgroundImageStyle}" class="${context.inlineVariations}"
-     style="${section.backgroundImageStyle @ context='attribute'}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+<sly data-sly-test.sectionList="${tabs.sections}"/>
+<ul class="nav nav-tabs" id="myTab" role="tablist" data-sly-list.section="${sectionList}">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link ${sectionList.index == 0 ? 'active' :''}" id="${section.name}-tab"
+            data-bs-toggle="tab" data-bs-target="#${section.name}" type="button" role="tab"
+            aria-controls="${section.name}" aria-selected="true">${section.heading}
+    </button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent" data-sly-list.section="${sectionList}">
+  <div class="tab-pane fade show ${sectionList.index == 0 ? 'active' :'' }" id="${section.name}"
+       role="tabpanel" aria-labelledby="${section.name}-tab">
+    <sly data-sly-resource="${section.path @ resourceType=section.resourceType}"/>
+  </div>
 </div>

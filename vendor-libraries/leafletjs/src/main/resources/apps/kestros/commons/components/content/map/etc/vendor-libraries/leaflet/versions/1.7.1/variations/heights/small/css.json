@@ -1,7 +1,6 @@
 {
   "jcr:primaryType": "sling:OrderedFolder",
   "include": [
-    "leaflet.js",
-    "leaflet-impl.js"
+    "small.less"
   ]
 }

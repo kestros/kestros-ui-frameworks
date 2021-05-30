@@ -20,18 +20,22 @@
     data-sly-use.templates="${navigation.componentUiFrameworkView.templatesPath}"
     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<nav class="navbar ${context.inlineVariations}">
-  <a class="navbar-brand" href="${navigation.rootPage.path}.html">${navigation.rootPage.title}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav" data-sly-list.page="${navigation.navigationPages}">
-      <li class="nav-item" class="${page.path == context.currentPage.path ? 'active' : ''}">
-        <a class="nav-link"
-           href=" ${page.path}.html">${page.title} <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
+<nav class="navbar ${context.inlineVariations} d-flex justify-content-between">
+  <div>
+    <a class="navbar-brand" href="${navigation.rootPage.path}.html">${navigation.rootPage.title}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" data-sly-list.page="${navigation.navigationPages}">
+        <li class="nav-item" class="${page.path == context.currentPage.path ? 'active' : ''}">
+          <a class="nav-link"
+             href=" ${page.path}.html">${page.title} <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

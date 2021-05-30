@@ -15,18 +15,10 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
-     data-sly-use.section="${'io.kestros.cms.components.basic.structure.section.SectionComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
+<sly
+    data-sly-use.gallery="${'io.kestros.cms.components.basic.content.gallery.GalleryComponent'}"/>
 
-<div data-sly-test="${!section.backgroundImageStyle}" class="${context.inlineVariations}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
-</div>
-
-<div data-sly-test="${section.backgroundImageStyle}" class="${context.inlineVariations}"
-     style="${section.backgroundImageStyle @ context='attribute'}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+<div class="gallery" data-sly-list.image="${gallery.imagePaths}">
+  <div style="width:350px" class="gallery-card"><img src="${image}" style="width: 100%;"/></div>
 </div>

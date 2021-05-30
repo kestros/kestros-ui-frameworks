@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:VendorLibrary",
+  "jcr:title": "Minigrid 3.1.1",
+  "jcr:description": "Minimal 2kb zero dependency cascading grid layout without pain.",
+  "fontAwesomeIcon": "fab fa-js",
+  "documentationUrl": "http://minigrid.js.org/"
+}

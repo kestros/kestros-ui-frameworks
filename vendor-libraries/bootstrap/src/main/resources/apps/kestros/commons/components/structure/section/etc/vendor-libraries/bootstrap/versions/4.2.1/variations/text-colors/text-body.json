@@ -1,4 +1,5 @@
 {
   "jcr:primaryType": "kes:ComponentVariation",
-  "jcr:title": "Fill Height"
+  "jcr:title": "Body",
+  "inline": true
 }

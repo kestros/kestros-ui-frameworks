@@ -29,10 +29,10 @@
   </parent>
 
   <groupId>io.kestros.vendor-libraries</groupId>
-  <artifactId>kestros-bootstrap</artifactId>
+  <artifactId>kestros-minigrid</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>Kestros Bootstrap</name>
+  <name>Kestros Minigrid</name>
   <description></description>
   <packaging>bundle</packaging>
 
@@ -95,7 +95,7 @@
       <!--            <exclude>*-maven-settings.xml</exclude>-->
       <!--            <exclude>src/main/resources/etc/vendor-libraries/bootstrap/**/*</exclude>-->
       <!--            <exclude>src/main/resources/etc/vendor-libraries/font-awesome-5-11-2/**/*</exclude>-->
-      <!--            <exclude>src/main/resources/etc/vendor-libraries/jquery/**/*</exclude>-->
+      <!--            <exclude>src/main/resources/etc/vendor-libraries/bulma/**/*</exclude>-->
       <!--            <exclude>src/main/resources/etc/vendor-libraries/popper/**/*</exclude>-->
       <!--            <exclude>src/main/resources/etc/vendor-libraries/semantic-ui/**/*</exclude>-->
       <!--          </excludes>-->
@@ -116,17 +116,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              /apps/kestros/commons/components/content/button/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/button/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/content/card/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/card/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/content/carousel/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/carousel/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/content/carousel-slide/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/carousel-slide/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/content/text/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/content/text/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/structure/container/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/container/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/structure/grid/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/structure/navigation/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/navigation/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/structure/tabs/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/tabs/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/structure/top-navigation/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/top-navigation/etc/vendor-libraries/bootstrap,
-              /apps/kestros/commons/components/structure/section/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/section/etc/vendor-libraries/bootstrap,
+              /apps/kestros/commons/components/content/gallery/etc/vendor-libraries/minigrid;overwrite:=true;path:=/apps/kestros/commons/components/content/gallery/etc/vendor-libraries/minigrid,
               /etc/vendor-libraries;overwrite:=true;path:=/etc/vendor-libraries
             </Sling-Initial-Content>
           </instructions>

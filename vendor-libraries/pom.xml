@@ -27,6 +27,7 @@
     <module>rellax</module>
     <module>animate-on-scroll</module>
     <module>leafletjs</module>
+    <module>minigrid</module>
   </modules>
 
 </project>
