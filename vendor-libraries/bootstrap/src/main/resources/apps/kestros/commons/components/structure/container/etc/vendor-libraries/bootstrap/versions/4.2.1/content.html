@@ -18,15 +18,14 @@
 <sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
      data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.Container'}"
      data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
 
 <div data-sly-test="${!container.backgroundImageStyle}" class="${context.inlineVariations}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+    <sly data-sly-call="${includes.contentArea}"/>
 </div>
 
 <div data-sly-test="${container.backgroundImageStyle}" class="${context.inlineVariations}"
      style="${container.backgroundImageStyle @ context='attribute'}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+    <sly data-sly-call="${includes.contentArea}"/>
 </div>

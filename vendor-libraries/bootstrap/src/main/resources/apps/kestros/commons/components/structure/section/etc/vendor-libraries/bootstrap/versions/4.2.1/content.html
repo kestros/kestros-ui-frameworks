@@ -19,14 +19,13 @@
      data-sly-use.section="${'io.kestros.cms.components.basic.structure.section.SectionComponent'}"
      data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-
 <div data-sly-test="${!section.backgroundImageStyle}" class="${context.inlineVariations}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+  <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+  <sly data-sly-call="${includes.contentArea}"/>
 </div>
 
 <div data-sly-test="${section.backgroundImageStyle}" class="${context.inlineVariations}"
      style="${section.backgroundImageStyle @ context='attribute'}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+  <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+  <sly data-sly-call="${includes.contentArea}"/>
 </div>

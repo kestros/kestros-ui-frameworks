@@ -15,9 +15,10 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 <div class="container p-3">
-  <sly
-      data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.Container'}"/>
+    <sly
+            data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.Container'}"/>
 
-  <sly data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
+    <sly data-sly-call="${includes.contentArea}"/>
 </div>
