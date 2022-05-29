@@ -15,10 +15,10 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
-     data-sly-use.templates="${component.componentUiFrameworkView.templatesPath}"
-     data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"/>
+<sly data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.templates="${context.currentPage.theme.uiFramework.templatesPath}"/>
+<sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"/>
 
 <div class="row">
   <sly data-sly-test="${grid.numberOfColumns == 2}">

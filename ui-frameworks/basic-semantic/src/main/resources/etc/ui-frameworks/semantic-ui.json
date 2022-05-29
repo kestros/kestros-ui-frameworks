@@ -1,9 +1,5 @@
 {
-  "jcr:primaryType": "kes:UiFramework",
+  "jcr:primaryType": "kes:ManagedUiFramework",
   "jcr:title": "Generic Semantic",
-  "kes:uiFrameworkCode": "semantic",
-  "kes:vendorLibraries": [
-    "jquery/3.3.1",
-    "semantic-ui/2.4.2"
-  ]
+  "kes:uiFrameworkCode": "semantic"
 }

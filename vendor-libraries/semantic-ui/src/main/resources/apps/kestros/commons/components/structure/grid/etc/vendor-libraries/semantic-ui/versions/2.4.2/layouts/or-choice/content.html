@@ -17,21 +17,22 @@
   */-->
 <sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
      data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
-<sly
-    data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.Container'}"/>
 <sly data-sly-test="${component.componentUiFrameworkView.templatesPath}"
      data-sly-use.templates="${component.componentUiFrameworkView.templatesPath}"/>
-<div data-sly-test="${!container.backgroundImageStyle}"
-     class="ui container ${context.inlineVariations}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
-</div>
+<sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"/>
 
-<div data-sly-test="${container.backgroundImageStyle}"
-     class="ui container ${context.inlineVariations}"
-     style="${container.backgroundImageStyle @ context='attribute'}">
-  <sly
-      data-sly-resource="${'content' @ resourceType='kestros/commons/components/content-area'}"/>
-</div>
 
+<div class="ui two column grid ${context.inlineVariations}">
+    <div class="column">
+        <sly
+                data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="column">
+        <sly
+                data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+</div>
+<div class="ui vertical divider">
+    OR
+</div>
 
