@@ -121,7 +121,7 @@
               /apps/kestros/commons/components/structure/grid/semantic;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/semantic,
               /apps/kestros/commons/components/structure/navigation/semantic;overwrite:=true;path:=/apps/kestros/commons/components/structure/navigation/semantic,
               /apps/kestros/commons/components/structure/top-navigation/semantic;overwrite:=true;path:=/apps/kestros/commons/components/structure/top-navigation/semantic,
-              /etc/ui-frameworks;overwrite:=true;path:=/etc/ui-frameworks
+              /etc/ui-frameworks;overwriteProperties:=true;path:=/etc/ui-frameworks
             </Sling-Initial-Content>
           </instructions>
         </configuration>

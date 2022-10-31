@@ -116,7 +116,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              /etc/vendor-libraries;overwrite:=true;path:=/etc/vendor-libraries
+              /etc/vendor-libraries;overwriteProperties:=true;path:=/etc/vendor-libraries
             </Sling-Initial-Content>
           </instructions>
         </configuration>

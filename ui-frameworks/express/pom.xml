@@ -120,7 +120,7 @@
               /apps/kestros/commons/components/structure/grid/express;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/express,
               /apps/kestros/commons/components/structure/navigation/express;overwrite:=true;path:=/apps/kestros/commons/components/structure/navigation/express,
               /apps/kestros/commons/components/structure/top-navigation/express;overwrite:=true;path:=/apps/kestros/commons/components/structure/top-navigation/express,
-              /etc/ui-frameworks;overwrite:=true;path:=/etc/ui-frameworks
+              /etc/ui-frameworks;overwriteProperties:=true;path:=/etc/ui-frameworks
             </Sling-Initial-Content>
           </instructions>
         </configuration>

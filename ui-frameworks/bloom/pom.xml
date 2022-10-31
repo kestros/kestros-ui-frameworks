@@ -120,7 +120,7 @@
               /apps/kestros/commons/components/structure/grid/bloom;overwrite:=true;path:=/apps/kestros/commons/components/structure/grid/bloom,
               /apps/kestros/commons/components/structure/navigation/bloom;overwrite:=true;path:=/apps/kestros/commons/components/structure/navigation/bloom,
               /apps/kestros/commons/components/structure/top-navigation/bloom;overwrite:=true;path:=/apps/kestros/commons/components/structure/top-navigation/bloom,
-              /etc/ui-frameworks;overwrite:=true;path:=/etc/ui-frameworks
+              /etc/ui-frameworks;overwriteProperties:=true;path:=/etc/ui-frameworks
             </Sling-Initial-Content>
           </instructions>
         </configuration>

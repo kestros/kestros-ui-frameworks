@@ -127,7 +127,7 @@
               /apps/kestros/commons/components/structure/tabs/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/tabs/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/structure/top-navigation/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/top-navigation/etc/vendor-libraries/bootstrap,
               /apps/kestros/commons/components/structure/section/etc/vendor-libraries/bootstrap;overwrite:=true;path:=/apps/kestros/commons/components/structure/section/etc/vendor-libraries/bootstrap,
-              /etc/vendor-libraries;overwrite:=true;path:=/etc/vendor-libraries
+              /etc/vendor-libraries;overwriteProperties:=true;path:=/etc/vendor-libraries
             </Sling-Initial-Content>
           </instructions>
         </configuration>
