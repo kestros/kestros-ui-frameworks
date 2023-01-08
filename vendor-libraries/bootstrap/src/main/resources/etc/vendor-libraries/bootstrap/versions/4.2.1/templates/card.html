@@ -1,7 +1,8 @@
 
 <template
-    data-sly-template.cardBase="${ @ title,image, imageAltText, imageAdditionalClasses, description, callToActionText, url, additionalClasses, titleAdditionClasses, buttonAdditionalClasses, contentAreaName}"
+    data-sly-template.cardBase="${ @ title,image, imageAltText, imageAdditionalClasses, description, callToActionText, url, additionalClasses, titleAdditionClasses, buttonAdditionalClasses, component}"
     data-title="Baseline Card">
+  <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
   <div class="card">
     <sly data-sly-test="${image}"
          data-sly-call="${imageBase @
@@ -12,8 +13,7 @@
       <h5 data-sly-test="${title}"
           class="card-title ${titleAdditionalClasses}">${title}</h5>
       <sly data-sly-test="${description}">${description @ context='html'}</sly>
-      <sly data-sly-test="${contentAreaName}"
-           data-sly-resource="${contentAreaName @ resourceType='kestros/commons/components/content-area'}"/>
+      <sly data-sly-call="${includes.contentArea @ component = component}"/>
       <a data-sly-test="${callToActionText}"
          href="${url}" class="btn ${buttonAdditionalClasses}">${callToActionText}</a>
     </div>

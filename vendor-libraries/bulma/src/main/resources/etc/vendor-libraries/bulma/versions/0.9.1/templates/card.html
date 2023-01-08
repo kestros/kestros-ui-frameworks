@@ -8,7 +8,8 @@
     buttonText,
     buttonLink,
     buttonAdditionalClasses,
-    contentAreaName}">
+    component}">
+  <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
   <div class="card ${cardAdditionalClasses}">
     <div class="card-image">
       <figure data-sly-test="${image}" class="image ${imageAdditionalClasses}">
@@ -18,8 +19,7 @@
     <div class="card-content">
       <p class="title ${inlineVariationsTitle}">${title}</p>
       <p class="content">${description}</p>
-      <sly data-sly-test="${contentAreaName}"
-           data-sly-resource="${contentAreaName @ resourceType='kestros/commons/components/content-area'}"/>
+      <sly data-sly-call="${includes.contentArea @ component = component}"/>
       <sly data-sly-test="${buttonText && buttonLink}"
            data-sly-call="${buttonBase @
             text=buttonText,

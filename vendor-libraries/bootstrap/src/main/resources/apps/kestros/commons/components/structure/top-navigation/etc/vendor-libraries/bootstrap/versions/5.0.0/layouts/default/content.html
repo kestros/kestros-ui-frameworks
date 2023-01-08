@@ -16,9 +16,9 @@
   ~
   */-->
 <sly data-sly-use.component="${'io.kestros.cms.sitebuilding.api.models.BaseComponent'}"
-     data-sly-use.templates="${component.componentUiFrameworkView.templatesPath}"
-     data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.TopNavigation'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"
+     data-sly-use.templates="${context.componentUiFrameworkView.templatesPath}"
+     data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.TopNavigation'}" />
 
 <nav class="navbar ${context.inlineVariations}">
   <div class="container-fluid">
