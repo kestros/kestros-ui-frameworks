@@ -25,12 +25,12 @@
   <parent>
     <groupId>io.kestros.cms</groupId>
     <artifactId>kestros-vendor-libraries</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.2</version>
   </parent>
 
   <groupId>io.kestros.vendor-libraries</groupId>
   <artifactId>kestros-semantic-ui</artifactId>
-  <version>0.0.12</version>
+  <version>0.0.1-SNAPSHOT</version>
 
   <name>Kestros Semantic UI</name>
   <description></description>
