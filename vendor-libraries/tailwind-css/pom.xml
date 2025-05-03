@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.kestros.cms</groupId>
+        <artifactId>kestros-site-parent</artifactId>
+        <version>0.1.2</version>
+    </parent>
+
+    <groupId>io.kestros.samples</groupId>
+    <artifactId>tailwinds-library</artifactId>
+
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>Tailwinds UI Library</name>
+
+    <packaging>bundle</packaging>
+
+    <properties>
+        <rootPackage>io.kestros.samples</rootPackage>
+        <bundleCategory>${organization.name}</bundleCategory>
+    </properties>
+
+    <dependencies>
+    </dependencies>
+
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/content/jcr_root</directory>
+            </resource>
+        </resources>
+
+        <plugins>
+            <!-- Builds the content package -->
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <version>1.3.6</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate-metadata</goal>
+                            <goal>package</goal>
+                            <goal>analyze-classes</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <packageType>mixed</packageType>
+                    <failOnMissingEmbed>true</failOnMissingEmbed>
+                    <accessControlHandling>merge</accessControlHandling>
+                    <allowIndexDefinitions>true</allowIndexDefinitions>
+                    <filterSource>${basedir}/src/content/META-INF/vault/filter.xml</filterSource>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>htl-maven-plugin</artifactId>
+                <version>1.2.2-1.4.0</version>
+                <configuration>
+                    <failOnWarnings>true</failOnWarnings>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.1</version>
+                <!-- Copy the jar to the install folder, so that application java code can live in the same module as the content package -->
+                <executions>
+                    <execution>
+                        <id>install-folder-jar</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <archive>
+                                <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                            </archive>
+                            <outputDirectory>src/content/jcr_root/apps/test-project1/install</outputDirectory>
+                            <excludes>
+                                <exclude>apps/**</exclude>
+                                <exclude>etc/**</exclude>
+                                <exclude>libs/**</exclude>
+                                <exclude>content/**</exclude>
+                                <exclude>META-INF/**</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>installPackage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.wcm.maven.plugins</groupId>
+                        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <serviceURL>
+                                ${sling.protocol}://${sling.host}:${sling.port}/bin/cpm/package.service.html
+                            </serviceURL>
+                            <userId>${sling.username}</userId>
+                            <password>${sling.password}</password>
+                            <packageFile>target/${project.artifactId}-${project.version}.zip
+                            </packageFile>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!-- overrides default bundle installation configuration -->
+            <id>installBundle</id>
+        </profile>
+    </profiles>
+
+
+</project>
