@@ -11,11 +11,11 @@
     </parent>
 
     <groupId>io.kestros.samples</groupId>
-    <artifactId>tailwind-framework</artifactId>
+    <artifactId>tachyons-framework</artifactId>
 
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Tailwind Framework</name>
+    <name>Tachyons Framework</name>
 
     <packaging>bundle</packaging>
 
