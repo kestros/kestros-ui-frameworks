@@ -23,6 +23,7 @@
     <module>bloom</module>
     <module>empty-framework</module>
     <module>tailwind-framework</module>
+    <module>tachyons-framework</module>
   </modules>
 
 </project>
