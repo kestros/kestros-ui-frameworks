@@ -4,6 +4,6 @@
           jcr:primaryType="kes:UiFramework"
           jcr:title="Tailwind UI Framework 0.0.1"
           jcr:description=""
-          kes:uiFrameworkCode="empty"
-          kes:vendorLibraries="[]"
+          kes:uiFrameworkCode="tailwind"
+          kes:vendorLibraries="[tailwind-css/4.1.0]"
 />

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
 
-  <filter root="/apps/test-project1"/>
-
   <filter root="/etc/vendor-libraries/tailwind-css"/>
-
+  <filter root="/apps/kestros/commons/components">
+        <!-- Match "ui-kit-lib" folders at any level under the components directory -->
+        <include pattern="^/apps/kestros/commons/components(/.*/tailwind-css(/.*)?)?$"/>
+    </filter>
 </workspaceFilter>
