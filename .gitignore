@@ -12,6 +12,8 @@ node/
 node_modules/
 .nyc_output/
 
+.vscode/
+
 package-lock.json
 npm-debug.log`
 vendor-libraries/font-awesome/.DS_Store

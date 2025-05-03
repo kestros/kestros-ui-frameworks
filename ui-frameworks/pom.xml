@@ -22,6 +22,7 @@
     <module>express</module>
     <module>bloom</module>
     <module>empty-framework</module>
+    <module>tailwind-framework</module>
   </modules>
 
 </project>
