@@ -70,33 +70,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.1</version>
-                <!-- Copy the jar to the install folder, so that application java code can live in the same module as the content package -->
-                <executions>
-                    <execution>
-                        <id>install-folder-jar</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <archive>
-                                <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-                            </archive>
-                            <outputDirectory>src/content/jcr_root/apps/test-project1/install</outputDirectory>
-                            <excludes>
-                                <exclude>apps/**</exclude>
-                                <exclude>etc/**</exclude>
-                                <exclude>libs/**</exclude>
-                                <exclude>content/**</exclude>
-                                <exclude>META-INF/**</exclude>
-                            </excludes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <executions>
