@@ -21,6 +21,7 @@
     <module>basic-semantic</module>
     <module>express</module>
     <module>bloom</module>
+    <module>empty-framework</module>
   </modules>
 
 </project>
