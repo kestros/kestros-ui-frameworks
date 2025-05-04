@@ -16,5 +16,6 @@
   ~
   */-->
 <sly data-sly-use.button="${'io.kestros.cms.components.basic.content.button.Button'}"/>
+<sly data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<a class="button primary" href="${button.link @ context='uri'}">${button.text}</a>
+<a class="${context.inlineVariations}" href="${button.link @ context='uri'}">${button.text}</a>
