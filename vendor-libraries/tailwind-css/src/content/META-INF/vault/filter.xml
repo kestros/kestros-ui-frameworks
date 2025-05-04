@@ -3,7 +3,6 @@
 
   <filter root="/etc/vendor-libraries/tailwind-css"/>
   <filter root="/apps/kestros/commons/components">
-        <!-- Match "ui-kit-lib" folders at any level under the components directory -->
         <include pattern="^/apps/kestros/commons/components(/.*/tailwind-css(/.*)?)?$"/>
     </filter>
 </workspaceFilter>
