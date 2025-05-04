@@ -15,7 +15,11 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-  <sly data-sly-use.button="${'io.kestros.cms.components.basic.content.button.Button'}"/>
-  <sly data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
-  
-  <a class="${context.inlineVariations}" href="${button.link @ context='uri'}">${button.text}</a>
+  <sly data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.ContainerComponent'}"
+  data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+
+<div class="${context.inlineVariations}" data-sly-element="${container.elementType}">
+ <sly data-sly-call="${includes.contentArea @ component = container}"/>
+</div>

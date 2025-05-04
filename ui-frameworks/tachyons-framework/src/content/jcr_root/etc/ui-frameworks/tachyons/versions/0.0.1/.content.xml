@@ -4,6 +4,6 @@
           jcr:primaryType="kes:UiFramework"
           jcr:title="Tachyons UI Framework 0.0.1"
           jcr:description=""
-          kes:uiFrameworkCode="empty"
-          kes:vendorLibraries="[]"
+          kes:uiFrameworkCode="tachyons"
+          kes:vendorLibraries="[tachyons/4.12.0]"
 />
