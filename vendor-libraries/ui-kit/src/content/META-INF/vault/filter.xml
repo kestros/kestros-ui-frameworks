@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+
+  <!-- only ui-kit folders inside of /apps/kestros/commons/components, and nested folders -->
+    <filter root="/apps/kestros/commons/components">
+        <!-- Match "ui-kit-lib" folders at any level under the components directory -->
+        <include pattern="^/apps/kestros/commons/components(/.*/ui-kit-lib(/.*)?)?$"/>
+    </filter>
+
+    <filter root="/etc/vendor-libraries/ui-kit"/>
+</workspaceFilter>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Styling"
+          jcr:description=""
+          mutuallyExclusive="true">
+
+    <uk-nav-primary jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Primary"
+                        inline="true"/>
+    <uk-nav-secondary jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Secondary"
+                        inline="true"/>
+
+
+</jcr:root>
