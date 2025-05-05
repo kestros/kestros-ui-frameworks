@@ -1,6 +1,7 @@
 
 \.target/
 \.idea/
+\.vscode/
 
 \pom.xml.versionsBackup
 
@@ -11,6 +12,8 @@ coverage/
 node/
 node_modules/
 .nyc_output/
+
+.vscode/
 
 package-lock.json
 npm-debug.log`

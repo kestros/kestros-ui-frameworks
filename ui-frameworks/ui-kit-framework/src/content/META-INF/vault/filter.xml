@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+
+    <!-- only ui-kit folders inside of /apps/kestros/commons/components-->
+    <filter root="/apps/kestros/commons/components">
+        <include pattern=".*ui-kit.*"/>
+    </filter>
+
+    <filter root="/etc/ui-frameworks/ui-kit"/>
+
+</workspaceFilter>

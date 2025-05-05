@@ -21,6 +21,10 @@
     <module>basic-semantic</module>
     <module>express</module>
     <module>bloom</module>
+    <module>empty-framework</module>
+    <module>tailwind-framework</module>
+    <module>tachyons-framework</module>
+    <module>ui-kit-framework</module>
   </modules>
 
 </project>

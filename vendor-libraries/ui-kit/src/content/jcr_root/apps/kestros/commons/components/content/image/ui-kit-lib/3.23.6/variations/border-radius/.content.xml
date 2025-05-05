@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Border Radius"
+          jcr:description=""
+          mutuallyExclusive="true">
+    <uk-border-rounded jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Rounded"
+                   inline="true"/>
+    <uk-border-circle jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Circle"
+                      inline="true"/>
+    <uk-border-pill jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Pill"
+                        inline="true"/>
+</jcr:root>

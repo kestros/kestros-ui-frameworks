@@ -28,6 +28,9 @@
     <module>animate-on-scroll</module>
     <module>leafletjs</module>
     <module>minigrid</module>
+    <module>tailwind-css</module>
+    <module>tachyons</module>
+    <module>ui-kit</module>
   </modules>
 
 </project>
