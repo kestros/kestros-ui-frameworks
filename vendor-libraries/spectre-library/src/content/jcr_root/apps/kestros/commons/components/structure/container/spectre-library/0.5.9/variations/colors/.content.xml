@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Container Colors"
+          jcr:description="Background color utility classes"
+          mutuallyExclusive="true">
+    <bg-primary jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Primary"
+                   inline="true"/>
+    <bg-secondary jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Secondary"
+                   inline="true"/>
+    <bg-dark jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Dark Background"
+                   inline="true"/>
+    <bg-gray jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Gray Background"
+                   inline="true"/>
+</jcr:root>

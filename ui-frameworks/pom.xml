@@ -18,13 +18,14 @@
   <name>Kestros Downloadable UI Frameworks</name>
 
   <modules>
-    <module>basic-semantic</module>
-    <module>express</module>
-    <module>bloom</module>
-    <module>empty-framework</module>
-    <module>tailwind-framework</module>
-    <module>tachyons-framework</module>
-    <module>ui-kit-framework</module>
+<!--    <module>basic-semantic</module>-->
+<!--    <module>express</module>-->
+<!--    <module>bloom</module>-->
+<!--    <module>empty-framework</module>-->
+<!--    <module>tailwind-framework</module>-->
+<!--    <module>tachyons-framework</module>-->
+<!--    <module>ui-kit-framework</module>-->
+    <module>spectre-framework</module>
   </modules>
 
 </project>
