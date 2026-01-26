@@ -12,5 +12,8 @@
     <uk-nav-center jcr:primaryType="kes:ComponentVariation"
                         jcr:title="Center"
                         inline="true"/>
+    <uk-navbar-transparent jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Transparent"
+                   inline="true"/>
 
 </jcr:root>
