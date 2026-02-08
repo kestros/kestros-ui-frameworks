@@ -19,11 +19,11 @@
 
 <sly data-sly-test="${!image.caption}">
     <sly data-sly-test="${!image.href}">
-        <img class="${image.inlineVariations}" src="${image.src}" alt="${image.altText}"/>
+        <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
     </sly>
     <sly data-sly-test="${image.href}">
         <a href="${image.href}" aria-label="${image.ariaLabel}" title="${image.anchorTitle}" target="${image.target}">
-            <img class="${image.inlineVariations}" src="${image.src}" alt="${image.altText}" role="${image.role}"/>
+            <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}" role="${image.role}"/>
         </a>
     </sly>
 </sly>
@@ -31,11 +31,11 @@
 <sly data-sly-test="${image.caption}">
     <figure>
         <sly data-sly-test="${!image.href}">
-            <img class="${image.inlineVariations}" src="${image.src}" alt="${image.altText}" role="${image.role}"/>
+            <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}" role="${image.role}"/>
         </sly>
         <sly data-sly-test="${image.href}">
             <a href="${image.href}" aria-label="${image.ariaLabel}" title="${image.anchorTitle}" target="${image.target}">
-                <img class="${image.inlineVariations}" src="${image.src}" alt="${image.altText}" role="${image.role}"/>
+                <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}" role="${image.role}"/>
             </a>
         </sly>
         <figcaption>${image.caption}</figcaption>

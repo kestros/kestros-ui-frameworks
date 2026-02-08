@@ -3,11 +3,12 @@
 
 <div class="uk-card ${card.inlineVariations}">
     <div class="uk-card-body">
-        <h3 data-sly-test="${card.title}" class="uk-card-title">${card.title}</h3>
+        <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
         <p data-sly-test="${card.description}">
             ${card.description}
         </p>
     </div>
+    <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
     <div class="uk-card-media-bottom" data-sly-test="${card.image}">
         <sly data-sly-resource="${card.image}"/>
     </div>
