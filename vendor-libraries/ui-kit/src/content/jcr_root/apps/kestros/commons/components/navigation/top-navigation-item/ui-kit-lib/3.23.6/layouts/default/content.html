@@ -15,9 +15,14 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.container="${'io.kestros.cms.components.basic.core.structure.container.ContainerDataSourceComponent'}"/>
-<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+<sly data-sly-use.topNavItem="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationItemDataSourceComponent'}"/>
 
-<div class="${container.inlineVariations}">
-    <sly data-sly-call="${includes.contentArea}"/>
-</div>
+<li class="${topNavItem.inlineVariations}">
+    <a href="${topNavItem.href}">${topNavItem.text}</a>
+    <div data-sly-test="${topNavItem.navigationItems}" class="uk-navbar-dropdown">
+        <ul class="uk-nav uk-navbar-dropdown-nav" data-sly-list.child="${topNavItem.children}">
+            <sly data-sly-resource="${child}"/>
+        </ul>
+    </div>
+</li>
+

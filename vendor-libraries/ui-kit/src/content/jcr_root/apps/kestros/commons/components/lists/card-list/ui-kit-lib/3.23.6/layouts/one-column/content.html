@@ -16,9 +16,11 @@
   ~
   */-->
 
-<sly data-sly-use.pageList="${'io.kestros.cms.components.basic.lists.PageList'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.cardList="${'io.kestros.cms.components.basic.core.lists.cardlist.CardListDataSourceComponent'}"/>
 
-<ul class="uk-list" data-sly-list.page="${pageList.pages}">
-    <li><a href="${page.path @ context='uri'}">${page.displayTitle}</a></li>
-</ul>
+<div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-1@s" uk-grid
+     data-sly-list.card="${cardList.children}">
+    <div>
+        <sly data-sly-resource="${card}"/>
+    </div>
+</div>

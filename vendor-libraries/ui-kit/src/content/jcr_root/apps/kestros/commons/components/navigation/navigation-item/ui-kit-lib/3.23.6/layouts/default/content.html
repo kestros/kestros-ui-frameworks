@@ -15,9 +15,5 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.navigation="${'io.kestros.cms.components.basic.structure.navigation.NavigationComponent'}"
-     data-sly-use.context="${'io.kestros.cms.components.basic.structure.navigation.NavigationComponentContext'}"/>
-
-<ul class="uk-nav ${context.inlineVariations}" data-sly-list.page="${context.navigationPages}">
-    <li class="${page.active ? 'uk-active' : ''}"><a href="${page.url @ context='uri'}" aria-label="${page.title}"><div>${page.title}<div class="uk-nav-subtitle" data-sly-test="${page.description}">${page.description}</div></div></a></li>
-</ul>
+<sly data-sly-use.navItem="${'io.kestros.cms.components.basic.core.navigation.nav.NavigationItemDataSourceComponent'}"/>
+<li>${navItem.text}</li>
