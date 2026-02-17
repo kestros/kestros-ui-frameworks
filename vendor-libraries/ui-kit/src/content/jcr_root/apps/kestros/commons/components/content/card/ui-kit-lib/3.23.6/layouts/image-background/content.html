@@ -1,0 +1,46 @@
+<!--/*
+  ~      Copyright (C) 2020  Kestros, Inc.
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ~
+  */-->
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+
+<div class="uk-card uk-card-primary uk-card-large uk-card-overlay ${card.inlineVariations}"
+     data-sly-test="${card.image}"
+     style="background-image: url('${card.image.src}'); background-size: cover; background-position: center; position: relative;">
+    <div class="uk-card-body uk-flex uk-flex-column uk-flex-between" style="min-height: 300px; position: relative; z-index: 1;">
+        <div>
+            <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
+            <p data-sly-test="${card.description}">
+                ${card.description}
+            </p>
+        </div>
+        <div data-sly-test="${card.buttonGroup}">
+            <sly data-sly-resource="${card.buttonGroup}"/>
+        </div>
+    </div>
+    <!-- TODO: Verify card.image.src is available; if image is a complex component, use data-sly-resource instead -->
+</div>
+
+<div class="uk-card uk-card-default ${card.inlineVariations}"
+     data-sly-test="${!card.image}">
+    <div class="uk-card-body">
+        <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
+        <p data-sly-test="${card.description}">
+            ${card.description}
+        </p>
+    </div>
+    <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
+</div>

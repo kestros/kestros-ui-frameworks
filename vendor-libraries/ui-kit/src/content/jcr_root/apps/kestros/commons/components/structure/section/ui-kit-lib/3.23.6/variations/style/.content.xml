@@ -14,6 +14,7 @@
     <uk-section-muted jcr:primaryType="kes:ComponentVariation"
                      jcr:title="Muted"
                      inline="true"/>
-
-
+    <uk-section-default jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Default"
+                     inline="true"/>
 </jcr:root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Text Wrapping"
+          jcr:description=""
+          mutuallyExclusive="true">
+    <uk-text-truncate jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Truncate"
+                      inline="true"/>
+    <uk-text-break jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Break"
+                   inline="true"/>
+    <uk-text-nowrap jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="No Wrap"
+                    inline="true"/>
+</jcr:root>

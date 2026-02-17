@@ -15,4 +15,7 @@
     <uk-card-secondary jcr:primaryType="kes:ComponentVariation"
                       jcr:title="Secondary"
                       inline="true"/>
+    <uk-card-overlay jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Overlay"
+                      inline="true"/>
 </jcr:root>
