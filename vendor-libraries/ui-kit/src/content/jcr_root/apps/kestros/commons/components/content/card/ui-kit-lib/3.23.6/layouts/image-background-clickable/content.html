@@ -17,10 +17,10 @@
   */-->
 <sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
 
-<a href="${card.buttonGroup.children[0].href @ context='uri'}"
-   target="${card.buttonGroup.children[0].target}"
-   aria-label="${card.buttonGroup.children[0].ariaLabel}"
-   title="${card.buttonGroup.children[0].title}"
+<a href="${card.primaryButton.href @ context='uri'}"
+   target="${card.primaryButton.target}"
+   aria-label="${card.primaryButton.ariaLabel}"
+   title="${card.primaryButton.title}"
    class="uk-card uk-card-primary uk-card-large uk-card-overlay ${card.inlineVariations} uk-display-block"
    style="background-image: url('${card.image.src}'); background-size: cover; background-position: center; text-decoration: none; color: inherit; position: relative;"
    data-sly-test="${card.image && card.buttonGroup}">
@@ -32,7 +32,7 @@
             </p>
         </div>
     </div>
-    <!-- TODO: Verify card.image.src and card.buttonGroup.children[0] are available with required properties (href, target, ariaLabel, title) -->
+    <!-- TODO: Verify card.image.src and card.primaryButton are available with required properties (href, target, ariaLabel, title) -->
 </a>
 
 <div class="uk-card uk-card-default ${card.inlineVariations}"

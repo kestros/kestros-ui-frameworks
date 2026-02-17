@@ -22,7 +22,7 @@
        aria-label="${topNavItem.ariaLabel}"
        aria-current="${topNavItem.active ? 'page' : ''}">${topNavItem.text}</a>
     <div data-sly-test="${topNavItem.navigationItems}" class="uk-navbar-dropdown">
-        <ul class="uk-nav uk-navbar-dropdown-nav" data-sly-list.child="${topNavItem.children}">
+        <ul class="uk-nav uk-navbar-dropdown-nav" data-sly-list.child="${topNavItem.navigationItemLinks}">
             <sly data-sly-resource="${child}"/>
         </ul>
     </div>

@@ -17,10 +17,10 @@
   */-->
 <sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
 
-<a href="${card.buttonGroup.children[0].href @ context='uri'}"
-   target="${card.buttonGroup.children[0].target}"
-   aria-label="${card.buttonGroup.children[0].ariaLabel}"
-   title="${card.buttonGroup.children[0].title}"
+<a href="${card.primaryButton.href @ context='uri'}"
+   target="${card.primaryButton.target}"
+   aria-label="${card.primaryButton.ariaLabel}"
+   title="${card.primaryButton.title}"
    class="uk-card ${card.inlineVariations} uk-display-block"
    style="text-decoration: none; color: inherit;">
     <div class="uk-card-body">
@@ -32,5 +32,5 @@
     <div class="uk-card-media-bottom" data-sly-test="${card.image}">
         <sly data-sly-resource="${card.image}"/>
     </div>
-    <!-- TODO: Verify card.buttonGroup.children[0] is available and has required properties (href, target, ariaLabel, title) -->
+    <!-- TODO: Verify card.primaryButton is available and has required properties (href, target, ariaLabel, title) -->
 </a>
