@@ -1,0 +1,9 @@
+<sly data-sly-use.panel="${'io.kestros.cms.components.basic.core.structure.accordion.AccordionPanelDataSourceComponent'}"/>
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+
+<li class="${panel.expanded ? 'uk-open' : ''} ${panel.inlineVariations}">
+    <a class="uk-accordion-title" href aria-label="${panel.ariaLabel}">${panel.title}</a>
+    <div class="uk-accordion-content">
+        <sly data-sly-call="${includes.contentArea}"/>
+    </div>
+</li>
