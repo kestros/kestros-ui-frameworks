@@ -1,0 +1,7 @@
+<sly data-sly-use.linkList="${'io.kestros.cms.components.basic.core.lists.linklist.LinkListDataSourceComponent'}"/>
+
+<ul class="uk-list ${linkList.inlineVariations}" data-sly-list.link="${linkList.children}">
+    <li>
+        <sly data-sly-resource="${link}"/>
+    </li>
+</ul>

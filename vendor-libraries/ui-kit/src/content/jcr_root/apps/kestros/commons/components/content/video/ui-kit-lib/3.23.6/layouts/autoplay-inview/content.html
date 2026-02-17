@@ -1,0 +1,5 @@
+<sly data-sly-use.video="${'io.kestros.cms.components.basic.core.content.video.VideoDataSourceComponent'}"/>
+
+<video class="${video.inlineVariations}" src="${video.videoSource @ context='uri'}" playsinline loop muted uk-video="autoplay: inview">
+    ${video.fallbackText}
+</video>
