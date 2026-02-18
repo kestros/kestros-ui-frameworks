@@ -1,0 +1,10 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+<div class="ui card ${card.inlineVariations}">
+    <div data-sly-test="${card.imagePath}" class="image">
+        <img src="${card.imagePath}" alt="${card.title}"/>
+    </div>
+    <div class="content">
+        <div data-sly-test="${card.title}" class="header">${card.title}</div>
+        <div data-sly-test="${card.description}" class="description">${card.description}</div>
+    </div>
+</div>

@@ -1,6 +1,0 @@
-{
-  "jcr:primaryType": "kes:ComponentVariation",
-  "jcr:title": "Tabs",
-  "jcr:description": "Tabbed navigation.",
-  "inline": true
-}

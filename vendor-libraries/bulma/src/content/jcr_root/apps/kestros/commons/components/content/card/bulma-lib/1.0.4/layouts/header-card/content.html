@@ -1,0 +1,10 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+<div class="card ${card.inlineVariations}">
+    <header class="card-header">
+        <p class="card-header-title">${card.title}</p>
+    </header>
+    <div class="card-content">
+        <sly data-sly-call="${includes.contentArea}"/>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<sly data-sly-use.breadcrumbs="${'io.kestros.cms.components.basic.core.navigation.breadcrumbs.BreadCrumbsDataSourceComponent'}"/>
+<div class="ui breadcrumb ${breadcrumbs.inlineVariations}">
+    <sly data-sly-list.crumb="${breadcrumbs.breadcrumbs}">
+        <sly data-sly-resource="${crumb}"/>
+        <div class="divider">/</div>
+    </sly>
+</div>

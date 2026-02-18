@@ -1,0 +1,8 @@
+<sly data-sly-use.table="${'io.kestros.cms.components.basic.core.content.table.TableDataSourceComponent'}"/>
+<table class="ui table ${table.inlineVariations}">
+    <tbody>
+        <sly data-sly-list.row="${table.rows}">
+            <sly data-sly-resource="${row}"/>
+        </sly>
+    </tbody>
+</table>

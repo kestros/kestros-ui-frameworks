@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Font Weight"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <font-thin jcr:primaryType="kes:ComponentVariation"
+               jcr:title="Thin"
+               inline="true"/>
+    <font-extralight jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Extra Light"
+                     inline="true"/>
+    <font-light jcr:primaryType="kes:ComponentVariation"
+                jcr:title="Light"
+                inline="true"/>
+    <font-normal jcr:primaryType="kes:ComponentVariation"
+                 jcr:title="Normal"
+                 inline="true"/>
+    <font-medium jcr:primaryType="kes:ComponentVariation"
+                 jcr:title="Medium"
+                 inline="true"/>
+    <font-semibold jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Semibold"
+                   inline="true"/>
+    <font-bold jcr:primaryType="kes:ComponentVariation"
+               jcr:title="Bold"
+               inline="true"/>
+    <font-extrabold jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Extra Bold"
+                    inline="true"/>
+    <font-black jcr:primaryType="kes:ComponentVariation"
+                jcr:title="Black"
+                inline="true"/>
+</jcr:root>

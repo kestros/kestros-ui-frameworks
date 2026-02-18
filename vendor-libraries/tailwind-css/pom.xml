@@ -8,29 +8,21 @@
         <groupId>io.kestros.cms</groupId>
         <artifactId>kestros-site-parent</artifactId>
         <version>0.1.2</version>
+        <relativePath/>
     </parent>
 
-    <groupId>io.kestros.samples</groupId>
-    <artifactId>tailwinds-library</artifactId>
-
+    <groupId>io.kestros.vendor-libraries</groupId>
+    <artifactId>kestros-tailwind-css</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <name>Tailwinds UI Library</name>
-
+    <name>Kestros Tailwind CSS</name>
     <packaging>bundle</packaging>
 
     <properties>
-        <rootPackage>io.kestros.samples</rootPackage>
-        <bundleCategory>${organization.name}</bundleCategory>
+        <bundleCategory>kestros</bundleCategory>
+        <rootPackage>io.kestros.vendor-libraries</rootPackage>
     </properties>
 
-    <dependencies>
-    </dependencies>
-
-
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <testSourceDirectory>src/test/java</testSourceDirectory>
         <resources>
             <resource>
                 <directory>src/content/jcr_root</directory>
@@ -38,7 +30,6 @@
         </resources>
 
         <plugins>
-            <!-- Builds the content package -->
             <plugin>
                 <groupId>org.apache.jackrabbit</groupId>
                 <artifactId>filevault-package-maven-plugin</artifactId>
@@ -65,6 +56,13 @@
                 <groupId>org.apache.sling</groupId>
                 <artifactId>htl-maven-plugin</artifactId>
                 <version>1.2.2-1.4.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <failOnWarnings>true</failOnWarnings>
                 </configuration>
@@ -72,6 +70,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
                 <executions>
                     <execution>
                         <id>bundle-manifest</id>
@@ -82,7 +81,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
@@ -107,18 +105,14 @@
                             </serviceURL>
                             <userId>${sling.username}</userId>
                             <password>${sling.password}</password>
-                            <packageFile>target/${project.artifactId}-${project.version}.zip
-                            </packageFile>
+                            <packageFile>target/${project.artifactId}-${project.version}.zip</packageFile>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
         </profile>
         <profile>
-            <!-- overrides default bundle installation configuration -->
             <id>installBundle</id>
         </profile>
     </profiles>
-
-
 </project>

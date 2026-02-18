@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/kestros/commons/components">
+        <include pattern="^/apps/kestros/commons/components(/.*/bulma-lib(/.*)?)?$"/>
+    </filter>
+    <filter root="/etc/vendor-libraries/bulma"/>
+</workspaceFilter>

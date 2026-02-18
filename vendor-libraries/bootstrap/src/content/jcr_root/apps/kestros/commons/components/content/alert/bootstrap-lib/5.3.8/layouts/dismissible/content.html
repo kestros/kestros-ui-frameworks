@@ -1,0 +1,6 @@
+<sly data-sly-use.alert="${'io.kestros.cms.components.basic.core.content.alert.AlertDataSourceComponent'}"/>
+<div class="alert alert-dismissible fade show ${alert.inlineVariations}" role="alert">
+    <h4 data-sly-test="${alert.heading}" class="alert-heading">${alert.heading}</h4>
+    <p data-sly-test="${alert.text}">${alert.text}</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
