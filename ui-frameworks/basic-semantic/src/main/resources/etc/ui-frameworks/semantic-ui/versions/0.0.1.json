@@ -4,7 +4,6 @@
   "jcr:description": "",
   "kes:uiFrameworkCode": "semantic",
   "kes:vendorLibraries": [
-    "jquery/3.3.1",
-    "semantic-ui/2.4.2"
+    "semantic-ui-lib/2.4.1"
   ]
 }

@@ -16,13 +16,13 @@
   ~
   */-->
 <sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
-
+<p>${card.image}</p>
 <a href="${card.primaryButton.href @ context='uri'}"
-   target="${card.primaryButton.target}"
+   target="${card.primaryButton.targetAsString}"
    aria-label="${card.primaryButton.ariaLabel}"
    title="${card.primaryButton.title}"
    class="uk-card uk-card-primary uk-card-large uk-card-overlay ${card.inlineVariations} uk-display-block"
-   style="background-image: url('${card.image.src}'); background-size: cover; background-position: center; text-decoration: none; color: inherit; position: relative;"
+   style="background-image: url('${card.imageElement.imagePath}'); background-size: cover; background-position: center; text-decoration: none; color: inherit; position: relative;"
    data-sly-test="${card.image && card.buttonGroup}">
     <div class="uk-card-body uk-flex uk-flex-column uk-flex-between" style="min-height: 300px; position: relative; z-index: 1;">
         <div>
@@ -32,7 +32,7 @@
             </p>
         </div>
     </div>
-    <!-- TODO: Verify card.image.src and card.primaryButton are available with required properties (href, target, ariaLabel, title) -->
+    <!-- TODO: Verify card.imageElement.imagePath and card.primaryButton are available with required properties (href, target, ariaLabel, title) -->
 </a>
 
 <div class="uk-card uk-card-default ${card.inlineVariations}"

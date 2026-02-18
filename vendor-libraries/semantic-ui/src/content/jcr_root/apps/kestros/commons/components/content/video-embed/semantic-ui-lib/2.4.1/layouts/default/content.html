@@ -1,4 +1,4 @@
 <sly data-sly-use.videoEmbed="${'io.kestros.cms.components.basic.core.content.videoembed.VideoEmbedDataSourceComponent'}"/>
 <div class="ui embed ${videoEmbed.inlineVariations}">
-    <iframe src="${videoEmbed.url}" allowfullscreen></iframe>
+    ${videoEmbed.videoEmbedCode @ context='html'}
 </div>

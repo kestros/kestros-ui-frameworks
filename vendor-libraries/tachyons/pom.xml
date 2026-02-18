@@ -13,7 +13,7 @@
 
     <groupId>io.kestros.vendor-libraries</groupId>
     <artifactId>kestros-tachyons</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <name>Kestros Tachyons</name>
     <packaging>bundle</packaging>
 
