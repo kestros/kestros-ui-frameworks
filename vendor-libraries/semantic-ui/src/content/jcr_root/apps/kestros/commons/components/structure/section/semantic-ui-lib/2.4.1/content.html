@@ -1,5 +1,5 @@
 <sly data-sly-use.section="${'io.kestros.cms.components.basic.core.structure.section.SectionDataSourceComponent'}"/>
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
-<div class="${section.inlineVariations}" data-sly-element="${section.elementType}" style="background-image: url(${section.backgroundImage @ context='unsafe'});">
+<div class="${section.inlineVariations}" data-sly-element="${section.elementType}" style="background-image: url(${section.backgroundImage @ context='uri'});">
     <sly data-sly-call="${includes.contentArea}"/>
 </div>

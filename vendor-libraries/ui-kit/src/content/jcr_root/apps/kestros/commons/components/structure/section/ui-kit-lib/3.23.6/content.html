@@ -19,7 +19,7 @@
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
 <div class="uk-section ${section.inlineVariations}" data-sly-element="${section.elementType}"
-     style="background-image: url(${section.backgroundImage @ context='unsafe'});">
+     style="background-image: url(${section.backgroundImage @ context='uri'});">
     <div class="uk-container">
         <sly data-sly-call="${includes.contentArea @ component = container}"/>
     </div>

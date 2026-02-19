@@ -19,7 +19,7 @@
 
 <div class="uk-card uk-card-primary uk-card-large uk-card-overlay ${card.inlineVariations}"
      data-sly-test="${card.image}"
-     style="background-image: url('${card.imageElement.imagePath}'); background-size: cover; background-position: center; position: relative;">
+     style="background-image: url('${card.imageElement.imagePath @ context='uri'}'); background-size: cover; background-position: center; position: relative;">
     <div class="uk-card-body uk-flex uk-flex-column uk-flex-between" style="min-height: 300px; position: relative; z-index: 1;">
         <div>
             <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
