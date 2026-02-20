@@ -1,0 +1,10 @@
+<sly data-sly-use.grid="${'io.kestros.cms.components.basic.core.structure.grid.GridDataSourceComponent'}"/>
+
+<div class="nova-grid ${grid.inlineVariations}">
+    <div class="nova-width-1-2">
+        <sly data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+    <div class="nova-width-1-2">
+        <sly data-sly-resource="${'column-2' @ resourceType='kestros/commons/components/content-area'}"/>
+    </div>
+</div>

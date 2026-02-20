@@ -1,7 +1,0 @@
-{
-  "jcr:primaryType": "kes:ManagedVendorLibrary",
-  "jcr:title": "Rellax",
-  "jcr:description": "Vanilla javascript parallax library.",
-  "fontAwesomeIcon": "fab fa-js",
-  "documentationUrl": "https://github.com/dixonandmoe/rellax"
-}
