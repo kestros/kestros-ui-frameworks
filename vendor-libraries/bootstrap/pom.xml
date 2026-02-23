@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>io.kestros.samples</groupId>
+    <groupId>io.kestros.vendor-libraries</groupId>
     <artifactId>bootstrap-library</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <name>Bootstrap UI Library</name>
@@ -19,7 +19,7 @@
 
     <properties>
         <bundleCategory>kestros</bundleCategory>
-        <rootPackage>io.kestros.samples</rootPackage>
+        <rootPackage>io.kestros.vendor-libraries</rootPackage>
     </properties>
 
     <build>

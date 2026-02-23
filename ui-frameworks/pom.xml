@@ -18,9 +18,9 @@
   <name>Kestros Downloadable UI Frameworks</name>
 
   <modules>
-    <module>basic-semantic</module>
-    <module>express</module>
-    <module>bloom</module>
+    <module>semantic-ui-framework</module>
+    <module>bootstrap-framework</module>
+    <module>bulma-framework</module>
     <module>empty-framework</module>
     <module>tailwind-framework</module>
     <module>tachyons-framework</module>

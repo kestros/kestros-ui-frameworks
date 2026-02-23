@@ -1,9 +1,0 @@
-{
-  "jcr:primaryType": "kes:UiFramework",
-  "jcr:title": "Basic Semantic 0.0.1",
-  "jcr:description": "",
-  "kes:uiFrameworkCode": "semantic",
-  "kes:vendorLibraries": [
-    "semantic-ui-lib/2.4.1"
-  ]
-}
