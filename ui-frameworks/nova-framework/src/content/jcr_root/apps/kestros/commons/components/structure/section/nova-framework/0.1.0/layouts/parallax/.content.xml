@@ -2,5 +2,5 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
           xmlns:kes="http://kestros.io/kes/1.0"
           jcr:primaryType="kes:Layout"
-          jcr:title="Default"
-          jcr:description="Nova CSS image layout"/>
+          jcr:title="Parallax"
+          jcr:description="Nova CSS section with rellax parallax scrolling"/>

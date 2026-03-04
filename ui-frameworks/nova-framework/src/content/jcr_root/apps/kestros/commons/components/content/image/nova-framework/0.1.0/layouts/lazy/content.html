@@ -3,11 +3,13 @@
 
 <sly data-sly-test="${!image.caption}">
     <sly data-sly-test="${!image.href}">
-        <img class="nova-image ${context.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
+        <img class="nova-image ${context.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"
+             loading="lazy"/>
     </sly>
     <sly data-sly-test="${image.href}">
         <a href="${image.href @ context='uri'}" target="${image.targetAsString}">
-            <img class="nova-image ${context.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
+            <img class="nova-image ${context.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"
+                 loading="lazy"/>
         </a>
     </sly>
 </sly>
@@ -15,11 +17,11 @@
 <sly data-sly-test="${image.caption}">
     <figure class="nova-image ${context.inlineVariations}">
         <sly data-sly-test="${!image.href}">
-            <img src="${image.imagePath}" alt="${image.altText}"/>
+            <img src="${image.imagePath}" alt="${image.altText}" loading="lazy"/>
         </sly>
         <sly data-sly-test="${image.href}">
             <a href="${image.href @ context='uri'}" target="${image.targetAsString}">
-                <img src="${image.imagePath}" alt="${image.altText}"/>
+                <img src="${image.imagePath}" alt="${image.altText}" loading="lazy"/>
             </a>
         </sly>
         <figcaption>${image.caption}</figcaption>
