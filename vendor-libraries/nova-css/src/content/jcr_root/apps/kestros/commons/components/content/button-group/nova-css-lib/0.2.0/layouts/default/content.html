@@ -1,0 +1,8 @@
+<sly data-sly-use.buttonGroup="${'io.kestros.cms.components.basic.content.buttongroup.ButtonGroupComponent'}"/>
+<sly data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ParentComponentEditContext'}"/>
+
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+
+<div class="nova-button-group ${context.inlineVariations}">
+    <sly data-sly-call="${includes.contentArea @ component = buttonGroup}"/>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Grid Columns"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <nova-grid-2 jcr:primaryType="kes:ComponentVariation"
+                 jcr:title="2 Columns"
+                 inline="true"/>
+    <nova-grid-3 jcr:primaryType="kes:ComponentVariation"
+                 jcr:title="3 Columns"
+                 inline="true"
+                 default="true"/>
+</jcr:root>
