@@ -1,0 +1,9 @@
+<sly data-sly-use.link="${'io.kestros.cms.components.basic.content.link.LinkComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+
+<a class="nova-link ${context.inlineVariations}"
+   href="${link.href @ context='uri'}"
+   target="${link.targetAsString}"
+   aria-label="${link.ariaLabel}"
+   title="${link.title}"
+   rel="${link.rel}">${link.text}</a>

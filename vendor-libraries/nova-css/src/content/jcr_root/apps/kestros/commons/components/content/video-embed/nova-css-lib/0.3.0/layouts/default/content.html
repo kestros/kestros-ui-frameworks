@@ -1,0 +1,6 @@
+<sly data-sly-use.videoEmbed="${'io.kestros.cms.components.basic.content.video.embed.VideoEmbedComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+
+<div class="nova-video-embed ${context.inlineVariations}">
+    ${videoEmbed.videoEmbedCode @ context='html'}
+</div>

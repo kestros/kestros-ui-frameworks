@@ -1,0 +1,64 @@
+/* Nova CSS 0.2.0 — Layout and Media Components */
+
+/* Button */
+.nova-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--nova-accent);
+    color: var(--nova-primary);
+    border: none;
+    border-radius: var(--nova-radius);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--nova-transition);
+}
+.nova-button:hover {
+    box-shadow: var(--nova-glow);
+    transform: translateY(-1px);
+}
+.nova-button-outline {
+    background: transparent;
+    border: 2px solid var(--nova-accent);
+    color: var(--nova-accent);
+}
+.nova-button-ghost {
+    background: transparent;
+    color: var(--nova-accent);
+    border: none;
+}
+
+/* Button Group */
+.nova-button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.nova-card {
+    background: var(--nova-surface);
+    border: 1px solid var(--nova-border);
+    border-radius: var(--nova-radius);
+    overflow: hidden;
+    transition: var(--nova-transition);
+}
+.nova-card:hover {
+    box-shadow: var(--nova-glow);
+    transform: translateY(-2px);
+}
+.nova-card-body {
+    padding: 1.5rem;
+}
+.nova-card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text */
+.nova-text {
+    color: var(--nova-text);
+    line-height: 1.7;
+    font-size: 1rem;
+}

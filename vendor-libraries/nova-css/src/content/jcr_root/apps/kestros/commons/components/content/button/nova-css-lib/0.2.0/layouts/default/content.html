@@ -1,0 +1,8 @@
+<sly data-sly-use.button="${'io.kestros.cms.components.basic.content.button.ButtonComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+
+<a class="nova-button ${context.inlineVariations}"
+   href="${button.href @ context='uri'}"
+   target="${button.targetAsString}"
+   aria-label="${button.ariaLabel}"
+   title="${button.title}">${button.text}</a>

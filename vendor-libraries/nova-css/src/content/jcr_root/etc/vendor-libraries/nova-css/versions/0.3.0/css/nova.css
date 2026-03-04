@@ -1,0 +1,35 @@
+/* Nova CSS 0.3.0 — Rich Content Components */
+
+/* Video Embed */
+.nova-video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--nova-radius);
+    box-shadow: var(--nova-glow);
+}
+.nova-video-embed iframe,
+.nova-video-embed object,
+.nova-video-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Link */
+.nova-link {
+    color: var(--nova-accent);
+    text-decoration: none;
+    transition: var(--nova-transition);
+    border-bottom: 1px solid transparent;
+}
+.nova-link:hover {
+    border-bottom-color: var(--nova-accent);
+}
+.nova-link-subtle {
+    color: var(--nova-text);
+    border-bottom: 1px dotted var(--nova-border);
+}

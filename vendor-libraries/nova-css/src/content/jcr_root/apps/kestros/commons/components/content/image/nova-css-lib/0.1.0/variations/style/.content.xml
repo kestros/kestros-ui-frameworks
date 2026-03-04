@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Image Style"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <nova-image-rounded jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Rounded"
+                        inline="true"/>
+    <nova-image-glow jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Glow"
+                     inline="true"/>
+</jcr:root>

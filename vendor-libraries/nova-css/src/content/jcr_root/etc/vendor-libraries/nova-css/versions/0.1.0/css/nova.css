@@ -1,0 +1,53 @@
+/* Nova CSS 0.1.0 — Foundation */
+:root {
+    --nova-primary: #0a1628;
+    --nova-accent: #00d4ff;
+    --nova-bg: #0d1b2a;
+    --nova-surface: #1b2838;
+    --nova-text: #e0e6ed;
+    --nova-heading: #ffffff;
+    --nova-border: rgba(0, 212, 255, 0.15);
+    --nova-glow: 0 0 20px rgba(0, 212, 255, 0.15);
+    --nova-radius: 8px;
+    --nova-transition: 0.3s ease;
+}
+
+/* Section */
+.nova-section {
+    padding: 4rem 0;
+    background-color: var(--nova-bg);
+    color: var(--nova-text);
+}
+.nova-section .nova-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Grid */
+.nova-grid {
+    display: grid;
+    gap: 2rem;
+}
+.nova-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.nova-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Heading */
+.nova-heading {
+    color: var(--nova-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* Image */
+.nova-image {
+    border-radius: var(--nova-radius);
+    overflow: hidden;
+    box-shadow: var(--nova-glow);
+}
+.nova-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
