@@ -23,5 +23,14 @@
     <uk-heading-3xlarge jcr:primaryType="kes:ComponentVariation"
                           jcr:title="XXX-Large"
                           inline="true"/>
+    <uk-text-small jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Text - Extra Small"
+                   inline="true"/>
+    <uk-text-default jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Text - Default"
+                     inline="true"/>
+    <uk-text-large jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Text - Large"
+                   inline="true"/>
 
 </jcr:root>
