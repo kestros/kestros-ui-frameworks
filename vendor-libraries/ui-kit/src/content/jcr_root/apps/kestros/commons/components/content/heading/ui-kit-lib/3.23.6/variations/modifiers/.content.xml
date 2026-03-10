@@ -11,4 +11,7 @@
     <uk-heading-bullet jcr:primaryType="kes:ComponentVariation"
                       jcr:title="Bullet"
                       inline="true"/>
+    <uk-card-title jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Card Title"
+                   inline="true"/>
 </jcr:root>

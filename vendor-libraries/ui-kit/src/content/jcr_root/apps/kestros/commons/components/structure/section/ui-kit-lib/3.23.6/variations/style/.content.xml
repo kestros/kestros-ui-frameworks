@@ -5,6 +5,9 @@
           jcr:title="Style"
           jcr:description=""
           mutuallyExclusive="true">
+    <uk-section-default jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Default"
+                   inline="true"/>
     <uk-section-primary jcr:primaryType="kes:ComponentVariation"
                    jcr:title="Primary"
                    inline="true"/>
