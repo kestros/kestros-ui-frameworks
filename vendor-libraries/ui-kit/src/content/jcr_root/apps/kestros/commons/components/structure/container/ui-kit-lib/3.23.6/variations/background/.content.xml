@@ -6,15 +6,15 @@
           jcr:description=""
           mutuallyExclusive="true">
     <uk-background-default jcr:primaryType="kes:ComponentVariation"
-                   jcr:title="Default"
-                   inline="true"/>
+                           jcr:title="Default"
+                           inline="true"/>
     <uk-background-muted jcr:primaryType="kes:ComponentVariation"
-                     jcr:title="Muted"
-                     inline="true"/>
+                         jcr:title="Muted"
+                         inline="true"/>
     <uk-background-primary jcr:primaryType="kes:ComponentVariation"
-                        jcr:title="Primary"
-                        inline="true"/>
+                           jcr:title="Primary"
+                           inline="true"/>
     <uk-background-secondary jcr:primaryType="kes:ComponentVariation"
-                        jcr:title="Secondary"
-                        inline="true"/>
+                             jcr:title="Secondary"
+                             inline="true"/>
 </jcr:root>

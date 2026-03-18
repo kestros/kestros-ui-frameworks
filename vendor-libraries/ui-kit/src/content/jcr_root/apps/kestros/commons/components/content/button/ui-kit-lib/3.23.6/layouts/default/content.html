@@ -15,11 +15,11 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.button="${'io.kestros.cms.components.basic.core.content.button.ButtonDataSourceComponent'}"/>
+<sly data-sly-use.button="${'io.kestros.cms.components.basic.content.button.ButtonComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<a class="uk-button ${button.inlineVariations}"
+<a class="uk-button ${context.inlineVariations}"
    href="${button.href @ context='uri'}"
-   target="${button.targetAsString}"
+   target="${button.target}"
    aria-label="${button.ariaLabel}"
-   aria-disabled="${button.disabled}"
-   title="${button.title}">${button.text}</a>
+   title="${button.anchorTitle}">${button.label}</a>

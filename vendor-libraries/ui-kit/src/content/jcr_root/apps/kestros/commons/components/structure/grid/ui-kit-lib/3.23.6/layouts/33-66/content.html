@@ -15,9 +15,10 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.grid="${'io.kestros.cms.components.basic.core.structure.grid.GridDataSourceComponent'}"/>
+<sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<div uk-grid class="uk-child-width-expand@s ${grid.inlineVariations}">
+<div uk-grid class="uk-child-width-expand@s ${context.inlineVariations}">
     <div class="uk-width-1-3@m">
         <sly data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
     </div>

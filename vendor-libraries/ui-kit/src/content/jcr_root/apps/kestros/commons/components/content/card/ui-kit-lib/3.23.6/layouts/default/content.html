@@ -1,15 +1,31 @@
-<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+<!--/*
+  ~      Copyright (C) 2020  Kestros, Inc.
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ~
+  */-->
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
-<div class="uk-card ${card.inlineVariations}">
-    <div class="uk-card-media-top" data-sly-test="${card.image}">
+<div class="uk-card uk-card-default ${context.inlineVariations}">
+    <div data-sly-test="${card.image}" class="uk-card-media-top">
         <sly data-sly-resource="${card.image}"/>
     </div>
     <div class="uk-card-body">
         <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
-        <p data-sly-test="${card.description}">
-            ${card.description}
-        </p>
+        <p data-sly-test="${card.description}">${card.description}</p>
+        <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
     </div>
-    <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
 </div>
-

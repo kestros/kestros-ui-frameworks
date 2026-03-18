@@ -16,9 +16,10 @@
   ~
   */-->
 
-<sly data-sly-use.alert="${'io.kestros.cms.components.basic.core.content.alert.AlertDataSourceComponent'}"/>
+<sly data-sly-use.alert="${'io.kestros.cms.components.basic.content.alert.AlertComponent'}"
+     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<div class="${alert.inlineVariations}" uk-alert>
+<div class="${context.inlineVariations}" uk-alert>
     <h3 data-sly-test="${alert.heading}">${alert.heading}</h3>
     <p data-sly-test="${alert.text}">${alert.text}</p>
 </div>
