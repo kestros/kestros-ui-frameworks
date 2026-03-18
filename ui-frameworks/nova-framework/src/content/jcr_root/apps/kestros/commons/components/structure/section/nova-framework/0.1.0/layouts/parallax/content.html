@@ -1,12 +1,12 @@
-<sly data-sly-use.container="${'io.kestros.cms.components.basic.structure.section.SectionComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.section="${'io.kestros.cms.components.basic.core.structure.section.SectionDataSourceComponent'}"/>
 
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
-<div class="nova-section rellax ${context.inlineVariations}" data-sly-element="${container.elementType}"
+<div class="nova-section rellax ${section.inlineVariations}" data-sly-element="${section.elementType}"
+     style="background-image: url(${section.backgroundImage @ context='uri'});"
      data-rellax-speed="-2">
     <div class="nova-container">
-        <sly data-sly-call="${includes.contentArea @ component = container}"/>
+        <sly data-sly-call="${includes.contentArea}"/>
     </div>
 </div>
 
