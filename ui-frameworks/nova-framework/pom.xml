@@ -34,7 +34,13 @@
 
   <name>Kestros Nova Framework</name>
   <description>UI framework wrapping nova-css with parallax and lazy loading framework views</description>
-  <packaging>bundle</packaging>
+  <packaging>content-package</packaging>
+
+  <scm>
+    <connection>scm:git:git://github.com/kestros/kestros-ui-frameworks.git</connection>
+    <developerConnection>scm:git:ssh://github.com/kestros/kestros-ui-frameworks.git</developerConnection>
+    <url>https://github.com/kestros/kestros-ui-frameworks</url>
+  </scm>
 
   <properties>
     <rootPackage>io.kestros.cms</rootPackage>
@@ -45,14 +51,6 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>src/main/java</sourceDirectory>
-    <testSourceDirectory>src/test/java</testSourceDirectory>
-    <resources>
-      <resource>
-        <directory>src/content/jcr_root</directory>
-      </resource>
-    </resources>
-
     <plugins>
       <plugin>
         <groupId>org.apache.jackrabbit</groupId>
@@ -71,7 +69,7 @@
         <configuration>
           <packageType>mixed</packageType>
           <failOnMissingEmbed>true</failOnMissingEmbed>
-          <accessControlHandling>merge</accessControlHandling>
+          <accessControlHandling>ignore</accessControlHandling>
           <allowIndexDefinitions>true</allowIndexDefinitions>
           <filterSource>${basedir}/src/content/META-INF/vault/filter.xml</filterSource>
         </configuration>
@@ -83,19 +81,6 @@
         <configuration>
           <failOnWarnings>true</failOnWarnings>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>bundle-manifest</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>manifest</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
