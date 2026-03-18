@@ -3,5 +3,5 @@
   "jcr:title": "Half Height",
   "jcr:description": "Sets the Hero to half page height",
   "inline": true,
-  "group": "colors"
+  "group": "size"
 }
