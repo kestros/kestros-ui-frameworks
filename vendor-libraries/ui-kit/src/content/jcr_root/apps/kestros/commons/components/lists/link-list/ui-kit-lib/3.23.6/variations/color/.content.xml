@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Marker Color"
+          jcr:description=""
+          mutuallyExclusive="true">
+    <uk-list-muted jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Muted"
+                   inline="true"/>
+    <uk-list-emphasis jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Emphasis"
+                      inline="true"/>
+    <uk-list-primary jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Primary"
+                     inline="true"/>
+    <uk-list-secondary jcr:primaryType="kes:ComponentVariation"
+                       jcr:title="Secondary"
+                       inline="true"/>
+</jcr:root>

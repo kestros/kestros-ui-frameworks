@@ -1,0 +1,15 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+
+<div class="uk-card ${card.inlineVariations}">
+    <div class="uk-card-media-top" data-sly-test="${card.image}">
+        <sly data-sly-resource="${card.image}"/>
+    </div>
+    <div class="uk-card-body">
+        <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
+        <p data-sly-test="${card.description}">
+            ${card.description}
+        </p>
+    </div>
+    <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
+</div>
+

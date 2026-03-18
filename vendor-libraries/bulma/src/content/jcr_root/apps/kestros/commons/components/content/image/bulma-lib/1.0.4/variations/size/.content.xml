@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Size"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <is-16x16 jcr:primaryType="kes:ComponentVariation"
+              jcr:title="16x16"
+              inline="true"/>
+    <is-24x24 jcr:primaryType="kes:ComponentVariation"
+              jcr:title="24x24"
+              inline="true"/>
+    <is-32x32 jcr:primaryType="kes:ComponentVariation"
+              jcr:title="32x32"
+              inline="true"/>
+    <is-48x48 jcr:primaryType="kes:ComponentVariation"
+              jcr:title="48x48"
+              inline="true"/>
+    <is-64x64 jcr:primaryType="kes:ComponentVariation"
+              jcr:title="64x64"
+              inline="true"/>
+    <is-96x96 jcr:primaryType="kes:ComponentVariation"
+              jcr:title="96x96"
+              inline="true"/>
+    <is-128x128 jcr:primaryType="kes:ComponentVariation"
+                jcr:title="128x128"
+                inline="true"/>
+</jcr:root>

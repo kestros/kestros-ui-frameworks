@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Size"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <is-widescreen jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Widescreen"
+                   inline="true"/>
+    <is-fullhd jcr:primaryType="kes:ComponentVariation"
+               jcr:title="Full HD"
+               inline="true"/>
+    <is-max-desktop jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Max Desktop"
+                    inline="true"/>
+    <is-max-widescreen jcr:primaryType="kes:ComponentVariation"
+                       jcr:title="Max Widescreen"
+                       inline="true"/>
+</jcr:root>

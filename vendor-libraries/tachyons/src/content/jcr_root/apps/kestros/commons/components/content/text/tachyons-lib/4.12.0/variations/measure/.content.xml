@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Measure"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <measure jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Measure (30em)"
+             inline="true"/>
+    <measure-wide jcr:primaryType="kes:ComponentVariation"
+                  jcr:title="Wide (34em)"
+                  inline="true"/>
+    <measure-narrow jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Narrow (20em)"
+                    inline="true"/>
+</jcr:root>

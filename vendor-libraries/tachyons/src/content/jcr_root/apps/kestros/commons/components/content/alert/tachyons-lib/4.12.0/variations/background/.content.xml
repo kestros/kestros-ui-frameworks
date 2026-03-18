@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Background"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <bg-washed-yellow jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Washed Yellow"
+                      inline="true"/>
+    <bg-washed-red jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Washed Red"
+                   inline="true"/>
+    <bg-washed-green jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Washed Green"
+                     inline="true"/>
+    <bg-washed-blue jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Washed Blue"
+                    inline="true"/>
+    <bg-light-red jcr:primaryType="kes:ComponentVariation"
+                  jcr:title="Light Red"
+                  inline="true"/>
+    <bg-light-yellow jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Light Yellow"
+                     inline="true"/>
+    <bg-light-green jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Light Green"
+                    inline="true"/>
+    <bg-lightest-blue jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Lightest Blue"
+                      inline="true"/>
+</jcr:root>

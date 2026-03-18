@@ -10,17 +10,17 @@
         <version>0.1.2</version>
     </parent>
 
-    <groupId>io.kestros.samples</groupId>
+    <groupId>io.kestros.cms</groupId>
     <artifactId>uikit-framework</artifactId>
 
     <version>0.0.1</version>
 
-    <name>Tachyons Framework</name>
+    <name>UIkit Framework</name>
 
     <packaging>bundle</packaging>
 
     <properties>
-        <rootPackage>io.kestros.samples</rootPackage>
+        <rootPackage>io.kestros.cms</rootPackage>
         <bundleCategory>${organization.name}</bundleCategory>
     </properties>
 

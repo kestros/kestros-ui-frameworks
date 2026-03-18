@@ -1,0 +1,26 @@
+<sly data-sly-use.image="${'io.kestros.cms.components.basic.core.content.image.ImageDataSourceComponent'}"/>
+
+<sly data-sly-test="${!image.caption}">
+    <sly data-sly-test="${!image.href}">
+        <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
+    </sly>
+    <sly data-sly-test="${image.href}">
+        <a href="${image.href}" aria-label="${image.ariaLabel}" title="${image.imageTitle}" target="${image.targetAsString}">
+            <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
+        </a>
+    </sly>
+</sly>
+
+<sly data-sly-test="${image.caption}">
+    <figure>
+        <sly data-sly-test="${!image.href}">
+            <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
+        </sly>
+        <sly data-sly-test="${image.href}">
+            <a href="${image.href}" aria-label="${image.ariaLabel}" title="${image.imageTitle}" target="${image.targetAsString}">
+                <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
+            </a>
+        </sly>
+        <figcaption>${image.caption}</figcaption>
+    </figure>
+</sly>

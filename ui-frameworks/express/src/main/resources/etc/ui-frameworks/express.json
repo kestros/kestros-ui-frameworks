@@ -1,7 +1,0 @@
-{
-  "jcr:primaryType": "kes:ManagedUiFramework",
-  "jcr:title": "Express",
-  "jcr:description": "Generic usage of the Bootstrap framework, with FontAwesome providing icons.",
-  "kes:uiFrameworkCode": "express",
-  "fontAwesomeIcon": "fab fa-bootstrap"
-}

@@ -1,0 +1,24 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+
+
+<div class="uk-card ${card.inlineVariations}">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="${card.imageElement.imagePath}"
+                     alt="Avatar">
+            </div>
+            <div class="uk-width-expand">
+                <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
+            </div>
+        </div>
+    </div>
+
+    <div data-sly-test="${card.description}" class="uk-card-body">
+        <p>${card.description}</p>
+    </div>
+    <div class="uk-card-footer" data-sly-test="${card.buttonGroup}">
+        <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
+    </div>
+</div>
+

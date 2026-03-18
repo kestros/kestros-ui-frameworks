@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Size"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <is-1 jcr:primaryType="kes:ComponentVariation"
+          jcr:title="Size 1"
+          inline="true"/>
+    <is-2 jcr:primaryType="kes:ComponentVariation"
+          jcr:title="Size 2"
+          inline="true"/>
+    <is-3 jcr:primaryType="kes:ComponentVariation"
+          jcr:title="Size 3"
+          inline="true"/>
+    <is-4 jcr:primaryType="kes:ComponentVariation"
+          jcr:title="Size 4"
+          inline="true"/>
+    <is-5 jcr:primaryType="kes:ComponentVariation"
+          jcr:title="Size 5"
+          inline="true"/>
+    <is-6 jcr:primaryType="kes:ComponentVariation"
+          jcr:title="Size 6"
+          inline="true"/>
+</jcr:root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Style"
+          jcr:description=""
+          mutuallyExclusive="true">
+    <nova-button-filled jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Filled"
+                        inline="true"/>
+    <nova-button-outline jcr:primaryType="kes:ComponentVariation"
+                         jcr:title="Outline"
+                         inline="true"/>
+    <nova-button-text jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Text"
+                      inline="true"/>
+</jcr:root>

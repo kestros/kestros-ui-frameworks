@@ -1,7 +1,0 @@
-{
-  "jcr:primaryType": "kes:VendorLibrary",
-  "jcr:title": "Bulma",
-  "jcr:description": "the modern CSS framework that just works.",
-  "fontAwesomeIcon": "fab fa-js",
-  "documentationUrl": "https://jquery.com/"
-}

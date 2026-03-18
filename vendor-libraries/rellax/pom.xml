@@ -24,16 +24,16 @@
 
   <parent>
     <groupId>io.kestros.cms</groupId>
-    <artifactId>kestros-vendor-libraries</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>kestros-site-parent</artifactId>
+    <version>0.1.2</version>
   </parent>
 
   <groupId>io.kestros.vendor-libraries</groupId>
   <artifactId>kestros-rellax</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
 
   <name>Kestros Rellax</name>
-  <description></description>
+  <description>Vanilla javascript parallax library.</description>
   <packaging>bundle</packaging>
 
   <licenses>
@@ -50,79 +50,101 @@
     <url>https://github.com/kestros/kestros-ui-frameworks/tree/master</url>
   </scm>
 
-
   <properties>
-    <bundleCategory>kestros</bundleCategory>
-    <skipTests>false</skipTests>
-    <sonar.language>js</sonar.language>
-    <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
-    <sonar.javascript.lcov.reportPaths>coverage/lcov.info</sonar.javascript.lcov.reportPaths>
+    <rootPackage>io.kestros.vendor-libraries</rootPackage>
+    <bundleCategory>${organization.name}</bundleCategory>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.scripting.sightly.runtime</artifactId>
-      <version>1.0.0-1.4.0</version>
-    </dependency>
   </dependencies>
 
   <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <resources>
       <resource>
-        <directory>src/main/resources</directory>
+        <directory>src/content/jcr_root</directory>
       </resource>
     </resources>
 
     <plugins>
-      <!--      <plugin>-->
-      <!--        <groupId>org.apache.rat</groupId>-->
-      <!--        <artifactId>apache-rat-plugin</artifactId>-->
-      <!--        <version>0.13</version>-->
-      <!--        <configuration>-->
-      <!--          <excludes>-->
-      <!--            &lt;!&ndash; don't check anything in target &ndash;&gt;-->
-      <!--            <exclude>target/*</exclude>-->
-      <!--            &lt;!&ndash; Fixing issues with deleted modules &ndash;&gt;-->
-      <!--            <exclude>**/target/*</exclude>-->
-      <!--            <exclude>**/target/**/*</exclude>-->
-      <!--            <exclude>**/*.json</exclude>-->
-      <!--            <exclude>node/**/*</exclude>-->
-      <!--            <exclude>node_modules/**/*</exclude>-->
-      <!--            <exclude>**/README.md</exclude>-->
-      <!--            <exclude>package.json</exclude>-->
-      <!--            <exclude>package-lock.json</exclude>-->
-      <!--            <exclude>*-maven-settings.xml</exclude>-->
-      <!--            <exclude>src/main/resources/etc/vendor-libraries/bootstrap/**/*</exclude>-->
-      <!--            <exclude>src/main/resources/etc/vendor-libraries/font-awesome-5-11-2/**/*</exclude>-->
-      <!--            <exclude>src/main/resources/etc/vendor-libraries/bulma/**/*</exclude>-->
-      <!--            <exclude>src/main/resources/etc/vendor-libraries/popper/**/*</exclude>-->
-      <!--            <exclude>src/main/resources/etc/vendor-libraries/semantic-ui/**/*</exclude>-->
-      <!--          </excludes>-->
-      <!--        </configuration>-->
-      <!--        <executions>-->
-      <!--          <execution>-->
-      <!--            <phase>verify</phase>-->
-      <!--            <goals>-->
-      <!--              <goal>check</goal>-->
-      <!--            </goals>-->
-      <!--          </execution>-->
-      <!--        </executions>-->
-      <!--      </plugin>-->
+      <plugin>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>filevault-package-maven-plugin</artifactId>
+        <version>1.3.6</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate-metadata</goal>
+              <goal>package</goal>
+              <goal>analyze-classes</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <packageType>mixed</packageType>
+          <failOnMissingEmbed>true</failOnMissingEmbed>
+          <accessControlHandling>merge</accessControlHandling>
+          <allowIndexDefinitions>true</allowIndexDefinitions>
+          <filterSource>${basedir}/src/content/META-INF/vault/filter.xml</filterSource>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>htl-maven-plugin</artifactId>
+        <version>1.2.2-1.4.0</version>
+        <configuration>
+          <failOnWarnings>true</failOnWarnings>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Sling-Initial-Content>
-              /etc/vendor-libraries;overwriteProperties:=true;path:=/etc/vendor-libraries
-            </Sling-Initial-Content>
-          </instructions>
-        </configuration>
+        <executions>
+          <execution>
+            <id>bundle-manifest</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>manifest</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
 
+  <profiles>
+    <profile>
+      <id>installPackage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.wcm.maven.plugins</groupId>
+            <artifactId>wcmio-content-package-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>install</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <serviceURL>
+                ${sling.protocol}://${sling.host}:${sling.port}/bin/cpm/package.service.html
+              </serviceURL>
+              <userId>${sling.username}</userId>
+              <password>${sling.password}</password>
+              <packageFile>target/${project.artifactId}-${project.version}.zip
+              </packageFile>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>installBundle</id>
+    </profile>
+  </profiles>
 
 </project>

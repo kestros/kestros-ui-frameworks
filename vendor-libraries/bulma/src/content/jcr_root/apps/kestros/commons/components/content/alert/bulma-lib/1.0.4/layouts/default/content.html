@@ -1,0 +1,5 @@
+<sly data-sly-use.alert="${'io.kestros.cms.components.basic.core.content.alert.AlertDataSourceComponent'}"/>
+<div class="notification ${alert.inlineVariations}">
+    <p data-sly-test="${alert.heading}" class="title is-5">${alert.heading}</p>
+    <p data-sly-test="${alert.text}">${alert.text}</p>
+</div>

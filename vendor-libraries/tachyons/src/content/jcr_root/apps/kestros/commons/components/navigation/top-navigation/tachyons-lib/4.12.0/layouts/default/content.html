@@ -1,0 +1,9 @@
+<sly data-sly-use.topNav="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationDataSourceComponent'}"/>
+<nav class="flex items-center justify-between ${topNav.inlineVariations}">
+    <a class="fw6 link">${topNav.brandName}</a>
+    <div class="flex">
+        <sly data-sly-list.item="${topNav.navigationLinks}">
+            <sly data-sly-resource="${item}"/>
+        </sly>
+    </div>
+</nav>

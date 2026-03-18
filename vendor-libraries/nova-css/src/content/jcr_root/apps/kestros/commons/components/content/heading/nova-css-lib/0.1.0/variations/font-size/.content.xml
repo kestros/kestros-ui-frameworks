@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Font Size"
+          jcr:description=""
+          mutuallyExclusive="true">
+    <nova-heading-small jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Small"
+                        inline="true"/>
+    <nova-heading-medium jcr:primaryType="kes:ComponentVariation"
+                         jcr:title="Medium"
+                         inline="true"/>
+    <nova-heading-large jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Large"
+                        inline="true"/>
+    <nova-heading-xlarge jcr:primaryType="kes:ComponentVariation"
+                         jcr:title="Extra Large"
+                         inline="true"/>
+    <nova-heading-hero jcr:primaryType="kes:ComponentVariation"
+                       jcr:title="Hero"
+                       inline="true"/>
+</jcr:root>

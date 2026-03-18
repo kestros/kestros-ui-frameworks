@@ -1,7 +1,0 @@
-{
-  "jcr:primaryType": "kes:ComponentVariation",
-  "jcr:title": "Expand Large",
-  "jcr:description": "Navbar will show on large viewports (and collapse on anything smaller).",
-  "inline": true,
-  "default": true
-}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Modifiers"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}false">
+    <inverted jcr:primaryType="kes:ComponentVariation"
+              jcr:title="Inverted"
+              inline="true"/>
+    <secondary jcr:primaryType="kes:ComponentVariation"
+               jcr:title="Secondary"
+               inline="true"/>
+    <pointing jcr:primaryType="kes:ComponentVariation"
+              jcr:title="Pointing"
+              inline="true"/>
+    <tabular jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Tabular"
+             inline="true"/>
+    <stackable jcr:primaryType="kes:ComponentVariation"
+               jcr:title="Stackable"
+               inline="true"/>
+    <borderless jcr:primaryType="kes:ComponentVariation"
+                jcr:title="Borderless"
+                inline="true"/>
+    <compact jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Compact"
+             inline="true"/>
+    <fluid jcr:primaryType="kes:ComponentVariation"
+           jcr:title="Fluid"
+           inline="true"/>
+</jcr:root>

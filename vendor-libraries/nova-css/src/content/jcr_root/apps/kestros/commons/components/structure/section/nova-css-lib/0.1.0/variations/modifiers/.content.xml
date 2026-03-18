@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Modifiers"
+          jcr:description=""
+          mutuallyExclusive="false">
+    <nova-section-full-bleed jcr:primaryType="kes:ComponentVariation"
+                             jcr:title="Full Bleed"
+                             inline="true"/>
+    <nova-section-no-padding jcr:primaryType="kes:ComponentVariation"
+                             jcr:title="No Padding"
+                             inline="true"/>
+</jcr:root>

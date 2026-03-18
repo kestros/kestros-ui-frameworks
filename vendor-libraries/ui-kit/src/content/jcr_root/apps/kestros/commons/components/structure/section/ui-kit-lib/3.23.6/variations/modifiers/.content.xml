@@ -12,5 +12,8 @@
     <uk-padding-remove-vertical jcr:primaryType="kes:ComponentVariation"
                         jcr:title="Remove Vertical Padding"
                         inline="true"/>
+    <uk-section-overlap jcr:primaryType="kes:ComponentVariation"
+                       jcr:title="Section Overlap"
+                       inline="true"/>
 
 </jcr:root>

@@ -1,0 +1,10 @@
+<sly data-sly-use.breadcrumbs="${'io.kestros.cms.components.basic.core.navigation.breadcrumbs.BreadCrumbsDataSourceComponent'}"/>
+<nav class="flex ${breadcrumbs.inlineVariations}" aria-label="breadcrumb">
+    <ol class="flex space-x-2">
+        <sly data-sly-list.crumb="${breadcrumbs.links}">
+            <li>
+                <sly data-sly-resource="${crumb}"/>
+            </li>
+        </sly>
+    </ol>
+</nav>

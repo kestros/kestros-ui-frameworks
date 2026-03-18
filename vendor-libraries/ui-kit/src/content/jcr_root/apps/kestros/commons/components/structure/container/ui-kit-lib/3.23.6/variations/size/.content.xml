@@ -17,4 +17,7 @@
     <uk-container-xlarge jcr:primaryType="kes:ComponentVariation"
                         jcr:title="Extra Large"
                         inline="true"/>
+    <uk-container-expand jcr:primaryType="kes:ComponentVariation"
+                        jcr:title="Expand"
+                        inline="true"/>
 </jcr:root>

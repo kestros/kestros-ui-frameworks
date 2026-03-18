@@ -1,0 +1,8 @@
+<sly data-sly-use.grid="${'io.kestros.cms.components.basic.core.structure.grid.GridDataSourceComponent'}"/>
+<div class="ui grid ${grid.inlineVariations}">
+    <sly data-sly-list.column="${grid.columns}">
+        <div class="column">
+            <sly data-sly-resource="${column}"/>
+        </div>
+    </sly>
+</div>

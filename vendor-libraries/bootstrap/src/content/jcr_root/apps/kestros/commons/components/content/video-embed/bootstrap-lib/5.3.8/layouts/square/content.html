@@ -1,0 +1,4 @@
+<sly data-sly-use.videoEmbed="${'io.kestros.cms.components.basic.core.content.videoembed.VideoEmbedDataSourceComponent'}"/>
+<div class="ratio ratio-1x1 ${videoEmbed.inlineVariations}">
+    ${videoEmbed.videoEmbedCode @ context='html'}
+</div>

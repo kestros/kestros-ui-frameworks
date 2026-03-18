@@ -1,6 +1,0 @@
-{
-  "jcr:primaryType": "kes:ComponentVariationGroup",
-  "jcr:title": "Sizes",
-  "fontAwesomeIcon": "fas fa-text-height",
-  "mutuallyExclusive": true
-}

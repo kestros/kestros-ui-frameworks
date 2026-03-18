@@ -1,0 +1,7 @@
+<sly data-sly-use.link="${'io.kestros.cms.components.basic.core.content.link.LinkDataSourceComponent'}"/>
+
+<a class="${link.inlineVariations}"
+   href="${link.href @ context='uri'}"
+   target="${link.targetAsString}"
+   aria-label="${link.ariaLabel}"
+   title="${link.title}">${link.text}</a>
