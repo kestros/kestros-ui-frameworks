@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "primary",
+  "jcr:description": "Bulma hero primary color.",
+  "inline": true,
+  "group": "colors"
+}

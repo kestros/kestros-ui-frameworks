@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "rounded",
+  "jcr:description": "Bulma rounded style.",
+  "inline": true
+}

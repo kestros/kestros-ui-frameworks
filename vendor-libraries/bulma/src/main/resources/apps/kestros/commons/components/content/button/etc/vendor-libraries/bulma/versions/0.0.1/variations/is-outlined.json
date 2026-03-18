@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "outlined",
+  "jcr:description": "Bulma outlined style.",
+  "inline": true
+}

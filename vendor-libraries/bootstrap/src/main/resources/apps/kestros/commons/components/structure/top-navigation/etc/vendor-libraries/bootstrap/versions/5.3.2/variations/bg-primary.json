@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ComponentVariation",
+  "jcr:title": "Primary Background",
+  "jcr:description": "Primary background color.",
+  "inline": true
+}

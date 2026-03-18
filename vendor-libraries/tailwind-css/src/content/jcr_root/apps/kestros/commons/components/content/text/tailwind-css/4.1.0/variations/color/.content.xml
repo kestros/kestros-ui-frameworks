@@ -5,11 +5,14 @@
           jcr:title="Color"
           jcr:description=""
           mutuallyExclusive="true">
-    <text-white jcr:primaryType="kes:ComponentVariation"
-                   jcr:title="Light"
-                   inline="true"/>
     <text-gray-900 jcr:primaryType="kes:ComponentVariation"
                    jcr:title="Dark"
+                   inline="true"/>
+    <text-gray-500 jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Gray"
+                   inline="true"/>
+    <text-white jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="White"
                    inline="true"/>
     <text-blue-600 jcr:primaryType="kes:ComponentVariation"
                    jcr:title="Blue"
