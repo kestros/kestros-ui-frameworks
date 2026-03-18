@@ -13,7 +13,7 @@
     <groupId>io.kestros.samples</groupId>
     <artifactId>nova-css-library</artifactId>
 
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>Nova CSS UI Library</name>
 

@@ -1,7 +1,6 @@
-<sly data-sly-use.card="${'io.kestros.cms.components.basic.content.card.CardComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
 
-<div class="nova-card ${context.inlineVariations}">
+<div class="nova-card ${card.inlineVariations}">
     <sly data-sly-test="${card.imageElement.imagePath}">
         <img class="nova-card-img" src="${card.imageElement.imagePath}" alt="${card.imageElement.altText}"/>
     </sly>

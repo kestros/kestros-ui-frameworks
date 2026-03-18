@@ -1,4 +1,3 @@
-<sly data-sly-use.heading="${'io.kestros.cms.components.basic.content.heading.HeadingComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.heading="${'io.kestros.cms.components.basic.core.content.heading.HeadingStaticDataSource'}"/>
 
-<h1 data-sly-element="${heading.headingType}" class="nova-heading ${context.inlineVariations}">${heading.headingText}</h1>
+<h1 data-sly-element="${heading.headingType}" class="nova-heading ${heading.inlineVariations}">${heading.headingText}</h1>
