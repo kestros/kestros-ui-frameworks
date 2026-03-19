@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
+
+    <filter root="/apps/kestros/commons/components">
+        <include pattern="^/apps/kestros/commons/components(/.*/bloom(/.*)?)?$"/>
+    </filter>
+
     <filter root="/etc/ui-frameworks/bloom"/>
+
 </workspaceFilter>

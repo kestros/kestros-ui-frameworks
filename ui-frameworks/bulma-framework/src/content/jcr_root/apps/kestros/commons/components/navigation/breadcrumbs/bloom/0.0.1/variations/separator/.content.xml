@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Separator"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <has-arrow-separator jcr:primaryType="kes:ComponentVariation"
+                         jcr:title="Arrow"
+                         inline="true"/>
+    <has-bullet-separator jcr:primaryType="kes:ComponentVariation"
+                          jcr:title="Bullet"
+                          inline="true"/>
+    <has-dot-separator jcr:primaryType="kes:ComponentVariation"
+                       jcr:title="Dot"
+                       inline="true"/>
+    <has-succeeds-separator jcr:primaryType="kes:ComponentVariation"
+                            jcr:title="Succeeds"
+                            inline="true"/>
+</jcr:root>

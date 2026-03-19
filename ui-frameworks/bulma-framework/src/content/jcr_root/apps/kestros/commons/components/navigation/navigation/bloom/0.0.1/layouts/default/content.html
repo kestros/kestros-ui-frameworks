@@ -1,0 +1,8 @@
+<sly data-sly-use.nav="${'io.kestros.cms.components.basic.core.navigation.nav.NavigationDataSourceComponent'}"/>
+<aside class="menu ${nav.inlineVariations}">
+    <ul class="menu-list">
+        <sly data-sly-list.item="${nav.navigationLinks}">
+            <li><sly data-sly-resource="${item}"/></li>
+        </sly>
+    </ul>
+</aside>
