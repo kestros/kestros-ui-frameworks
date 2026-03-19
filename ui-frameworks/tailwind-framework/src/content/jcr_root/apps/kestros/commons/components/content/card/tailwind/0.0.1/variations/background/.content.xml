@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Background"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <bg-white jcr:primaryType="kes:ComponentVariation"
+             jcr:title="White"
+             inline="true"/>
+    <bg-gray-50 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Gray 50"
+             inline="true"/>
+    <bg-gray-100 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Gray 100"
+             inline="true"/>
+    <bg-blue-50 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Blue 50"
+             inline="true"/>
+</jcr:root>

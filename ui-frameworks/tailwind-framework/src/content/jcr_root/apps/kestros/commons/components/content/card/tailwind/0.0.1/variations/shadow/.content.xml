@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Shadow"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <shadow-sm jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Small"
+             inline="true"/>
+    <shadow jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Medium"
+             inline="true"/>
+    <shadow-md jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Large"
+             inline="true"/>
+    <shadow-lg jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Extra Large"
+             inline="true"/>
+    <shadow-none jcr:primaryType="kes:ComponentVariation"
+             jcr:title="None"
+             inline="true"/>
+</jcr:root>

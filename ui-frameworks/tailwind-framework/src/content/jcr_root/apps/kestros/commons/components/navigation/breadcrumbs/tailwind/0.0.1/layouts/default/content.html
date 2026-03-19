@@ -1,0 +1,7 @@
+<sly data-sly-use.breadcrumbs="${'io.kestros.cms.components.basic.core.navigation.breadcrumbs.BreadCrumbsDataSourceComponent'}"/>
+<nav class="flex items-center text-sm text-gray-500 ${breadcrumbs.inlineVariations}">
+    <sly data-sly-list.crumb="${breadcrumbs.links}">
+        <span data-sly-test="${\!itemList.first}" class="mx-2">/</span>
+        <sly data-sly-resource="${crumb}"/>
+    </sly>
+</nav>

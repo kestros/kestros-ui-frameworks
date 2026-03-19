@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Font Size"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <text-xs jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Extra Small"
+             inline="true"/>
+    <text-sm jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Small"
+             inline="true"/>
+    <text-base jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Base"
+             inline="true"/>
+    <text-lg jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Large"
+             inline="true"/>
+    <text-xl jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Extra Large"
+             inline="true"/>
+</jcr:root>

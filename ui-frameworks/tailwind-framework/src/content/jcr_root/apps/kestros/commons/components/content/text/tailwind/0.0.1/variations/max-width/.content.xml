@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Max Width"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <max-w-xs jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Extra Small"
+             inline="true"/>
+    <max-w-sm jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Small"
+             inline="true"/>
+    <max-w-md jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Medium"
+             inline="true"/>
+    <max-w-lg jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Large"
+             inline="true"/>
+    <max-w-xl jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Extra Large"
+             inline="true"/>
+    <max-w-prose jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Prose"
+             inline="true"/>
+</jcr:root>

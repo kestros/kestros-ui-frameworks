@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Padding"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <py-4 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Small"
+             inline="true"/>
+    <py-8 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Medium"
+             inline="true"/>
+    <py-12 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Large"
+             inline="true"/>
+    <py-16 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Extra Large"
+             inline="true"/>
+    <py-24 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="2XL"
+             inline="true"/>
+</jcr:root>

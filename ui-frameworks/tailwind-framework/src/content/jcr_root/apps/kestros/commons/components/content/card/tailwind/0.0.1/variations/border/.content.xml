@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Border"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <border jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Default"
+             inline="true"/>
+    <border-2 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Thick"
+             inline="true"/>
+    <border-gray-200 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Gray"
+             inline="true"/>
+    <border-gray-300 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Dark Gray"
+             inline="true"/>
+    <border-blue-200 jcr:primaryType="kes:ComponentVariation"
+             jcr:title="Blue"
+             inline="true"/>
+</jcr:root>
