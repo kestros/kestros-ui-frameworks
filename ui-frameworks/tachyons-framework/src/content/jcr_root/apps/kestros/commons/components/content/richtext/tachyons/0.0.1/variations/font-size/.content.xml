@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Font Size"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <f1 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F1 (3rem)"
+        inline="true"/>
+    <f2 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F2 (2.25rem)"
+        inline="true"/>
+    <f3 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F3 (1.5rem)"
+        inline="true"/>
+    <f4 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F4 (1.25rem)"
+        inline="true"/>
+    <f5 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F5 (1rem)"
+        inline="true"/>
+    <f6 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F6 (0.875rem)"
+        inline="true"/>
+    <f7 jcr:primaryType="kes:ComponentVariation"
+        jcr:title="F7 (0.75rem)"
+        inline="true"/>
+</jcr:root>

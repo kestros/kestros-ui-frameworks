@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Padding"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <pa1 jcr:primaryType="kes:ComponentVariation"
+         jcr:title="Extra Small"
+         inline="true"/>
+    <pa2 jcr:primaryType="kes:ComponentVariation"
+         jcr:title="Small"
+         inline="true"/>
+    <pa3 jcr:primaryType="kes:ComponentVariation"
+         jcr:title="Medium"
+         inline="true"/>
+    <pa4 jcr:primaryType="kes:ComponentVariation"
+         jcr:title="Large"
+         inline="true"/>
+</jcr:root>
