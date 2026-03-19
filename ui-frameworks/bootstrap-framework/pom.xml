@@ -86,7 +86,7 @@
             <configuration>
                 <packageType>mixed</packageType>
                 <failOnMissingEmbed>true</failOnMissingEmbed>
-                <accessControlHandling>merge</accessControlHandling>
+                <accessControlHandling>ignore</accessControlHandling>
                 <allowIndexDefinitions>true</allowIndexDefinitions>
                 <filterSource>${basedir}/src/content/META-INF/vault/filter.xml</filterSource>
             </configuration>
