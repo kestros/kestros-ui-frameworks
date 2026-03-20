@@ -6,4 +6,4 @@
           jcr:title="Bloom 0.0.1"
           jcr:description=""
           kes:uiFrameworkCode="bloom"
-          kes:vendorLibraries="[bulma/0.9.1]"/>
+          kes:vendorLibraries="[bulma/1.0.4]"/>
