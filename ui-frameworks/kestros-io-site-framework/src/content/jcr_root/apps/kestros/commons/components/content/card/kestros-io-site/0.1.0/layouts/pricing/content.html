@@ -1,0 +1,7 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+<div class="box h-100 d-flex flex-column ${card.inlineVariations}">
+    <h3 data-sly-test="${card.titleElement}">${card.titleElement.headingText}</h3>
+    <p data-sly-test="${card.description}" class="text-muted">${card.description}</p>
+    <hr/>
+    <sly data-sly-test="${card.buttonGroupElement}" data-sly-resource="${card.buttonGroupElement}"/>
+</div>

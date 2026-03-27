@@ -1,0 +1,5 @@
+<sly data-sly-use.topNavItem="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationItemDataSourceComponent'}"/>
+<li>
+    <a class="nav-link scrollto${topNavItem.active ? ' active' : ''} ${topNavItem.inlineVariations}"
+       href="${topNavItem.href}">${topNavItem.text}</a>
+</li>

@@ -1,0 +1,19 @@
+<sly data-sly-use.topNav="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationDataSourceComponent'}"/>
+<header id="header" class="header fixed-top ${topNav.inlineVariations}">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="${topNav.navigationLinkElements[0].href @ context='uri'}" class="logo d-flex align-items-center">
+            <sly data-sly-test="${topNav.imageElement}">
+                <img src="${topNav.imageElement.imagePath}" alt="${topNav.brandName}"/>
+            </sly>
+            <span>${topNav.brandName}</span>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <sly data-sly-list.item="${topNav.navigationLinkElements}">
+                    <sly data-sly-resource="${item}"/>
+                </sly>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>
