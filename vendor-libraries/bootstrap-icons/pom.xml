@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>io.kestros.vendor-libraries</groupId>
-    <artifactId>animate-on-scroll-library</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
-    <name>Animate On Scroll Library</name>
+    <artifactId>bootstrap-icons-library</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Bootstrap Icons Library</name>
     <packaging>bundle</packaging>
 
     <properties>

@@ -11,15 +11,15 @@
         <relativePath/>
     </parent>
 
-    <groupId>io.kestros.vendor-libraries</groupId>
-    <artifactId>animate-on-scroll-library</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
-    <name>Animate On Scroll Library</name>
+    <groupId>io.kestros.cms</groupId>
+    <artifactId>kestros-io-site-framework</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Kestros IO Site Framework</name>
     <packaging>bundle</packaging>
 
     <properties>
         <bundleCategory>kestros</bundleCategory>
-        <rootPackage>io.kestros.vendor-libraries</rootPackage>
+        <rootPackage>io.kestros.cms</rootPackage>
     </properties>
 
     <build>
