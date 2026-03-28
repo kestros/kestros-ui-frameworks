@@ -1,7 +1,7 @@
 <sly data-sly-use.topNav="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationDataSourceComponent'}"/>
 <header id="header" class="header fixed-top ${topNav.inlineVariations}">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <a href="${topNav.navigationLinkElements[0].href @ context='uri'}" class="logo d-flex align-items-center">
+        <a href="/" class="logo d-flex align-items-center">
             <sly data-sly-test="${topNav.imageElement}">
                 <img src="${topNav.imageElement.imagePath}" alt="${topNav.brandName}"/>
             </sly>
@@ -9,7 +9,7 @@
         </a>
         <nav id="navbar" class="navbar">
             <ul>
-                <sly data-sly-list.item="${topNav.navigationLinkElements}">
+                <sly data-sly-list.item="${topNav.navigationLinks}">
                     <sly data-sly-resource="${item}"/>
                 </sly>
             </ul>

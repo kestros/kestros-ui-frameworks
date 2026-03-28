@@ -1,7 +1,9 @@
 <sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
-<div class="box h-100 d-flex flex-column ${card.inlineVariations}">
+<div class="box ${card.inlineVariations}" data-aos="zoom-in" data-aos-delay="100">
     <h3 data-sly-test="${card.titleElement}">${card.titleElement.headingText}</h3>
-    <p data-sly-test="${card.description}" class="text-muted">${card.description}</p>
-    <hr/>
-    <sly data-sly-test="${card.buttonGroupElement}" data-sly-resource="${card.buttonGroupElement}"/>
+    <img data-sly-test="${card.imageElement}" src="${card.imageElement.imagePath}" class="img-fluid" alt="${card.imageElement.altText}"/>
+    <sly data-sly-test="${card.description}">
+        <p class="description">${card.description}</p>
+    </sly>
+    <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
 </div>

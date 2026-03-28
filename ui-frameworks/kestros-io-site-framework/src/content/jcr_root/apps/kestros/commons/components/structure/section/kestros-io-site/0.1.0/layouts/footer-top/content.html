@@ -1,7 +1,9 @@
 <sly data-sly-use.section="${'io.kestros.cms.components.basic.core.structure.section.SectionDataSourceComponent'}"
      data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
-<section class="breadcrumbs ${section.inlineVariations}">
+<div class="footer-top ${section.inlineVariations}">
     <div class="container">
-        <sly data-sly-call="${includes.contentArea}"/>
+        <div class="row gy-4">
+            <sly data-sly-call="${includes.contentArea}"/>
+        </div>
     </div>
-</section>
+</div>
