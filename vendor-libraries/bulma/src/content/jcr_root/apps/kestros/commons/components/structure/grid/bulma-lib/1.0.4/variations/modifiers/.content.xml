@@ -4,20 +4,17 @@
           jcr:primaryType="kes:ComponentVariationGroup"
           jcr:title="Modifiers"
           jcr:description=""
-          mutuallyExclusive="{Boolean}false">
+          mutuallyExclusive="false">
     <is-multiline jcr:primaryType="kes:ComponentVariation"
                   jcr:title="Multiline"
                   inline="true"/>
-    <is-gapless jcr:primaryType="kes:ComponentVariation"
-                jcr:title="Gapless"
-                inline="true"/>
     <is-centered jcr:primaryType="kes:ComponentVariation"
                  jcr:title="Centered"
                  inline="true"/>
     <is-vcentered jcr:primaryType="kes:ComponentVariation"
                   jcr:title="Vertically Centered"
                   inline="true"/>
-    <is-mobile jcr:primaryType="kes:ComponentVariation"
-               jcr:title="Mobile"
-               inline="true"/>
+    <is-gapless jcr:primaryType="kes:ComponentVariation"
+                jcr:title="No Gap"
+                inline="true"/>
 </jcr:root>

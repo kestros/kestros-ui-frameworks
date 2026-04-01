@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Text Color"
+          jcr:description=""
+          mutuallyExclusive="{Boolean}true">
+    <has-text-white jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="White"
+                    inline="true"/>
+    <has-text-light jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Light"
+                    inline="true"/>
+</jcr:root>
