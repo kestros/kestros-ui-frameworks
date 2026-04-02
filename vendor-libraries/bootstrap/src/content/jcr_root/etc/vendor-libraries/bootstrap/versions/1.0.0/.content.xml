@@ -3,7 +3,7 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0"
           xmlns:kes="http://kestros.io/kes/1.0"
           jcr:primaryType="kes:VendorLibrary"
-          jcr:title="Semantic UI 2.4.1"
+          jcr:title="Bootstrap 1.0.0 (Bootstrap CSS 5.3.8)"
           jcr:description=""
-          kes:libraryCode="semantic-ui-lib"
+          kes:libraryCode="bootstrap-lib"
 />

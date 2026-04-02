@@ -6,4 +6,4 @@
           jcr:title="Semantic UI 0.0.1"
           jcr:description="Config-only framework referencing the Semantic UI vendor library."
           kes:uiFrameworkCode="semantic"
-          kes:vendorLibraries="[semantic-ui-lib/2.4.1]"/>
+          kes:vendorLibraries="[semantic-ui-lib/1.0.0]"/>
