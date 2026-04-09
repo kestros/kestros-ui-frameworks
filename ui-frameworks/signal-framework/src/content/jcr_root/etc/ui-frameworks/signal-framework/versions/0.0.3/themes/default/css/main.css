@@ -1,0 +1,691 @@
+body { margin: 0; }
+body .ui.menu { display: none; }
+body .ui.container { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+/* signal-conf theme overlay on the semantic-ui default theme.
+ *
+ * Semantic UI has a strong built-in look, but Kestros components
+ * can't pass UIKit-style modifier classes through inlineVariations
+ * (it's a variation-name lookup, not raw class pass-through). So
+ * this file targets the concrete markup the signal-conf site emits
+ * and applies the finishing layer directly — dark conference hero,
+ * bold editorial typography, card grids for speakers/sessions, and
+ * a sticky schedule table.
+ */
+
+/* ─── Base typography ─────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1d26;
+  background: #ffffff;
+  line-height: 1.55;
+}
+a { color: #e8513f; text-decoration: none; }
+a:hover { color: #b33626; }
+h1, h2, h3, h4 { font-family: 'Inter', -apple-system, sans-serif; color: #0b0d14; }
+
+/* ─── Top navigation ──────────────────────────────────────────────────── */
+body > div.component-inherited-content-area:first-of-type {
+  background: #0b0d14;
+  padding: 1.1rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1e2130;
+}
+body > div.component-inherited-content-area:first-of-type::before {
+  content: 'SIGNAL';
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  font-size: 1rem;
+  color: #e8513f;
+}
+body > div.component-inherited-content-area:first-of-type .ui.menu,
+body > div.component-inherited-content-area:first-of-type .ui.menu .item {
+  background: transparent !important;
+  border: none !important;
+  padding-left: 0;
+}
+body > div.component-inherited-content-area:first-of-type a {
+  color: #c8cbd6;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-left: 1.75rem;
+}
+body > div.component-inherited-content-area:first-of-type a:hover {
+  color: #ffffff;
+}
+/* Push the nav items to the right to leave room for the SIGNAL wordmark */
+body > div.component-inherited-content-area:first-of-type > .component-content-area,
+body > div.component-inherited-content-area:first-of-type > div:not(.component-inherited-content-area) {
+  text-align: right;
+}
+
+/* ─── Sections — first is hero, rest alternate ────────────────────────── */
+body > div:not(.component-inherited-content-area),
+body > div.ui.container,
+body > section,
+body > div[class*="section"] {
+  /* noop — Kestros structure/section outputs some vendor-specific class */
+}
+
+/* The Kestros structure/section HTL on semantic-ui wraps content in a
+ * <div class="ui segment ${section.inlineVariations}">. We want full-
+ * bleed hero + regular content sections. */
+body > div:not(.component-inherited-content-area) {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* First segment after header — dark editorial hero */
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) {
+  background: #0b0d14 !important;
+  color: #ffffff;
+  padding: 8rem 2rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(232, 81, 63, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 82% 72%, rgba(76, 127, 226, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(255, 183, 77, 0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) > * {
+  position: relative;
+  z-index: 1;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) h1 {
+  color: #ffffff;
+  font-size: 4.25rem;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  font-weight: 900;
+  margin: 1rem auto 1.25rem;
+  max-width: 1000px;
+  text-align: center;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) h2 {
+  color: #ffffff;
+  font-size: 2.75rem;
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.2rem;
+  max-width: 720px;
+  margin: 0.75rem auto 1.5rem;
+  text-align: center;
+  line-height: 1.55;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) .component-text:first-child p {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.8rem;
+  color: #e8513f;
+  margin-bottom: 0.25rem;
+}
+
+/* Non-hero section containers */
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) ~ div:not(.component-inherited-content-area) {
+  background: #ffffff;
+}
+body > div:nth-child(4):not(.component-inherited-content-area),
+body > div:nth-child(6):not(.component-inherited-content-area),
+body > div:nth-child(8):not(.component-inherited-content-area),
+body > div:nth-child(10):not(.component-inherited-content-area),
+body > div:nth-child(12):not(.component-inherited-content-area),
+body > div:nth-child(14):not(.component-inherited-content-area) {
+  background: #f5f6fa;
+}
+
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) ~ div:not(.component-inherited-content-area) h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) ~ div:not(.component-inherited-content-area) .component-text:first-child p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: #e8513f;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+body > div:not(.component-inherited-content-area) > .ui.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ─── Button group → conference pill buttons ──────────────────────────── */
+body div[class*="uk-button-group"],
+body .component-button-group {
+  text-align: center;
+  margin-top: 1.75rem;
+}
+body a.ui.button,
+body .component-button-group a {
+  display: inline-block;
+  background: #e8513f;
+  color: #ffffff !important;
+  padding: 0.95rem 1.85rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  margin: 0 0.4rem 0 0;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+body a.ui.button:hover,
+body .component-button-group a:hover {
+  background: #b33626;
+  transform: translateY(-1px);
+}
+body .component-button-group a + a {
+  background: transparent;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) ~ div:not(.component-inherited-content-area) .component-button-group a + a {
+  color: #0b0d14 !important;
+  border: 1px solid #0b0d14;
+}
+
+/* ─── Richtext flex/grid handling (see league-theme for rationale) ────── */
+body .component-richtext > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem auto 0;
+  justify-content: center;
+}
+body .component-richtext > div > div > table,
+body .component-richtext > div > table,
+body .component-richtext > div > ul,
+body .component-richtext > div > ol,
+body .component-richtext > div > h2,
+body .component-richtext > div > h3,
+body .component-richtext > div > h4,
+body .component-richtext > div > p {
+  display: initial;
+}
+body .component-richtext > div:has(> table),
+body .component-richtext > div:has(> ul),
+body .component-richtext > div:has(> ol),
+body .component-richtext > div:has(> h2),
+body .component-richtext > div:has(> h3) {
+  display: block;
+}
+
+/* Sponsors & schedule-day blocks need block layout (full-width tiers
+ * and day tables, not a flex row of tiers). */
+body .component-richtext > div > div:has(> .sponsors-tier),
+body .component-richtext > div > div:has(> .schedule-day),
+body .component-richtext > div > div:has(> table),
+body .component-richtext > div > div:has(> .past-editions-table) {
+  display: block;
+}
+body .component-richtext > div > div > div:not([class*="ui-grid"]):not([class*="uk-grid"]):not([class*="uk-child-width"]):not([class*="uk-flex"]):not(.sponsors-tier):not(.schedule-day):not(.signal-venue):not(.signal-stat-grid) {
+  flex: 1 1 280px;
+  max-width: 340px;
+}
+/* Full-width blocks inside a block-display wrapper */
+body .component-richtext > div > div > .sponsors-tier,
+body .component-richtext > div > div > .schedule-day,
+body .component-richtext > div > div > .signal-venue,
+body .component-richtext > div > div > .signal-stat-grid {
+  flex: none;
+  max-width: none;
+  width: 100%;
+}
+
+/* ─── Cards (speakers / sessions / sponsors) ──────────────────────────── */
+body .signal-card {
+  background: #ffffff;
+  border: 1px solid #e2e4ec;
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem;
+  box-shadow: 0 1px 2px rgba(20, 24, 36, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+body .signal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(20, 24, 36, 0.09);
+  border-color: #cdd1dc;
+}
+body .signal-card h3 {
+  margin: 0.1rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0b0d14;
+  letter-spacing: -0.01em;
+}
+body .signal-card .signal-card-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  color: #e8513f;
+  font-weight: 700;
+}
+body .signal-card .signal-card-sub {
+  color: #5c6376;
+  font-size: 0.92rem;
+}
+body .signal-card .signal-card-body {
+  color: #3a404f;
+  font-size: 0.92rem;
+  margin-top: 0.35rem;
+}
+body .signal-card .signal-card-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eef0f5;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #5c6376;
+}
+body .signal-card .signal-tag {
+  display: inline-block;
+  background: #f1f2f7;
+  color: #3a404f;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+}
+body .signal-card .signal-tag.is-intro       { background: #e9f6ef; color: #1d7041; }
+body .signal-card .signal-tag.is-intermediate{ background: #fdf4d6; color: #7a5512; }
+body .signal-card .signal-tag.is-advanced    { background: #fbe5e2; color: #8a2418; }
+
+/* Speaker avatar = initials circle on a brand-red disc */
+body .signal-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e8513f, #b33626);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* ─── Schedule table ──────────────────────────────────────────────────── */
+body .schedule-day {
+  margin: 2rem auto 2.5rem;
+}
+body .schedule-day h3 {
+  text-align: center;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0b0d14;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+body table.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: #ffffff;
+  border: 1px solid #e2e4ec;
+  border-radius: 12px;
+  overflow: hidden;
+}
+body table.schedule-table thead th {
+  background: #0b0d14;
+  color: #ffffff;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+body table.schedule-table td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid #e8eaf0;
+  vertical-align: top;
+}
+body table.schedule-table tr:last-child td { border-bottom: none; }
+body table.schedule-table tr:nth-child(even) td { background: #f8f9fc; }
+body table.schedule-table td.schedule-time {
+  font-weight: 700;
+  color: #0b0d14;
+  white-space: nowrap;
+  width: 110px;
+}
+body table.schedule-table td.schedule-track {
+  color: #5c6376;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  width: 130px;
+}
+body table.schedule-table td.schedule-title strong {
+  display: block;
+  color: #0b0d14;
+  font-size: 1rem;
+  font-weight: 700;
+}
+body table.schedule-table td.schedule-title .schedule-speaker {
+  color: #5c6376;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+/* ─── Session + speaker + venue details ───────────────────────────────── */
+body .signal-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 1.5rem auto;
+}
+body .signal-stat-grid .signal-stat {
+  background: #ffffff;
+  border: 1px solid #e2e4ec;
+  border-radius: 12px;
+  padding: 1.35rem 1.2rem;
+  text-align: center;
+}
+body .signal-stat .signal-stat-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  color: #5c6376;
+  font-weight: 700;
+}
+body .signal-stat .signal-stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0b0d14;
+  margin-top: 0.3rem;
+  letter-spacing: -0.015em;
+}
+
+/* ─── Sponsors tier grid ──────────────────────────────────────────────── */
+body .sponsors-tier {
+  text-align: center;
+  margin: 1.75rem 0;
+}
+body .sponsors-tier h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #5c6376;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+body .sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+body .sponsor-logos .sponsor {
+  background: #ffffff;
+  border: 1px solid #e2e4ec;
+  border-radius: 12px;
+  padding: 1rem 1.6rem;
+  font-weight: 800;
+  color: #0b0d14;
+  letter-spacing: -0.01em;
+  min-width: 160px;
+  text-align: center;
+}
+body .sponsor-logos .sponsor.tier-gold { font-size: 1.4rem; padding: 1.6rem 2.2rem; }
+body .sponsor-logos .sponsor.tier-silver { font-size: 1.1rem; padding: 1.2rem 1.8rem; }
+body .sponsor-logos .sponsor.tier-bronze { font-size: 0.95rem; opacity: 0.85; }
+
+/* ─── Venue map-ish block ─────────────────────────────────────────────── */
+body .signal-venue {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 1.5rem auto;
+  align-items: stretch;
+}
+body .signal-venue .signal-venue-map {
+  background: linear-gradient(135deg, #0b0d14 0%, #1c2133 60%, #2d3657 100%);
+  border-radius: 16px;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+body .signal-venue .signal-venue-map::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, transparent 48%, rgba(232, 81, 63, 0.12) 48%, rgba(232, 81, 63, 0.12) 52%, transparent 52%),
+    linear-gradient(45deg, transparent 48%, rgba(76, 127, 226, 0.1) 48%, rgba(76, 127, 226, 0.1) 52%, transparent 52%);
+}
+body .signal-venue .signal-venue-map .signal-venue-pin {
+  position: relative;
+  z-index: 1;
+  background: #e8513f;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(232, 81, 63, 0.4);
+}
+body .signal-venue .signal-venue-info h3 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+body .signal-venue .signal-venue-info p {
+  color: #3a404f;
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────── */
+body > div.component-inherited-content-area:last-of-type {
+  background: #0b0d14;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 3.5rem 2rem 2rem;
+}
+body > div.component-inherited-content-area:last-of-type .ui.segment,
+body > div.component-inherited-content-area:last-of-type > div[class*="segment"] {
+  background: transparent !important;
+  padding: 0 !important;
+}
+body > div.component-inherited-content-area:last-of-type h4,
+body > div.component-inherited-content-area:last-of-type h5 {
+  color: #ffffff;
+  font-size: 0.82rem;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+body > div.component-inherited-content-area:last-of-type a {
+  color: rgba(255, 255, 255, 0.72);
+}
+body > div.component-inherited-content-area:last-of-type a:hover {
+  color: #ffffff;
+}
+body > div.component-inherited-content-area:last-of-type ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body > div.component-inherited-content-area:last-of-type li {
+  padding: 0.25rem 0;
+  font-size: 0.88rem;
+}
+body > div.component-inherited-content-area:last-of-type .component-richtext > div > div {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+body > div.component-inherited-content-area:last-of-type .component-richtext > div > div > div {
+  max-width: none !important;
+  flex: none !important;
+}
+body > div.component-inherited-content-area:last-of-type hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0 1rem;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Past-editions table ─────────────────────────────────────────────── */
+body .past-editions-table {
+  width: 100%;
+  max-width: 860px;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+body .past-editions-table td,
+body .past-editions-table th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e8eaf0;
+}
+body .past-editions-table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: #5c6376;
+}
+body .past-editions-table strong { color: #0b0d14; }
+
+/* ─── Small utilities the pages use ───────────────────────────────────── */
+body .signal-center { text-align: center; }
+body .signal-muted { color: #5c6376; }
+body .signal-strong { font-weight: 700; color: #0b0d14; }
+
+
+/* ─── signal-framework 0.0.2 customizations ──────────────────────────
+ * Editorial indigo + red palette, serif display headlines, aurora hero. */
+:root {
+  --signal-primary:     #ff6a4a;
+  --signal-primary-dark:#c23b1d;
+  --signal-ink:         #070814;
+  --signal-indigo:      #1c1f46;
+  --signal-indigo-2:    #2a2e68;
+  --signal-cream:       #f8f5ee;
+}
+body { background: #ffffff; color: #1c1f2a; }
+body > div.component-inherited-content-area:first-of-type { background: var(--signal-ink); }
+body > div.component-inherited-content-area:first-of-type::before { color: var(--signal-primary); }
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) {
+  background: var(--signal-ink) !important;
+  padding: 9rem 2rem 8rem;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area)::before {
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(255, 106, 74, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 78% 68%, rgba(84, 70, 220, 0.32) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(255, 182, 72, 0.14) 0%, transparent 60%),
+    linear-gradient(180deg, var(--signal-ink) 0%, var(--signal-indigo) 100%);
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) h1 {
+  font-family: 'Georgia', 'Libre Caslon Text', 'Baskerville', serif;
+  font-weight: 700;
+  font-size: 4.5rem;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) .component-text:first-child p {
+  color: var(--signal-primary);
+  font-family: -apple-system, 'Inter', sans-serif;
+  font-weight: 700;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) ~ div:not(.component-inherited-content-area) h2 {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+body > div.component-inherited-content-area + div:not(.component-inherited-content-area) ~ div:not(.component-inherited-content-area) .component-text:first-child p {
+  color: var(--signal-primary);
+}
+body a.ui.button,
+body .component-button-group a {
+  background: linear-gradient(135deg, var(--signal-primary) 0%, var(--signal-primary-dark) 100%);
+  box-shadow: 0 6px 18px rgba(255, 106, 74, 0.3);
+}
+body a.ui.button:hover,
+body .component-button-group a:hover {
+  background: linear-gradient(135deg, var(--signal-primary-dark) 0%, #8c220c 100%);
+}
+body > div:nth-child(4):not(.component-inherited-content-area),
+body > div:nth-child(6):not(.component-inherited-content-area),
+body > div:nth-child(8):not(.component-inherited-content-area),
+body > div:nth-child(10):not(.component-inherited-content-area),
+body > div:nth-child(12):not(.component-inherited-content-area),
+body > div:nth-child(14):not(.component-inherited-content-area) {
+  background: var(--signal-cream);
+}
+body .signal-card-eyebrow { color: var(--signal-primary); }
+body .signal-avatar { background: linear-gradient(135deg, var(--signal-primary), var(--signal-primary-dark)); }
+body a { color: var(--signal-primary); }
+body a:hover { color: var(--signal-primary-dark); }
+body table.schedule-table thead th { background: var(--signal-indigo); }
+body > div.component-inherited-content-area:last-of-type {
+  background: var(--signal-ink);
+  border-top: 3px solid var(--signal-primary);
+}
+
+/* ─── 0.0.3 · bugfix: session card height inconsistency ───────────────
+ * The sessions index had 15 cards with varying abstract length. Some
+ * cards were 180px tall, others 280px, breaking the grid rhythm.
+ * Flex-columns + min-height fix this cleanly and push the level tag
+ * + end-time to the bottom of every card. */
+body .signal-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+body .signal-card .signal-card-body { flex: 1 1 auto; }
+body .signal-card .signal-card-foot { margin-top: auto; }
