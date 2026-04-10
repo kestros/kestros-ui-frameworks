@@ -1,0 +1,92 @@
+[
+  {
+    "id": "riverside-fc",
+    "name": "Riverside FC",
+    "shortName": "RIV",
+    "city": "Riverside",
+    "stadium": "Riverbank Stadium",
+    "founded": 1892,
+    "playerIds": ["luca-mendez", "kai-okonkwo", "james-reid"]
+  },
+  {
+    "id": "northgate-united",
+    "name": "Northgate United",
+    "shortName": "NGU",
+    "city": "Northgate",
+    "stadium": "Northgate Park",
+    "founded": 1905,
+    "playerIds": ["andre-silva", "tom-kirby", "omar-hassan"]
+  },
+  {
+    "id": "harbor-city",
+    "name": "Harbor City",
+    "shortName": "HBC",
+    "city": "Harbor City",
+    "stadium": "The Docklands",
+    "founded": 1911,
+    "playerIds": ["yuki-tanaka", "ben-cross", "mateo-ruiz"]
+  },
+  {
+    "id": "summit-athletic",
+    "name": "Summit Athletic",
+    "shortName": "SUM",
+    "city": "Summit",
+    "stadium": "Peak Arena",
+    "founded": 1923,
+    "playerIds": ["david-park", "noel-abrams", "stefan-beck"]
+  },
+  {
+    "id": "ironbridge-town",
+    "name": "Ironbridge Town",
+    "shortName": "IBT",
+    "city": "Ironbridge",
+    "stadium": "Forge Ground",
+    "founded": 1898,
+    "playerIds": ["callum-moore", "ravi-patel", "leo-grant"]
+  },
+  {
+    "id": "eastfield-rovers",
+    "name": "Eastfield Rovers",
+    "shortName": "EFR",
+    "city": "Eastfield",
+    "stadium": "Eastfield Green",
+    "founded": 1934,
+    "playerIds": ["josh-walker", "sami-diallo", "marcus-hale"]
+  },
+  {
+    "id": "coastal-rangers",
+    "name": "Coastal Rangers",
+    "shortName": "CST",
+    "city": "Seaside",
+    "stadium": "Cliff View Park",
+    "founded": 1919,
+    "playerIds": ["alex-novak", "finn-kelly", "daniel-cho"]
+  },
+  {
+    "id": "central-dynamo",
+    "name": "Central Dynamo",
+    "shortName": "CDY",
+    "city": "Centralia",
+    "stadium": "Dynamo Arena",
+    "founded": 1947,
+    "playerIds": ["ian-wong", "karl-jensen", "pedro-alves"]
+  },
+  {
+    "id": "westmoor-city",
+    "name": "Westmoor City",
+    "shortName": "WMC",
+    "city": "Westmoor",
+    "stadium": "Moor Park Stadium",
+    "founded": 1886,
+    "playerIds": ["ryan-bell", "tariq-ahmed", "chris-lane"]
+  },
+  {
+    "id": "meridian-wanderers",
+    "name": "Meridian Wanderers",
+    "shortName": "MRW",
+    "city": "Meridian",
+    "stadium": "Wanderer's Ground",
+    "founded": 1903,
+    "playerIds": ["luke-grant", "hassan-ali", "nick-stone"]
+  }
+]
