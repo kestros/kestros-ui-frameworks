@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ManagedVendorLibrary"
+          jcr:title="Nova Parallax"
+          jcr:description="Accessibility-aware scroll-driven parallax library. IntersectionObserver-gated, respects prefers-reduced-motion, opts out on touch + narrow viewports."
+          fontAwesomeIcon="fab fa-js"
+/>
