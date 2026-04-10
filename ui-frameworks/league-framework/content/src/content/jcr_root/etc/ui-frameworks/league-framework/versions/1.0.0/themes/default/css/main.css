@@ -1,24 +1,7 @@
 /* league-demo theme overlay on top of the bare ui-kit framework.
  *
  * The ui-kit framework serves vanilla UIKit 3 CSS from the vendor
- * library. Kestros components emit minimal UIKit classes (e.g.
- * `uk-section`, `uk-button`) but the `inlineVariations` property is
- * wired to named variation lookups, not raw class pass-through, so
- * things like "uk-section-primary" can't be added from content.
- *
- * This overlay targets the concrete markup the league-demo site emits
- * and applies the finish that the bare framework can't express:
- *
- *   - Dark hero treatment for the first section on every page
- *   - Muted alternating tone on subsequent sections
- *   - Primary-button styling on anchors inside .uk-button-group
- *   - Table + card finishing touches
- *
- * This is a site-level concern, not a framework change. In a real
- * deployment the ui-kit framework would be forked into a league-
- * specific framework (e.g. "league-theme/0.0.1") with its own theme
- * CSS. For the demo we sidestep that by dropping this file directly
- * on top of the shared ui-kit default theme.
+ * library. This overlay applies the league-specific brand treatment.
  */
 
 /* ─── Base typography ─────────────────────────────────────────────────── */
