@@ -48,11 +48,25 @@ public class LeagueMatchPageFilter extends AbstractDynamicPageFilter {
       return null;
     }
     String id = suffix.substring("/matches/".length()).replace(".", "").replace("/", "");
-    if (leagueDataService == null || leagueDataService.getMatch(id) == null) {
+    if (leagueDataService == null) {
       return null;
+    }
+    io.kestros.samples.league.api.models.Match match = leagueDataService.getMatch(id);
+    if (match == null) {
+      return null;
+    }
+    io.kestros.samples.league.api.models.Team home = leagueDataService.getTeam(match.getHomeTeamId());
+    io.kestros.samples.league.api.models.Team away = leagueDataService.getTeam(match.getAwayTeamId());
+    String homeName = home != null ? home.getName() : match.getHomeTeamId();
+    String awayName = away != null ? away.getName() : match.getAwayTeamId();
+    String title = homeName + " " + match.getHomeScore() + " - " + match.getAwayScore() + " " + awayName;
+    if (!match.isPlayed()) {
+      title = homeName + " vs " + awayName;
     }
     Map<String, String> params = new HashMap<>();
     params.put("match-id", id);
+    params.put("dynamicPageTitle", title);
+    params.put("dynamicPageDescription", "Matchday " + match.getMatchday() + " - " + match.getDate() + " - " + match.getVenue());
     return params;
   }
 

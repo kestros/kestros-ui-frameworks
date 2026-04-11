@@ -501,31 +501,7 @@ body .component-richtext > div > div > div:not([class*="uk-grid"]):not([class*="
   align-self: stretch;
 }
 
-/* ─── 0.1.0 · ticker-style stats band under the hero ──────────────────
- * Minor release: adds a thin pitch-green ribbon that sits directly
- * below the hero showing league-wide quick stats. Applies to the
- * first non-hero section when it is marked with a data-ticker
- * attribute — since the Kestros section component can't pass custom
- * attributes, the site opts in via a marker class applied by the
- * sibling-selector pattern (first non-hero section only).
- */
-body > div.component-inherited-content-area + div.uk-section + div.uk-section {
-  position: relative;
-}
-body > div.component-inherited-content-area + div.uk-section + div.uk-section::before {
-  content: 'NEW SEASON · 10 CLUBS · 135 FIXTURES · LIVE NOW';
-  display: block;
-  background: var(--league-primary);
-  color: #ffffff;
-  padding: 0.75rem 1rem;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  text-align: center;
-  margin: -4rem -2rem 3rem;
-  border-top: 3px solid var(--league-accent);
-}
+/* ─── 0.1.0 ticker ribbon removed in 1.0.0 ─── */
 
 /* Minor: subtle row-hover on all tables */
 body .uk-table tbody tr {

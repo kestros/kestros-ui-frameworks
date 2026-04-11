@@ -48,11 +48,17 @@ public class LeagueSeasonPageFilter extends AbstractDynamicPageFilter {
       return null;
     }
     String id = suffix.substring("/seasons/".length()).replace(".", "").replace("/", "");
-    if (leagueDataService == null || leagueDataService.getSeason(id) == null) {
+    if (leagueDataService == null) {
+      return null;
+    }
+    io.kestros.samples.league.api.models.Season season = leagueDataService.getSeason(id);
+    if (season == null) {
       return null;
     }
     Map<String, String> params = new HashMap<>();
     params.put("season-id", id);
+    params.put("dynamicPageTitle", season.getName() + " Season");
+    params.put("dynamicPageDescription", "Meridian Premier League " + season.getName() + " season");
     return params;
   }
 

@@ -48,11 +48,19 @@ public class LeaguePlayerPageFilter extends AbstractDynamicPageFilter {
       return null;
     }
     String slug = suffix.substring("/players/".length()).replace(".", "").replace("/", "");
-    if (leagueDataService == null || leagueDataService.getPlayer(slug) == null) {
+    if (leagueDataService == null) {
       return null;
     }
+    io.kestros.samples.league.api.models.Player player = leagueDataService.getPlayer(slug);
+    if (player == null) {
+      return null;
+    }
+    io.kestros.samples.league.api.models.Team team = leagueDataService.getTeam(player.getTeamId());
+    String teamName = team != null ? team.getName() : "";
     Map<String, String> params = new HashMap<>();
     params.put("player-slug", slug);
+    params.put("dynamicPageTitle", player.getFirstName() + " " + player.getLastName());
+    params.put("dynamicPageDescription", player.getPosition() + " #" + player.getNumber() + " for " + teamName);
     return params;
   }
 
