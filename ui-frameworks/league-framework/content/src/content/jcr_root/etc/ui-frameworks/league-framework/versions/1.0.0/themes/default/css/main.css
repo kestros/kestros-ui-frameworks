@@ -35,6 +35,10 @@ body > div.component-inherited-content-area:first-of-type a {
 body > div.component-inherited-content-area:first-of-type a:hover {
   color: #ffffff;
 }
+/* Override UIkit's grey navbar background */
+body > div.component-inherited-content-area:first-of-type .uk-navbar-container {
+  background: transparent;
+}
 
 /* ─── Sections — first one is the hero, rest alternate ────────────────── */
 body > div.uk-section {
