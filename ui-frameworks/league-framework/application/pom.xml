@@ -36,6 +36,18 @@
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>io.kestros.cms</groupId>
+            <artifactId>kestros-site-building-api</artifactId>
+            <version>0.1.4-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.kestros.cms</groupId>
+            <artifactId>kestros-site-building-core</artifactId>
+            <version>0.1.5-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
