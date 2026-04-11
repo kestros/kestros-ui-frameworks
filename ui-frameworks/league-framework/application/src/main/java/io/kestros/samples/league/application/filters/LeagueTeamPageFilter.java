@@ -19,7 +19,7 @@ import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(service = Filter.class)
 @SlingServletFilter(scope = SlingServletFilterScope.REQUEST,
-    pattern = "/content/sites/.*/team/.*\\.html",
+    pattern = "/content/sites/.*/teams/.*\\.html",
     methods = "GET")
 public class LeagueTeamPageFilter extends AbstractDynamicPageFilter {
 
@@ -44,10 +44,10 @@ public class LeagueTeamPageFilter extends AbstractDynamicPageFilter {
       SlingHttpServletRequest request) {
     String sitePath = site.getResource().getPath();
     String suffix = requestPath.substring(sitePath.length());
-    if (!suffix.startsWith("/team/")) {
+    if (!suffix.startsWith("/teams/")) {
       return null;
     }
-    String slug = suffix.substring("/team/".length()).replace(".", "").replace("/", "");
+    String slug = suffix.substring("/teams/".length()).replace(".", "").replace("/", "");
     if (leagueDataService == null || leagueDataService.getTeam(slug) == null) {
       return null;
     }
