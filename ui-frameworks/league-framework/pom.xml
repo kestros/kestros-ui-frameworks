@@ -18,10 +18,7 @@
     <name>League Framework</name>
 
     <modules>
-        <module>api</module>
-        <module>core</module>
         <module>content</module>
-        <module>application</module>
     </modules>
 
 </project>
