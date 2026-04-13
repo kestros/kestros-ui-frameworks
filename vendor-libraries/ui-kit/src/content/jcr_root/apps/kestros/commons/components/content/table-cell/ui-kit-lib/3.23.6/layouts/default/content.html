@@ -2,5 +2,6 @@
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
 <td class="${tableCell.inlineVariations}">
+    <sly data-sly-test="${tableCell.text}">${tableCell.text}</sly>
     <sly data-sly-call="${includes.contentArea}"/>
 </td>
