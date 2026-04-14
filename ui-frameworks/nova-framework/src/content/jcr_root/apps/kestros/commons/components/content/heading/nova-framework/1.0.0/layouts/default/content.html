@@ -1,0 +1,19 @@
+<sly data-sly-use.heading="${'io.kestros.cms.components.basic.core.content.heading.HeadingDataSourceComponent'}"/>
+<sly data-sly-test="${heading.headingType == 'h1'}">
+    <h1 class="nova-heading-hero nl-v10-heading ${heading.inlineVariations}">${heading.headingText}</h1>
+</sly>
+<sly data-sly-test="${heading.headingType == 'h2'}">
+    <h2 class="nova-heading-xlarge nl-v10-heading ${heading.inlineVariations}">${heading.headingText}</h2>
+</sly>
+<sly data-sly-test="${heading.headingType == 'h3'}">
+    <h3 class="nova-heading-large nl-v10-heading ${heading.inlineVariations}">${heading.headingText}</h3>
+</sly>
+<sly data-sly-test="${heading.headingType == 'h4'}">
+    <h4 class="nova-heading-medium nl-v10-heading ${heading.inlineVariations}">${heading.headingText}</h4>
+</sly>
+<sly data-sly-test="${heading.headingType == 'h5'}">
+    <h5 class="nova-heading-small nl-v10-heading ${heading.inlineVariations}">${heading.headingText}</h5>
+</sly>
+<sly data-sly-test="${heading.headingType == 'h6'}">
+    <h6 class="nova-heading-small nl-v10-heading ${heading.inlineVariations}">${heading.headingText}</h6>
+</sly>

@@ -1,0 +1,22 @@
+<sly data-sly-use.section="${'io.kestros.cms.components.basic.core.structure.section.SectionDataSourceComponent'}"/>
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+<sly data-sly-test.hasParallax="${properties.parallax == 'true' && properties.backgroundImagePath}"/>
+<sly data-sly-test="${hasParallax}">
+    <section class="nova-section nl-v10-section nl-v11-parallax ${section.inlineVariations}"
+             data-parallax="true"
+             data-parallax-speed="${properties.parallaxSpeed || '0.5'}">
+        <div class="nl-parallax-bg"
+             style="background-image: url('${properties.backgroundImagePath @ context='uri'}');"></div>
+        <div class="nova-section-inner nl-section-inner">
+            <sly data-sly-call="${includes.contentArea}"/>
+        </div>
+    </section>
+</sly>
+<sly data-sly-test="${!hasParallax}">
+    <section class="nova-section nl-v10-section ${section.inlineVariations}"
+             style="background-image: url('${properties.backgroundImagePath @ context='uri'}');">
+        <div class="nova-section-inner nl-section-inner">
+            <sly data-sly-call="${includes.contentArea}"/>
+        </div>
+    </section>
+</sly>
