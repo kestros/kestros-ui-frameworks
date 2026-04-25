@@ -11,13 +11,12 @@
     </parent>
 
     <groupId>io.kestros.samples</groupId>
-    <artifactId>nova-framework</artifactId>
-
+    <artifactId>league-framework-content</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
-    <name>Nova Framework</name>
-
     <packaging>bundle</packaging>
+
+    <name>League Framework — Content</name>
+    <description>Framework version descriptors, theme CSS, and vault content for the league-framework sample.</description>
 
     <properties>
         <rootPackage>io.kestros.samples</rootPackage>

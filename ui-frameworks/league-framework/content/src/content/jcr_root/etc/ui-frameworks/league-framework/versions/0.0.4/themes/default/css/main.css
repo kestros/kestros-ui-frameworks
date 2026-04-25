@@ -1,0 +1,515 @@
+/* league-demo theme overlay on top of the bare ui-kit framework.
+ *
+ * The ui-kit framework serves vanilla UIKit 3 CSS from the vendor
+ * library. Kestros components emit minimal UIKit classes (e.g.
+ * `uk-section`, `uk-button`) but the `inlineVariations` property is
+ * wired to named variation lookups, not raw class pass-through, so
+ * things like "uk-section-primary" can't be added from content.
+ *
+ * This overlay targets the concrete markup the league-demo site emits
+ * and applies the finish that the bare framework can't express:
+ *
+ *   - Dark hero treatment for the first section on every page
+ *   - Muted alternating tone on subsequent sections
+ *   - Primary-button styling on anchors inside .uk-button-group
+ *   - Table + card finishing touches
+ *
+ * This is a site-level concern, not a framework change. In a real
+ * deployment the ui-kit framework would be forked into a league-
+ * specific framework (e.g. "league-theme/0.0.1") with its own theme
+ * CSS. For the demo we sidestep that by dropping this file directly
+ * on top of the shared ui-kit default theme.
+ */
+
+/* ─── Base typography ─────────────────────────────────────────────────── */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  color: #1f2430;
+  background: #ffffff;
+}
+a { color: #2a4a8a; }
+a:hover { color: #16305f; }
+
+/* ─── Top navigation ──────────────────────────────────────────────────── */
+body > div.component-inherited-content-area:first-of-type {
+  background: #10131a;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+body > div.component-inherited-content-area:first-of-type a {
+  color: #d0d6e0;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-right: 1.5rem;
+}
+body > div.component-inherited-content-area:first-of-type a:hover {
+  color: #ffffff;
+}
+
+/* ─── Sections — first one is the hero, rest alternate ────────────────── */
+body > div.uk-section {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+/* First section on every page (the one immediately after the header) —
+ * dark hero. Header + footer are both <div.component-inherited-content-area>
+ * so `:first/:nth-of-type` on <div> would count those too; use an
+ * adjacent-sibling combinator instead. */
+body > div.component-inherited-content-area + div.uk-section {
+  /* `!important` defeats the inline `background-image: url()` the
+   *  section HTL hardcodes on every instance. */
+  background: linear-gradient(135deg, #10131a 0%, #1d2230 50%, #2a3250 100%) !important;
+  color: #ffffff;
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+}
+body > div.component-inherited-content-area + div.uk-section h1,
+body > div.component-inherited-content-area + div.uk-section h2 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 1rem auto;
+  max-width: 900px;
+}
+body > div.component-inherited-content-area + div.uk-section p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.2rem;
+  max-width: 720px;
+  margin: 0.75rem auto 2rem;
+  line-height: 1.55;
+}
+body > div.component-inherited-content-area + div.uk-section .uk-text-meta,
+body > div.component-inherited-content-area + div.uk-section .uk-text-lead {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Every uk-section that is NOT the hero — walk the general sibling
+ * chain from the hero forward. */
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section {
+  background: #ffffff;
+}
+/* Even-indexed non-hero sections → light-grey band. Using :nth-child on
+ * body > div which counts header (1) + hero (2) + sections (3..N); the
+ * 3rd body child is the first non-hero section. */
+body > div:nth-child(4).uk-section,
+body > div:nth-child(6).uk-section,
+body > div:nth-child(8).uk-section,
+body > div:nth-child(10).uk-section,
+body > div:nth-child(12).uk-section,
+body > div:nth-child(14).uk-section {
+  background: #f4f6f9;
+}
+
+/* ─── Section content — max width + spacing ───────────────────────────── */
+body > div.uk-section > .uk-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2430;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section .component-text:first-child p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: #7b8393;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Button group → primary-style pills ──────────────────────────────── */
+body .component-button-group,
+body div.uk-button-group {
+  text-align: center;
+  margin-top: 1.5rem;
+  display: inline-block;
+}
+body > div.component-inherited-content-area + div.uk-section .component-button-group {
+  display: block;
+}
+body .uk-button-group a.uk-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #1f2430;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 0.4rem 0 0;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+body .uk-button-group a.uk-button:hover {
+  background: #eef0f4;
+  transform: translateY(-1px);
+}
+body .uk-button-group a.uk-button + a.uk-button {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section .uk-button-group a.uk-button {
+  background: #1f2430;
+  color: #ffffff;
+}
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section .uk-button-group a.uk-button + a.uk-button {
+  background: transparent;
+  color: #1f2430;
+  border: 1px solid #1f2430;
+}
+
+/* ─── Richtext wrappers — give my outer <div> flex behavior so
+ *     card strips lay out horizontally even though the uk-grid class
+ *     was stripped by the richtext sanitizer.
+ *
+ *     Structure the richtext HTL emits:
+ *       .component-richtext             ← kestros component wrapper
+ *         > div                         ← richtext HTL's own <div class="${inlineVariations}">
+ *           > div                       ← MY outer wrapper (class stripped)
+ *             > div × N                 ← MY column wrappers (class stripped)
+ *               > .uk-card
+ *
+ *     So my flex target is 2 levels deep from .component-richtext. */
+body .component-richtext > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem auto 0;
+  justify-content: center;
+}
+/* Tables and single-child bodies should stay block-level */
+body .component-richtext > div > div > table,
+body .component-richtext > div > table,
+body .component-richtext > div > ul,
+body .component-richtext > div > ol,
+body .component-richtext > div > h2,
+body .component-richtext > div > h3,
+body .component-richtext > div > h4,
+body .component-richtext > div > p {
+  display: initial;
+}
+body .component-richtext > div:has(> table),
+body .component-richtext > div:has(> ul),
+body .component-richtext > div:has(> ol),
+body .component-richtext > div:has(> h2),
+body .component-richtext > div:has(> h3) {
+  display: block;
+}
+/* Column wrappers — each flex child. Skip divs that already have a
+ * UIKit grid class (the sanitizer keeps class strings without @). */
+body .component-richtext > div > div > div:not([class*="uk-grid"]):not([class*="uk-child-width"]):not([class*="uk-flex"]) {
+  flex: 1 1 260px;
+  max-width: 360px;
+}
+
+/* Scoreboard-style grids that DID keep their class — restore 1-3 layout */
+body .uk-grid-small.uk-child-width-1-3 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0;
+}
+body .uk-grid-small.uk-child-width-1-3 > * {
+  flex: 1 1 33%;
+  max-width: 33%;
+}
+
+/* Make sure the match-page big score is actually large */
+body > div.component-inherited-content-area + div.uk-section .uk-heading-medium {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* ─── Cards — finishing touches ───────────────────────────────────────── */
+body .uk-card.uk-card-default {
+  background: #ffffff;
+  border: 1px solid #e4e7ed;
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 1px 2px rgba(20, 24, 36, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+body .uk-card.uk-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(20, 24, 36, 0.08);
+}
+body .uk-card .uk-card-title {
+  font-size: 1.2rem;
+  margin: 0.25rem 0 0.5rem;
+  color: #1f2430;
+  font-weight: 700;
+}
+
+/* ─── Tables ──────────────────────────────────────────────────────────── */
+body .uk-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+  font-size: 0.95rem;
+}
+body .uk-table thead th {
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 2px solid #1f2430;
+  color: #1f2430;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+body .uk-table td {
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid #e4e7ed;
+}
+body .uk-table-striped tbody tr:nth-of-type(even) {
+  background: #f7f8fa;
+}
+body .uk-table-divider tbody tr {
+  border-bottom: 1px solid #e4e7ed;
+}
+body .uk-table-small td,
+body .uk-table-small th {
+  padding: 0.55rem 0.7rem;
+}
+body .uk-text-bold { font-weight: 700; }
+body .uk-text-muted { color: #7b8393; }
+body .uk-text-meta { color: #7b8393; font-size: 0.8rem; }
+body .uk-text-small { font-size: 0.85rem; }
+body .uk-text-large { font-size: 1.15rem; }
+body .uk-text-lead { font-size: 1.15rem; line-height: 1.55; }
+body .uk-text-center { text-align: center; }
+body .uk-text-right { text-align: right; }
+body .uk-text-left { text-align: left; }
+body .uk-text-uppercase { text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ─── Labels (EU / REL / Current) ─────────────────────────────────────── */
+body .uk-label {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+body .uk-label-success { background: #cfeedd; color: #1a6b3e; }
+body .uk-label-danger  { background: #f5d7d7; color: #8a1b1b; }
+body .uk-label-warning { background: #fde8c8; color: #7a5115; }
+
+body .uk-badge {
+  display: inline-block;
+  background: #1f2430;
+  color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────── */
+body > div.component-inherited-content-area:last-of-type {
+  background: #10131a;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 3rem 2rem 1.5rem;
+}
+body > div.component-inherited-content-area:last-of-type .uk-section {
+  background: transparent;
+  padding: 0;
+}
+body > div.component-inherited-content-area:last-of-type h4,
+body > div.component-inherited-content-area:last-of-type h5 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+body > div.component-inherited-content-area:last-of-type a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+}
+body > div.component-inherited-content-area:last-of-type a:hover {
+  color: #ffffff;
+}
+body > div.component-inherited-content-area:last-of-type ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body > div.component-inherited-content-area:last-of-type li {
+  padding: 0.25rem 0;
+  font-size: 0.88rem;
+}
+body > div.component-inherited-content-area:last-of-type hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 2rem 0 1rem;
+}
+body > div.component-inherited-content-area:last-of-type .component-richtext > div {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+body > div.component-inherited-content-area:last-of-type .component-richtext > div > div {
+  max-width: none;
+}
+
+/* ─── Scoreboard block on match page ──────────────────────────────────── */
+body .uk-heading-medium { font-size: 2.5rem; font-weight: 800; }
+body .uk-heading-small { font-size: 1.75rem; font-weight: 700; }
+
+/* ─── Flex helpers that richtext preserved ────────────────────────────── */
+body .uk-flex { display: flex; }
+body .uk-flex-between { justify-content: space-between; }
+body .uk-flex-middle { align-items: center; }
+body .uk-flex-center { justify-content: center; }
+
+/* ─── Margin helpers ──────────────────────────────────────────────────── */
+body .uk-margin-small-top { margin-top: 0.5rem; }
+body .uk-margin-top { margin-top: 1rem; }
+body .uk-margin-remove { margin: 0; }
+
+/* ─── Lists ───────────────────────────────────────────────────────────── */
+body .uk-list {
+  padding: 0;
+  list-style: none;
+}
+body .uk-list li {
+  padding: 0.35rem 0;
+}
+body .uk-list-divider li + li {
+  border-top: 1px solid #e4e7ed;
+  margin-top: 0.35rem;
+  padding-top: 0.55rem;
+}
+body .uk-list-small li {
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+
+/* ─── league-framework 0.0.2 customizations ─────────────────────────── */
+:root {
+  --league-primary: #0d5c3c;
+  --league-primary-dark: #074428;
+  --league-accent: #f4d35e;
+  --league-ink: #0a0f14;
+}
+body > div.component-inherited-content-area:first-of-type { background: var(--league-ink); }
+body > div.component-inherited-content-area + div.uk-section {
+  background:
+    repeating-linear-gradient(90deg, transparent 0, transparent 119px, rgba(255,255,255,0.025) 119px, rgba(255,255,255,0.025) 120px),
+    linear-gradient(135deg, var(--league-ink) 0%, #0c2a1f 45%, var(--league-primary) 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+body > div.component-inherited-content-area + div.uk-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(244, 211, 94, 0.14) 0%, transparent 55%);
+  pointer-events: none;
+}
+body > div.component-inherited-content-area + div.uk-section > * { position: relative; z-index: 1; }
+body > div.component-inherited-content-area + div.uk-section h1 {
+  font-size: 4rem;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
+}
+body .uk-button-group a.uk-button {
+  background: var(--league-accent);
+  color: var(--league-ink);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+body .uk-button-group a.uk-button:hover { background: #ead04b; }
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section .uk-button-group a.uk-button {
+  background: var(--league-primary);
+  color: #ffffff;
+}
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section .uk-button-group a.uk-button:hover {
+  background: var(--league-primary-dark);
+}
+body .uk-label-success { background: #cce9d9; color: var(--league-primary-dark); }
+body a { color: var(--league-primary); }
+body a:hover { color: var(--league-primary-dark); }
+body .uk-table thead th { border-bottom: 2px solid var(--league-primary); }
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+body > div.component-inherited-content-area + div.uk-section ~ div.uk-section h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--league-primary);
+  margin: 0.85rem auto 0;
+  border-radius: 2px;
+}
+
+/* ─── 0.0.3 · bugfix: standings table overflow ────────────────────────
+ * The standings table on /standings has 11 columns. On viewports
+ * under ~1200px the rightmost "Last 5" column was being clipped.
+ * Wrap the table in a horizontal scroll container and tighten up
+ * cell padding so the happy path stays at 1100px and narrower
+ * viewports scroll cleanly. */
+body .component-richtext:has(> div > table.uk-table-striped) > div {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+body .uk-table-striped {
+  min-width: 920px;
+}
+body .uk-table-striped th,
+body .uk-table-striped td {
+  padding: 0.55rem 0.7rem;
+  white-space: nowrap;
+}
+
+/* ─── 0.0.4 · bugfix + polish ─────────────────────────────────────────
+ * fix: button focus outlines were invisible (black on dark hero).
+ * improve: team-card heights were inconsistent because description
+ * length varied — set a flex column layout + min-height.
+ */
+body .uk-button-group a.uk-button:focus-visible {
+  outline: 2px solid var(--league-accent);
+  outline-offset: 3px;
+}
+body > div.component-inherited-content-area + div.uk-section .uk-button-group a.uk-button:focus-visible {
+  outline: 2px solid #ffffff;
+}
+body .uk-card.uk-card-default {
+  display: flex;
+  flex-direction: column;
+  min-height: 140px;
+  gap: 0.35rem;
+}
+body .uk-card .uk-card-title {
+  margin-top: auto;
+}
+body .component-richtext > div > div > div:not([class*="uk-grid"]):not([class*="uk-child-width"]):not([class*="uk-flex"]) {
+  align-self: stretch;
+}
