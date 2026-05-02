@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "include": [
+    "jquery-3.3.1.js"
+  ]
+}

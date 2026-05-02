@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
           xmlns:jcr="http://www.jcp.org/jcr/1.0"
           xmlns:kes="http://kestros.io/kes/1.0"
-          jcr:primaryType="kes:UiFramework"
-          jcr:title="Bloom 0.0.1"
+          jcr:primaryType="kes:VendorLibrary"
+          jcr:title="Tachyons 1.0.0 (Tachyons CSS 4.12.0)"
           jcr:description=""
-          kes:uiFrameworkCode="bloom"
-          kes:vendorLibraries="[bulma/1.0.0]"/>
+          kes:libraryCode="tachyons-lib"
+/>
