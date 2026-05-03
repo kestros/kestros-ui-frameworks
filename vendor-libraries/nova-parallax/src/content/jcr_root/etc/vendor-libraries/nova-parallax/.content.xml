@@ -5,4 +5,5 @@
           jcr:title="Nova Parallax"
           jcr:description="Accessibility-aware scroll-driven parallax library. IntersectionObserver-gated, respects prefers-reduced-motion, opts out on touch + narrow viewports."
           fontAwesomeIcon="fab fa-js"
+          kes:libraryCode="nova-parallax-lib"
 />

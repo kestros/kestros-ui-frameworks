@@ -3,4 +3,5 @@
           jcr:primaryType="kes:ManagedUiFramework"
           jcr:title="Signal Framework"
           jcr:description="Tech-conference sample framework on the ui-kit vendor library. Demonstrates framework evolution across eight versions from baseline theming through responsive + dark-mode support."
+          kes:uiFrameworkCode="signal-framework"
 />

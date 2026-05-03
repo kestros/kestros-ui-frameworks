@@ -5,5 +5,5 @@
           jcr:title="Signal Framework 1.1.0"
           jcr:description="Live stream + video archive — video embed treatment and archive list."
           kes:uiFrameworkCode="signal-framework"
-          kes:vendorLibraries="[ui-kit/3.23.6]"
+          kes:vendorLibraries="[ui-kit/1.0.0]"
 />

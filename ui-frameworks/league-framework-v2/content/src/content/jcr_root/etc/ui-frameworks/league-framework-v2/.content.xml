@@ -4,4 +4,5 @@
           jcr:primaryType="kes:ManagedUiFramework"
           jcr:title="League Framework v2"
           jcr:description="Bootstrap 5 based league framework with full component coverage."
+          kes:uiFrameworkCode="league-framework-v2"
 />
