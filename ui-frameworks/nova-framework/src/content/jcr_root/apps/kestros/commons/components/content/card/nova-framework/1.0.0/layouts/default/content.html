@@ -1,0 +1,9 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+<article class="nl-card nl-v10-card">
+    <div class="nl-card-media" data-sly-resource="${'image' @ resourceType='kestros/commons/components/content/image'}"></div>
+    <div class="nl-card-body">
+        <sly data-sly-test="${card.title}" data-sly-resource="${card.title}"/>
+        <p class="nl-card-text" data-sly-test="${card.description}">${card.description}</p>
+        <sly data-sly-test="${card.buttonGroup}" data-sly-resource="${card.buttonGroup}"/>
+    </div>
+</article>

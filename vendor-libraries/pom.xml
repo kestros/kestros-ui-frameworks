@@ -38,6 +38,7 @@
     <module>swiper</module>
     <module>open-sans</module>
     <module>nunito</module>
+    <module>nova-parallax</module>
   </modules>
 
 </project>
