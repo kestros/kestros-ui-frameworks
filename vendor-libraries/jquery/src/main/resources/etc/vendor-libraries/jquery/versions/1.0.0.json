@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:VendorLibrary",
+  "jcr:title": "jQuery 1.0.0 (jQuery 3.3.1)",
+  "jcr:description": "A fast, small, and feature-rich JavaScript library.",
+  "fontAwesomeIcon": "fab fa-js",
+  "documentationUrl": "https://jquery.com/"
+}
