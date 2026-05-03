@@ -1,5 +1,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           xmlns:kes="http://kestros.io/kes/1.0"
           jcr:primaryType="kes:ManagedUiFramework"
-          jcr:title="UIkit Ui Framework"
+          jcr:title="UIkit"
+          jcr:description="A lightweight and modular front-end framework for developing fast and powerful web interfaces."
+          kes:uiFrameworkCode="ui-kit"
 />
