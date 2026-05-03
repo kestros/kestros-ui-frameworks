@@ -26,6 +26,7 @@
     <module>tachyons-framework</module>
     <module>ui-kit-framework</module>
     <module>nova-framework</module>
+    <module>express-framework</module>
     <module>kestros-io-site-framework</module>
     <module>signal-framework</module>
     <module>league-framework</module>
