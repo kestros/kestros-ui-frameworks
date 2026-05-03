@@ -86,7 +86,7 @@
             <configuration>
                 <packageType>mixed</packageType>
                 <failOnMissingEmbed>true</failOnMissingEmbed>
-                <accessControlHandling>merge</accessControlHandling>
+                <accessControlHandling>ignore</accessControlHandling>
                 <allowIndexDefinitions>true</allowIndexDefinitions>
                 <filterSource>${basedir}/src/content/META-INF/vault/filter.xml</filterSource>
             </configuration>
@@ -115,5 +115,31 @@
     </plugins>
   </build>
 
+  <profiles>
+    <profile>
+      <id>installPackage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.wcm.maven.plugins</groupId>
+            <artifactId>wcmio-content-package-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>install</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <serviceURL>${sling.protocol}://${sling.host}:${sling.port}/bin/cpm/package.service.html</serviceURL>
+              <userId>${sling.username}</userId>
+              <password>${sling.password}</password>
+              <packageFile>target/${project.artifactId}-${project.version}.zip</packageFile>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>

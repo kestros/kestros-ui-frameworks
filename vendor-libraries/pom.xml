@@ -32,6 +32,7 @@
     <module>tachyons</module>
     <module>ui-kit</module>
     <module>nova-css</module>
+    <module>nova-parallax</module>
   </modules>
 
 </project>
