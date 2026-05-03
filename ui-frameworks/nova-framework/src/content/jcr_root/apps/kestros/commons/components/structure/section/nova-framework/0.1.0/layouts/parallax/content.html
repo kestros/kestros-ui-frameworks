@@ -1,0 +1,17 @@
+<sly data-sly-use.section="${'io.kestros.cms.components.basic.core.structure.section.SectionDataSourceComponent'}"/>
+
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+
+<div class="nova-section rellax ${section.inlineVariations}" data-sly-element="${section.elementType}"
+     style="background-image: url(${section.backgroundImage @ context='uri'});"
+     data-rellax-speed="-2">
+    <div class="nova-container">
+        <sly data-sly-call="${includes.contentArea}"/>
+    </div>
+</div>
+
+<script>
+    if (typeof Rellax !== 'undefined') {
+        new Rellax('.rellax');
+    }
+</script>

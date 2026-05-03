@@ -1,0 +1,8 @@
+<sly data-sly-use.link="${'io.kestros.cms.components.basic.core.content.link.LinkStaticDataSource'}"/>
+
+<a class="nova-link ${link.inlineVariations}"
+   href="${link.href @ context='uri'}"
+   target="${link.targetAsString}"
+   aria-label="${link.ariaLabel}"
+   title="${link.title}"
+   rel="${link.rel}">${link.text}</a>

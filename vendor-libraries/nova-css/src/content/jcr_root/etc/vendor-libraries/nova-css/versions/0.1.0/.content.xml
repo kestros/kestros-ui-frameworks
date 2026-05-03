@@ -3,6 +3,6 @@
           xmlns:kes="http://kestros.io/kes/1.0"
           jcr:primaryType="kes:VendorLibrary"
           jcr:title="Nova CSS 0.1.0"
-          jcr:description="Foundation: section, container, heading, text, button, button-group"
+          jcr:description="Foundation layouts: image, section, grid, heading"
           kes:libraryCode="nova-css-lib"
 />

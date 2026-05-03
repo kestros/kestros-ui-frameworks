@@ -1,0 +1,18 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+
+<div class="nova-card ${card.inlineVariations}">
+    <sly data-sly-test="${card.imageElement.imagePath}">
+        <img class="nova-card-img" src="${card.imageElement.imagePath}" alt="${card.imageElement.altText}"/>
+    </sly>
+    <div class="nova-card-body">
+        <sly data-sly-test="${card.titleElement.headingText}">
+            <h3 class="nova-heading">${card.titleElement.headingText}</h3>
+        </sly>
+        <sly data-sly-test="${card.description}">
+            <p class="nova-text">${card.description}</p>
+        </sly>
+        <sly data-sly-test="${card.buttonGroup}">
+            <sly data-sly-resource="${card.buttonGroup}"/>
+        </sly>
+    </div>
+</div>
