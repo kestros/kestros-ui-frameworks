@@ -28,7 +28,7 @@
     <version>0.1.2</version>
   </parent>
 
-  <groupId>io.kestros.cms</groupId>
+  <groupId>io.kestros.samples</groupId>
   <artifactId>kestros-nova-framework</artifactId>
   <version>0.1.0-SNAPSHOT</version>
 
