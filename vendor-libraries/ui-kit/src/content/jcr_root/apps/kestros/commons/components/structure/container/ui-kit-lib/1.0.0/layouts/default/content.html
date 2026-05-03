@@ -16,10 +16,9 @@
   ~
   */-->
 <sly data-sly-use.container="${'io.kestros.cms.components.basic.structure.container.ContainerComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
-<div class="uk-container ${context.inlineVariations}" data-sly-element="${container.elementType}">
+<div class="uk-container ${container.inlineVariations}" data-sly-element="${container.elementType}">
     <sly data-sly-call="${includes.contentArea @ component = container}"/>
 </div>

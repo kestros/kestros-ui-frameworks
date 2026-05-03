@@ -16,9 +16,8 @@
   ~
   */-->
 <sly data-sly-use.grid="${'io.kestros.cms.components.basic.structure.grid.Grid'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<div uk-grid="masonry:pack" class="${context.inlineVariations}">
+<div uk-grid="masonry:pack" class="${grid.inlineVariations}">
     <div>
         <sly data-sly-resource="${'column-1' @ resourceType='kestros/commons/components/content-area'}"/>
     </div>

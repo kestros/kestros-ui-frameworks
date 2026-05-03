@@ -20,7 +20,7 @@
 
 <nav class="uk-navbar-container">
     <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav ${context.inlineVariations}" data-sly-list.page="${context.navigationPages}">
+        <ul class="uk-navbar-nav ${navigation.inlineVariations}" data-sly-list.page="${context.navigationPages}">
             <li class="${page.active ? 'uk-active' : ''}"><a href="${page.url @ context='uri'}" aria-label="${page.title}">${page.title}</a></li>
         </ul>
     </div>

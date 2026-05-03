@@ -16,11 +16,10 @@
   ~
   */-->
 
-<sly data-sly-use.buttonGroup="${'io.kestros.cms.components.basic.content.buttongroup.ButtonGroupComponent'}"/>
-<sly data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ParentComponentEditContext'}"/>
+<sly data-sly-use.buttonGroup="${'io.kestros.cms.components.basic.core.content.buttongroup.ButtonGroupDataSourceComponent'}"/>
 
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
-<div class="uk-button-group ${context.inlineVariations}">
+<div class="uk-button-group ${buttonGroup.inlineVariations}">
     <sly data-sly-call="${includes.contentArea @ component = buttonGroup}"/>
 </div>

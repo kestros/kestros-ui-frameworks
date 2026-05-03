@@ -16,10 +16,9 @@
   ~
   */-->
 <sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
-<div class="uk-card uk-card-default ${context.inlineVariations}">
+<div class="uk-card uk-card-default ${card.inlineVariations}">
     <div data-sly-test="${card.image}" class="uk-card-media-top">
         <sly data-sly-resource="${card.image}"/>
     </div>

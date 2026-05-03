@@ -15,16 +15,15 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.image="${'io.kestros.cms.components.basic.content.image.ImageComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
+<sly data-sly-use.image="${'io.kestros.cms.components.basic.core.content.image.ImageDataSourceComponent'}"
 
 <sly data-sly-test="${!image.caption}">
     <sly data-sly-test="${!image.href}">
-        <img class="${context.inlineVariations}" src="${image.src}" alt="${image.altText}"/>
+        <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}"/>
     </sly>
     <sly data-sly-test="${image.href}">
         <a href="${image.href}" aria-label="${image.ariaLabel}" title="${image.anchorTitle}" target="${image.target}">
-            <img class="${context.inlineVariations}" src="${image.src}" alt="${image.altText}" role="${image.role}"/>
+            <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}" role="${image.role}"/>
         </a>
     </sly>
 </sly>
@@ -32,11 +31,11 @@
 <sly data-sly-test="${image.caption}">
     <figure>
         <sly data-sly-test="${!image.href}">
-            <img class="${context.inlineVariations}" src="${image.src}" alt="${image.altText}" role="${image.role}"/>
+            <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}" role="${image.role}"/>
         </sly>
         <sly data-sly-test="${image.href}">
             <a href="${image.href}" aria-label="${image.ariaLabel}" title="${image.anchorTitle}" target="${image.target}">
-                <img class="${context.inlineVariations}" src="${image.src}" alt="${image.altText}" role="${image.role}"/>
+                <img class="${image.inlineVariations}" src="${image.imagePath}" alt="${image.altText}" role="${image.role}"/>
             </a>
         </sly>
         <figcaption>${image.caption}</figcaption>

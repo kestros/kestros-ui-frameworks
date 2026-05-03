@@ -19,6 +19,6 @@
      data-sly-use.context="${'io.kestros.cms.components.basic.structure.navigation.NavigationComponentContext'}"/>
 
 
-<ul class="uk-nav ${context.inlineVariations} " data-sly-list.page="${context.navigationPages}">
+<ul class="uk-nav ${navigation.inlineVariations} " data-sly-list.page="${context.navigationPages}">
     <li class="${page.active ? 'uk-active' : ''}"><a href="${page.url @ context='uri'}" aria-label="${page.title}">${page.title}</a></li>
 </ul>

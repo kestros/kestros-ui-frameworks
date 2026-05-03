@@ -16,9 +16,8 @@
   ~
   */-->
 <sly data-sly-use.topNav="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationDataSourceComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<nav class="uk-navbar-container ${context.inlineVariations}" uk-navbar>
+<nav class="uk-navbar-container ${topNav.inlineVariations}" uk-navbar>
     <div class="uk-navbar-left">
         <sly data-sly-test="${topNav.image}">
             <a class="uk-navbar-item uk-logo" href="#">

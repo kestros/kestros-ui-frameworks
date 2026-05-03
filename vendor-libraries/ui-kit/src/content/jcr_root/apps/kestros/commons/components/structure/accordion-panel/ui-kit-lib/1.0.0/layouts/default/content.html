@@ -16,10 +16,9 @@
   ~
   */-->
 <sly data-sly-use.panel="${'io.kestros.cms.components.basic.core.structure.accordion.AccordionPanelDataSourceComponent'}"
-     data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
-<li class="${context.inlineVariations}${panel.expanded ? ' uk-open' : ''}">
+<li class="${panel.inlineVariations}${panel.expanded ? ' uk-open' : ''}">
     <a class="uk-accordion-title" href="#">${panel.title}</a>
     <div class="uk-accordion-content">
         <sly data-sly-call="${includes.contentArea}"/>

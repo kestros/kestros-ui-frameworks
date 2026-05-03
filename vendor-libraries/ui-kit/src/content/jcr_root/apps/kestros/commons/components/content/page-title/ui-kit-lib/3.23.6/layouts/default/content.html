@@ -15,7 +15,7 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ~
   */-->
-<sly data-sly-use.pageTitle="${'io.kestros.cms.components.basic.content.pagetitle.PageTitle'}"
+<sly data-sly-use.pageTitle="${'io.kestros.cms.components.basic.core.content.heading.HeadingDataSourceComponent'}"
      data-sly-use.context="${'io.kestros.cms.sitebuilding.api.models.ComponentRequestContext'}"/>
 
-<h1 data-sly-element="${pageTitle.level}" class="${context.inlineVariations}">${context.currentPage.title}</h1>
+<h1 data-sly-element="${pageTitle.headingType}" class="${pageTitle.inlineVariations}">${context.currentPage.title}</h1>
