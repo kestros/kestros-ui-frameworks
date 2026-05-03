@@ -27,6 +27,8 @@
     <module>ui-kit-framework</module>
     <module>nova-framework</module>
     <module>express-framework</module>
+    <module>league-framework</module>
+    <module>league-framework-v2</module>
   </modules>
 
 </project>
