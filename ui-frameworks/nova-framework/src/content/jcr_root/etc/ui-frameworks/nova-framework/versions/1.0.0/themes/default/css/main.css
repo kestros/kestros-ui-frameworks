@@ -1,0 +1,890 @@
+/* nova-lifestyle 0.0.2 — first brand CSS on top of nova-css 0.3.0.
+ *
+ * No custom view overrides yet — this is theme-only. nova-css already
+ * provides the structural classes (.nova-section, .nova-grid, .nova-card,
+ * .nova-button, .nova-heading-*, .nova-text-*). We layer brand colors,
+ * slightly tighter typography, and a few spacing refinements on top.
+ */
+
+:root {
+  /* Nova brand palette — near-black, pure white, warm gray accents,
+   * one accent color (a muted gold for subtle highlights). */
+  --nl-ink: #0a0a0a;
+  --nl-graphite: #1d1d1f;
+  --nl-paper: #ffffff;
+  --nl-fog: #f5f5f7;
+  --nl-mist: #e8e8ed;
+  --nl-stone: #86868b;
+  --nl-accent: #b18f4a;
+}
+
+/* Body + base type tuning — nova-css sets 17px, we nudge the line-height
+ * up for more generous reading. */
+body {
+  color: var(--nl-graphite);
+  background: var(--nl-paper);
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--nl-ink);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Hero section — darker, generous padding, centered type */
+body > section:first-of-type {
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+body > section:first-of-type h1 {
+  color: var(--nl-paper);
+  font-size: 4rem;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+body > section:first-of-type .component-text,
+body > section:first-of-type .component-text p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Subsequent sections alternate surface colors — paper, fog */
+body > section {
+  padding: 6rem 0;
+}
+body > section:nth-of-type(even) {
+  background: var(--nl-fog);
+}
+body > section > div {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section headings */
+body > section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin: 0 auto 3rem;
+  max-width: 820px;
+}
+/* Eyebrow text (small uppercase lede above an h2) */
+body > section > div > .component-text:first-child,
+body > section > div > .component-text:first-child p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: var(--nl-stone);
+  margin-bottom: 0.75rem;
+}
+
+/* Top navigation — dark brand bar */
+body > .component-inherited-content-area:first-of-type {
+  background: var(--nl-paper);
+  border-bottom: 1px solid var(--nl-mist);
+  padding: 1.25rem 0;
+}
+body > .component-inherited-content-area:first-of-type ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1140px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+body > .component-inherited-content-area:first-of-type li { list-style: none; }
+body > .component-inherited-content-area:first-of-type a {
+  color: var(--nl-graphite);
+  text-decoration: none;
+}
+body > .component-inherited-content-area:first-of-type a:hover { color: var(--nl-ink); }
+
+/* Grids — nova-css has .nova-grid and classes, but we fall back to the
+ * common grid HTL at this version (no grid view override yet — that ships
+ * in nl/0.1.0). Treat the flat 3-column structure like northstar did. */
+.component-grid > div:first-child:not(.row):not([class*="nova-v10-grid"]) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 3rem 0;
+}
+@media (max-width: 900px) {
+  .component-grid > div:first-child:not(.row):not([class*="nova-v10-grid"]) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Cards — minimal surface, generous padding, subtle border */
+body > section .component-grid > div > div {
+  background: var(--nl-paper);
+  border: 1px solid var(--nl-mist);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+body > section:nth-of-type(even) .component-grid > div > div {
+  background: var(--nl-paper);
+}
+body > section .component-grid > div > div:hover {
+  transform: translateY(-2px);
+  border-color: var(--nl-stone);
+}
+body > section .component-grid > div > div h3 {
+  font-size: 1.375rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--nl-ink);
+}
+body > section .component-grid > div > div p,
+body > section .component-grid > div > div .component-text {
+  color: var(--nl-graphite);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Buttons — pill-style, dark primary, outlined secondary */
+body section a.nova-button,
+body section button-group a,
+body > section .component-button-group a,
+body > section .component-button-group-left a {
+  display: inline-block;
+  margin: 0 0.5rem 0 0;
+  padding: 0.85rem 1.75rem;
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+body section a.nova-button:hover,
+body section button-group a:hover,
+body > section .component-button-group a:hover {
+  background: var(--nl-graphite);
+  text-decoration: none;
+}
+/* Secondary button — outlined */
+body > section .component-button-group a + a,
+body section button-group a + a {
+  background: transparent;
+  color: var(--nl-ink);
+  border: 1px solid var(--nl-ink);
+  padding: calc(0.85rem - 1px) calc(1.75rem - 1px);
+}
+body > section .component-button-group a + a:hover {
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+}
+/* Hero CTAs — inverse (light pills on dark bg) */
+body > section:first-of-type a {
+  display: inline-block;
+  margin: 1rem 0.5rem 0 0;
+  padding: 0.95rem 2rem;
+  background: var(--nl-paper);
+  color: var(--nl-ink);
+  border-radius: 100px;
+  font-weight: 500;
+  text-decoration: none;
+}
+body > section:first-of-type a:hover {
+  background: var(--nl-fog);
+  text-decoration: none;
+}
+body > section:first-of-type a + a {
+  background: transparent;
+  color: var(--nl-paper);
+  border: 1px solid var(--nl-paper);
+  padding: calc(0.95rem - 1px) calc(2rem - 1px);
+}
+body > section:first-of-type a + a:hover {
+  background: var(--nl-paper);
+  color: var(--nl-ink);
+}
+
+/* Richtext — comfortable reading width, generous leading */
+body > section .nova-richtext,
+body > section .component-richtext {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--nl-graphite);
+}
+body > section .component-richtext p {
+  margin: 0 0 1.25rem;
+}
+body > section .component-richtext p:last-child { margin-bottom: 0; }
+
+/* Outlined button following a grid */
+.component-grid + a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--nl-ink);
+  color: var(--nl-ink);
+  border-radius: 100px;
+  font-weight: 500;
+}
+.component-grid + a:hover {
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+  text-decoration: none;
+}
+
+/* Footer — dark, typographic */
+body > .component-inherited-content-area:last-of-type {
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+  padding: 5rem 0 2rem;
+  margin-top: 0;
+}
+body > .component-inherited-content-area:last-of-type h5 {
+  color: var(--nl-paper);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.25rem;
+}
+body > .component-inherited-content-area:last-of-type a {
+  color: rgba(255, 255, 255, 0.72);
+  display: block;
+  padding: 0.3rem 0;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+body > .component-inherited-content-area:last-of-type a:hover {
+  color: var(--nl-paper);
+}
+body > .component-inherited-content-area:last-of-type .component-text,
+body > .component-inherited-content-area:last-of-type p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+body > .component-inherited-content-area:last-of-type section {
+  padding: 0 2rem;
+  background: transparent;
+}
+body > .component-inherited-content-area:last-of-type section + section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+body > .component-inherited-content-area:last-of-type section + section p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+body > .component-inherited-content-area:last-of-type .component-grid > div:first-child {
+  max-width: 1140px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+body > .component-inherited-content-area:last-of-type .component-grid > div > div {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+body > .component-inherited-content-area:last-of-type .component-grid > div > div:hover {
+  transform: none;
+  border: none;
+}
+
+
+/* nova-lifestyle 0.1.0 — adds CSS for the new grid layout overrides.
+ *
+ * 0.1.0 ships framework view overrides for `structure/grid` with five
+ * named layouts: default / 2-col / 4-col / split-left / split-right.
+ * Each emits `nl-grid nl-v10-grid` markup with a layout modifier class.
+ *
+ * This CSS layers on top of nl-002-main.css — it doesn't replace it,
+ * and Kestros will serve both (the theme under nl/0.1.0 includes a copy
+ * of the 0.0.2 content plus this addition).
+ */
+
+/* Base nl-v10 grid — flex row with uniform gap */
+.nl-grid.nl-v10-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+.nl-grid.nl-v10-grid > .nl-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2-col — two equal columns */
+.nl-grid.nl-v10-grid-2col > .nl-col {
+  flex: 1 1 calc(50% - 1.5rem);
+}
+
+/* 4-col — four equal columns, collapses to 2 then 1 on narrow screens */
+.nl-grid.nl-v10-grid-4col > .nl-col {
+  flex: 1 1 calc(25% - 2.25rem);
+}
+@media (max-width: 960px) {
+  .nl-grid.nl-v10-grid-4col > .nl-col { flex-basis: calc(50% - 1.5rem); }
+}
+@media (max-width: 640px) {
+  .nl-grid.nl-v10-grid-4col > .nl-col { flex-basis: 100%; }
+}
+
+/* Split layouts — 33/67 or 67/33 */
+.nl-grid.nl-v10-grid-split-left > .nl-col-narrow,
+.nl-grid.nl-v10-grid-split-right > .nl-col-narrow {
+  flex: 0 0 calc(33.333% - 1.5rem);
+}
+.nl-grid.nl-v10-grid-split-left > .nl-col-wide,
+.nl-grid.nl-v10-grid-split-right > .nl-col-wide {
+  flex: 0 0 calc(66.667% - 1.5rem);
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+  .nl-grid.nl-v10-grid { gap: 2rem; }
+  .nl-grid.nl-v10-grid > .nl-col {
+    flex-basis: 100% !important;
+  }
+}
+
+/* When the new grid class is used, disable the legacy .component-grid
+ * fallback rule from nl-002-main.css so we don't fight CSS. */
+.component-grid > .nl-v10-grid {
+  display: flex !important;
+}
+
+
+/* nova-lifestyle 1.0.0 — major release with custom view overrides.
+ *
+ * This CSS layers on top of nl-002-main.css + nl-010-main.css. It adds
+ * styling specific to the new custom view overrides (nl-v10-section,
+ * nl-v10-card, nl-v10-button, nl-v10-heading) that ship at /apps under
+ * nova-lifestyle/1.0.0/.
+ */
+
+/* ─── nl-v10-section ────────────────────────────────────────────────── */
+
+/* Our section override wraps in .nova-section plus .nl-v10-section. The
+ * inline style sets background-image from the `backgroundImagePath`
+ * property, so hero sections with a real image get it. */
+.nl-v10-section {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+/* Hero section — when the override is used as the FIRST section, deep
+ * brand color + generous padding + ::before overlay so the bg image
+ * reads through softly. */
+body > section.nl-v10-section:first-of-type {
+  background-color: var(--nl-ink);
+  color: var(--nl-paper);
+  padding: 9rem 0 8rem;
+}
+body > section.nl-v10-section:first-of-type::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.82) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+body > section.nl-v10-section:first-of-type > .nl-section-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* Non-hero sections using the override — breath room + alternating fog */
+body > section.nl-v10-section {
+  padding: 7rem 0;
+}
+body > section.nl-v10-section:nth-of-type(even) {
+  background-color: var(--nl-fog);
+}
+body > section.nl-v10-section > .nl-section-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ─── nl-v10-heading ────────────────────────────────────────────────── */
+
+.nl-v10-heading.nova-heading-hero {
+  font-size: 4.5rem;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 0 auto 1.5rem;
+  max-width: 920px;
+}
+.nl-v10-heading.nova-heading-xlarge {
+  font-size: 2.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0 auto 3.5rem;
+  max-width: 820px;
+}
+.nl-v10-heading.nova-heading-large {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+/* ─── nl-v10-card ────────────────────────────────────────────────────── */
+
+.nl-card.nl-v10-card {
+  background: var(--nl-paper);
+  border: 1px solid var(--nl-mist);
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.nl-card.nl-v10-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--nl-stone);
+  box-shadow: 0 16px 40px rgba(10, 10, 10, 0.08);
+}
+.nl-card.nl-v10-card .nl-card-media {
+  background: var(--nl-fog);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.nl-card.nl-v10-card .nl-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nl-card.nl-v10-card .nl-card-media:empty {
+  display: none;
+}
+.nl-card.nl-v10-card .nl-card-body {
+  padding: 2rem 1.75rem 2.25rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.nl-card.nl-v10-card .nl-card-body h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin: 0 0 0.85rem;
+  color: var(--nl-ink);
+}
+.nl-card.nl-v10-card .nl-card-text {
+  color: var(--nl-graphite);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+/* ─── nl-v10-button ──────────────────────────────────────────────────── */
+
+a.nova-button.nl-v10-button {
+  display: inline-block;
+  padding: 0.95rem 1.85rem;
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin: 0 0.6rem 0 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+a.nova-button.nl-v10-button:hover {
+  background: var(--nl-graphite);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+/* Secondary (outline) — second button in a button group */
+.component-button-group a.nl-v10-button + a.nl-v10-button {
+  background: transparent;
+  color: var(--nl-ink);
+  border: 1px solid var(--nl-ink);
+  padding: calc(0.95rem - 1px) calc(1.85rem - 1px);
+}
+.component-button-group a.nl-v10-button + a.nl-v10-button:hover {
+  background: var(--nl-ink);
+  color: var(--nl-paper);
+}
+/* Hero inverse — buttons in the hero section look light */
+body > section.nl-v10-section:first-of-type a.nova-button.nl-v10-button {
+  background: var(--nl-paper);
+  color: var(--nl-ink);
+}
+body > section.nl-v10-section:first-of-type a.nova-button.nl-v10-button:hover {
+  background: var(--nl-fog);
+}
+body > section.nl-v10-section:first-of-type .component-button-group a.nl-v10-button + a.nl-v10-button {
+  background: transparent;
+  color: var(--nl-paper);
+  border: 1px solid var(--nl-paper);
+}
+body > section.nl-v10-section:first-of-type .component-button-group a.nl-v10-button + a.nl-v10-button:hover {
+  background: var(--nl-paper);
+  color: var(--nl-ink);
+}
+
+/* ─── Hero subtitle on nl-v10 sections ──────────────────────────────── */
+
+body > section.nl-v10-section:first-of-type .component-text p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  max-width: 720px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+/* ─── Eyebrow (small uppercase text above a heading) ─────────────────── */
+
+body > section.nl-v10-section .nl-section-inner > .component-text:first-child p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--nl-stone);
+  margin-bottom: 1rem;
+}
+
+
+/* nova-lifestyle 1.0.1 — patch release.
+ *
+ * Small post-QA polish over 1.0.0. Scope: tighter card gutters on desktop,
+ * more generous section padding on mobile, and slightly warmer hero text
+ * color. No view override changes.
+ */
+
+/* Card gutters on wide screens — the default nova-css .nova-grid has tight
+ * gaps; bump them to 3.5rem for more breathing room between cards. */
+@media (min-width: 1024px) {
+  .nl-grid.nl-v10-grid {
+    gap: 3.5rem;
+  }
+}
+
+/* Mobile section padding — the 7rem/9rem default felt too tall on phones.
+ * Back off considerably. */
+@media (max-width: 768px) {
+  body > section.nl-v10-section { padding: 4.5rem 0; }
+  body > section.nl-v10-section:first-of-type { padding: 6rem 0 5rem; }
+  .nl-v10-heading.nova-heading-hero { font-size: 2.75rem; }
+  .nl-v10-heading.nova-heading-xlarge { font-size: 2rem; margin-bottom: 2.5rem; }
+}
+
+/* Hero subtitle — the rgba(255,255,255,0.78) at 1.25rem was fine on the
+ * ink background, but feedback said it read as dim. Bump to 0.88. */
+body > section.nl-v10-section:first-of-type .component-text p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Subtle separator between footer and content */
+body > .component-inherited-content-area:last-of-type {
+  border-top: 1px solid rgba(177, 143, 74, 0.08);
+}
+
+/* Hide the .nl-card-media region when the card has no image. The image
+ * HTL emits an empty <img/> tag when imagePath is missing, so :has(img)
+ * isn't selective enough — use :has(img[src]) to only show when the
+ * img actually has a src attribute. All evergreen browsers (2024+)
+ * support :has(). */
+.nl-card.nl-v10-card .nl-card-media {
+  display: none;
+}
+.nl-card.nl-v10-card .nl-card-media:has(img[src]) {
+  display: block;
+}
+
+/* Eyebrow text — the small uppercase caption that sits above an <h2>
+ * inside a section. The selector in nl-100-main.css targeted
+ * `.nl-section-inner > .component-text:first-child` but content authors
+ * put their components inside a .nova-container wrapper, so the first
+ * .component-text is a grandchild, not a direct child. Catch both forms.
+ *
+ * Applies when the first .component-text immediately precedes an h2/h3
+ * heading — that's the eyebrow-then-heading pattern. A .component-text
+ * on its own (with no heading sibling) is just regular body text and
+ * should stay body-size. */
+body > section.nl-v10-section .nova-container > .component-text:first-child:has(+ .nl-v10-heading) p,
+body > section.nl-v10-section .nova-container > .component-text:first-child:has(+ h2) p,
+body > section.nl-v10-section .nl-section-inner > .component-text:first-child:has(+ .nl-v10-heading) p,
+body > section.nl-v10-section .nl-section-inner > .component-text:first-child:has(+ h2) p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--nl-stone);
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+
+/* nova-lifestyle 1.1.0 — minor release adding parallax section support.
+ *
+ * Layered on top of nl-101 (which is nl-002 + nl-010 + nl-100 + nl-101).
+ * Adds the .nl-v11-parallax section wrapper + .nl-parallax-bg layer.
+ */
+
+/* Parallax sections — section has position: relative, overflow: hidden.
+ * The bg layer is absolutely-positioned, slightly taller than the
+ * section, so scroll-translating it upward reveals different portions of
+ * the image through the container's overflow: hidden. */
+body > section.nl-v11-parallax {
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 0 9rem;
+  color: var(--nl-paper);
+  background-color: var(--nl-ink);
+}
+
+body > section.nl-v11-parallax .nl-parallax-bg {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  right: 0;
+  bottom: -25%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Subtle scrim so hero copy stays legible without hiding the bg art.
+ * The new parallax-ready SVGs are already dark (verticalDepth gradient +
+ * vignette) so the overlay only needs to add a soft top-down fade. */
+body > section.nl-v11-parallax::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.1) 0%, rgba(10, 10, 10, 0.4) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body > section.nl-v11-parallax > .nl-section-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* Typography inside parallax sections — larger + lighter */
+body > section.nl-v11-parallax .nl-v10-heading.nova-heading-hero {
+  font-size: 5rem;
+  line-height: 1.02;
+  color: var(--nl-paper);
+  margin: 0 auto 1.5rem;
+  max-width: 960px;
+}
+body > section.nl-v11-parallax .component-text p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  max-width: 760px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+/* Button treatment — inverse pills (light on dark) */
+body > section.nl-v11-parallax a.nova-button.nl-v10-button {
+  background: var(--nl-paper);
+  color: var(--nl-ink);
+  padding: 1.05rem 2.15rem;
+  margin: 1rem 0.6rem 0 0;
+}
+body > section.nl-v11-parallax a.nova-button.nl-v10-button:hover {
+  background: var(--nl-fog);
+}
+body > section.nl-v11-parallax .component-button-group a.nl-v10-button + a.nl-v10-button {
+  background: transparent;
+  color: var(--nl-paper);
+  border: 1px solid var(--nl-paper);
+  padding: calc(1.05rem - 1px) calc(2.15rem - 1px);
+}
+body > section.nl-v11-parallax .component-button-group a.nl-v10-button + a.nl-v10-button:hover {
+  background: var(--nl-paper);
+  color: var(--nl-ink);
+}
+
+/* Mobile — parallax is disabled on touch devices (JS handles that too)
+ * and padding tightens up. */
+@media (max-width: 768px) {
+  body > section.nl-v11-parallax {
+    padding: 6.5rem 0 5.5rem;
+  }
+  body > section.nl-v11-parallax .nl-v10-heading.nova-heading-hero {
+    font-size: 2.75rem;
+  }
+  body > section.nl-v11-parallax .component-text p {
+    font-size: 1.1rem;
+  }
+  /* Static bg on mobile (no transform trickery) */
+  body > section.nl-v11-parallax .nl-parallax-bg {
+    top: 0;
+    bottom: 0;
+    transform: none !important;
+  }
+}
+
+/* The JS that actually runs the parallax is inlined by the framework
+ * CSS aggregator via a small companion script. We embed a minimal CSS
+ * fallback here using `background-attachment: fixed` so even without
+ * JS you get a pseudo-parallax effect on desktop. */
+@media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+  body > section.nl-v11-parallax .nl-parallax-bg {
+    background-attachment: fixed;
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  body > section.nl-v11-parallax .nl-parallax-bg {
+    transform: none !important;
+    background-attachment: scroll;
+  }
+}
+
+
+/* ═══ nl-120 JS parallax ═══ */
+/* nova-lifestyle 1.2.0 — JS-driven parallax.
+ *
+ * Removes the CSS `background-attachment: fixed` fallback from 1.1.0
+ * (which was a blunt approximation) and relies on the companion
+ * parallax.js file shipped in the theme's js/ folder. The bg layer is
+ * translated via transform: translate3d() on scroll.
+ */
+
+/* Override the 1.1.0 fallback — scroll-transformed bg layer, not fixed */
+body > section.nl-v11-parallax .nl-parallax-bg {
+  background-attachment: scroll !important;
+  /* Taller than the section so scroll translation doesn't expose gaps */
+  top: -30%;
+  bottom: -30%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: none;
+}
+
+/* Respect reduced motion — disable parallax entirely */
+@media (prefers-reduced-motion: reduce) {
+  body > section.nl-v11-parallax .nl-parallax-bg {
+    top: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+  }
+}
+
+/* Undo the legacy `body > section > div` max-width rule for the parallax
+ * bg layer — that rule was scoped to section content wrappers in 0.0.2,
+ * but nl/1.1.0's parallax section adds .nl-parallax-bg as a sibling
+ * div which was unintentionally caught, constraining it to 1140px wide
+ * with 150px margins on each side (visible as dark bars at the edges
+ * of the hero). Force the bg layer to fill the full section width. */
+body > section.nl-v11-parallax > .nl-parallax-bg {
+  max-width: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* ─── Grid column wrappers — drop the 0.0.2 legacy card surface ────────
+ * nl-002-main.css styles `body > section .component-grid > div > div`
+ * with a paper background, 1px border, padding, and hover transform.
+ * That selector was written before the grid started wrapping children
+ * in `.nl-col` divs, so it ends up painting the column wrapper as a
+ * card surface — which then stacks with the inner `.nl-card` markup,
+ * producing the nested-card / double-border look. Zero the column
+ * wrapper so only the inner card (or bare content) provides visuals. */
+body > section .component-grid > div > div,
+body > section:nth-of-type(even) .component-grid > div > div {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  transform: none;
+}
+body > section .component-grid > div > div:hover {
+  transform: none;
+  border-color: transparent;
+}
+
+/* ─── Cards — remove the double-border look ────────────────────────────
+ * The 1.0.0 card override gave every card a 1px outer border + rounded
+ * media background. For cards with SVG product art the SVG already has
+ * its own dark rounded-rectangle chrome, so the card border stacks a
+ * second rounded frame around the first. Drop the border/bg on the card
+ * and its media, and remove the inner media padding so the image sits
+ * cleanly in place of a card chrome. Text cards (no image) lose the
+ * faint box outline in the process but gain breathing room. */
+body > section .nl-card.nl-v10-card {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
+}
+body > section .nl-card.nl-v10-card:hover {
+  border: none;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+body > section .nl-card.nl-v10-card .nl-card-media {
+  background: transparent;
+  border-radius: 18px;
+  overflow: hidden;
+}
+body > section .nl-card.nl-v10-card .nl-card-body {
+  padding: 1.4rem 0.25rem 0;
+}
+body > section .nl-card.nl-v10-card .nl-card-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Standalone button alignment ─────────────────────────────────────
+ * In non-hero sections a bare button (from a button-group with one
+ * child, or a standalone button component) inherits the container's
+ * text-align — which isn't set to center on non-first sections, so the
+ * button sits flush against the content's left edge. Set text-align
+ * center on the nl-section-inner so standalone buttons center under
+ * the content they belong to. Headings and paragraphs already have
+ * their own `text-align: center` rules, so nothing else moves. */
+body > section.nl-v10-section > .nl-section-inner {
+  text-align: center;
+}
+body > section.nl-v10-section a.nova-button.nl-v10-button {
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:UiFramework",
+  "jcr:title": "Empty Framework",
+  "jcr:description": "An empty framework with no component views. All components will default to their common view.",
+  "kes:uiFrameworkCode": "empty",
+  "kes:vendorLibraries": []
+}
