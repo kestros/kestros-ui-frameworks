@@ -4,14 +4,14 @@
           jcr:primaryType="kes:ComponentVariationGroup"
           jcr:title="Modifiers"
           jcr:description=""
-          mutuallyExclusive="false">
+          mutuallyExclusive="true">
     <uk-responsive-width jcr:primaryType="kes:ComponentVariation"
-                         jcr:title="Responsive Width"
-                         inline="true"/>
+                   jcr:title="Responseive Width"
+                   inline="true"/>
     <uk-responsive-height jcr:primaryType="kes:ComponentVariation"
-                          jcr:title="Responsive Height"
-                          inline="true"/>
+                    jcr:title="Responseive Height"
+                    inline="true"/>
     <uk-preserve-width jcr:primaryType="kes:ComponentVariation"
-                       jcr:title="Preserve Width"
-                       inline="true"/>
+                    jcr:title="Preserve Width"
+                    inline="true"/>
 </jcr:root>

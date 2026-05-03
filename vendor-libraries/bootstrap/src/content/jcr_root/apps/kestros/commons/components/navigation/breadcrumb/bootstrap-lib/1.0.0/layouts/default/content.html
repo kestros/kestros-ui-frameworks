@@ -1,0 +1,6 @@
+<sly data-sly-use.crumb="${'io.kestros.cms.components.basic.core.navigation.breadcrumbs.BreadCrumbDataSourceComponent'}"/>
+<li class="breadcrumb-item${crumb.lastItem ? ' active' : ''} ${crumb.inlineVariations}"
+    data-sly-attribute.aria-current="${crumb.lastItem ? 'page' : ''}">
+    <a data-sly-test="${!crumb.lastItem}" href="${crumb.href}">${crumb.text}</a>
+    <sly data-sly-test="${crumb.lastItem}">${crumb.text}</sly>
+</li>

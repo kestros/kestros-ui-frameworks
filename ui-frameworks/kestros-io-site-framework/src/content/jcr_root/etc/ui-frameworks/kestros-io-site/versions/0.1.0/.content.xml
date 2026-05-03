@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:UiFramework"
+          jcr:title="Kestros IO Site 0.1.0"
+          jcr:description="FlexStart-based framework for kestros.io site. Bootstrap 5, AOS animations, GLightbox, Swiper, Remixicon, Bootstrap Icons, Open Sans and Nunito fonts."
+          kes:uiFrameworkCode="kestros-io-site"
+          kes:vendorLibraries="[bootstrap/1.0.0,animate-on-scroll/1.0.0,bootstrap-icons/1.0.0,remixicon/1.0.0,glightbox/1.0.0,swiper/1.0.0,open-sans/1.0.0,nunito/1.0.0]"
+/>

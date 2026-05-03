@@ -5,13 +5,13 @@
           jcr:title="Modifiers"
           jcr:description=""
           mutuallyExclusive="false">
-    <uk-card-title jcr:primaryType="kes:ComponentVariation"
-                        jcr:title="Card Title"
-                        inline="true"/>
     <uk-heading-divider jcr:primaryType="kes:ComponentVariation"
                    jcr:title="Divider"
                    inline="true"/>
     <uk-heading-bullet jcr:primaryType="kes:ComponentVariation"
                       jcr:title="Bullet"
                       inline="true"/>
+    <uk-card-title jcr:primaryType="kes:ComponentVariation"
+                   jcr:title="Card Title"
+                   inline="true"/>
 </jcr:root>

@@ -6,13 +6,12 @@
           jcr:description=""
           mutuallyExclusive="true">
     <uk-text-light jcr:primaryType="kes:ComponentVariation"
-                  jcr:title="Light"
-                  inline="true"/>
+                   jcr:title="Light"
+                   inline="true"/>
     <uk-text-normal jcr:primaryType="kes:ComponentVariation"
-                     jcr:title="Normal"
-                     inline="true"/>
+                    jcr:title="Normal"
+                    inline="true"/>
     <uk-text-bold jcr:primaryType="kes:ComponentVariation"
-                     jcr:title="Bold"
-                     inline="true"/>
-
+                  jcr:title="Bold"
+                  inline="true"/>
 </jcr:root>
