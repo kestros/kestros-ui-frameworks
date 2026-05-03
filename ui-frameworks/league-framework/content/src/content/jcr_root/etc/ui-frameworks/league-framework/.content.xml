@@ -3,4 +3,5 @@
           jcr:primaryType="kes:ManagedUiFramework"
           jcr:title="League Framework"
           jcr:description="Sport-league sample framework on the ui-kit vendor library. Demonstrates framework evolution across six versions from baseline theming through a major token refactor."
+          kes:uiFrameworkCode="league-framework"
 />

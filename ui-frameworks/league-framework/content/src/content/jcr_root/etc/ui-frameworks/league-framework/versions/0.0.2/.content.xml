@@ -5,5 +5,5 @@
           jcr:title="League Framework 0.0.2"
           jcr:description="Brand pass — pitch-green palette, field-stripe hero gradient, gold accent buttons."
           kes:uiFrameworkCode="league-framework"
-          kes:vendorLibraries="[ui-kit/3.23.6]"
+          kes:vendorLibraries="[ui-kit/1.0.0]"
 />

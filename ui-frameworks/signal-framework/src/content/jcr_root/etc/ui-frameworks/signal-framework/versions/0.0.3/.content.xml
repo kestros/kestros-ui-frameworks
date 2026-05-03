@@ -5,5 +5,5 @@
           jcr:title="Signal Framework 0.0.3"
           jcr:description="Card elevation — session and speaker card shadows + border treatment."
           kes:uiFrameworkCode="signal-framework"
-          kes:vendorLibraries="[ui-kit/3.23.6]"
+          kes:vendorLibraries="[ui-kit/1.0.0]"
 />
