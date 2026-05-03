@@ -20,7 +20,7 @@
      data-sly-use.context="${'io.kestros.cms.components.basic.structure.breadcrumb.BreadcrumbsComponentContext'}"/>
 
 <nav aria-label="Breadcrumb">
-    <ul class="uk-breadcrumb ${context.inlineVariations}">
+    <ul class="uk-breadcrumb ${breadcrumbs.inlineVariations}">
         <sly data-sly-list.crumb="${context.crumbs}">
             <sly data-sly-test="${crumb.currentPage}">
                 <li><span aria-current="page">${crumb.text}</span></li>

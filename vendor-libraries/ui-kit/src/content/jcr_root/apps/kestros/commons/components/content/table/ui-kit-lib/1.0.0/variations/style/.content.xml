@@ -4,11 +4,26 @@
           jcr:primaryType="kes:ComponentVariationGroup"
           jcr:title="Style"
           jcr:description=""
-          mutuallyExclusive="true">
+          mutuallyExclusive="false">
     <uk-table-divider jcr:primaryType="kes:ComponentVariation"
                       jcr:title="Divider"
                       inline="true"/>
     <uk-table-striped jcr:primaryType="kes:ComponentVariation"
                       jcr:title="Striped"
                       inline="true"/>
+    <uk-table-hover jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Hover"
+                    inline="true"/>
+    <uk-table-small jcr:primaryType="kes:ComponentVariation"
+                    jcr:title="Small"
+                    inline="true"/>
+    <uk-table-responsive jcr:primaryType="kes:ComponentVariation"
+                         jcr:title="Responsive"
+                         inline="true"/>
+    <uk-table-justify jcr:primaryType="kes:ComponentVariation"
+                      jcr:title="Justify"
+                      inline="true"/>
+    <uk-table-middle jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Middle"
+                     inline="true"/>
 </jcr:root>
