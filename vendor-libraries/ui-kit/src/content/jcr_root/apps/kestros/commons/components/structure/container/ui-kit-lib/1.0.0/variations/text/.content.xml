@@ -6,6 +6,6 @@
           jcr:description=""
           mutuallyExclusive="true">
     <uk-light jcr:primaryType="kes:ComponentVariation"
-                   jcr:title="Light Text"
-                   inline="true"/>
+              jcr:title="Light"
+              inline="true"/>
 </jcr:root>

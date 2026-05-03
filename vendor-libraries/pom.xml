@@ -32,6 +32,12 @@
     <module>tachyons</module>
     <module>ui-kit</module>
     <module>nova-css</module>
+    <module>bootstrap-icons</module>
+    <module>remixicon</module>
+    <module>glightbox</module>
+    <module>swiper</module>
+    <module>open-sans</module>
+    <module>nunito</module>
     <module>nova-parallax</module>
   </modules>
 

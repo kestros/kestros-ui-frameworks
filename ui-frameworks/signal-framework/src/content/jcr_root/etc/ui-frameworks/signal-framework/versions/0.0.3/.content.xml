@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:UiFramework"
+          jcr:title="Signal Framework 0.0.3"
+          jcr:description="Card elevation — session and speaker card shadows + border treatment."
+          kes:uiFrameworkCode="signal-framework"
+          kes:vendorLibraries="[ui-kit/3.23.6]"
+/>

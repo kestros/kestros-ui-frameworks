@@ -5,10 +5,10 @@
           jcr:title="Text"
           jcr:description=""
           mutuallyExclusive="true">
-    <uk-light jcr:primaryType="kes:ComponentVariation"
-                   jcr:title="Light"
-                   inline="true"/>
     <uk-dark jcr:primaryType="kes:ComponentVariation"
-                     jcr:title="Dark"
-                     inline="true"/>
+             jcr:title="Dark"
+             inline="true"/>
+    <uk-light jcr:primaryType="kes:ComponentVariation"
+              jcr:title="Light"
+              inline="true"/>
 </jcr:root>

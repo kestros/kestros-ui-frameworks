@@ -5,14 +5,13 @@
           jcr:title="Text Transform"
           jcr:description=""
           mutuallyExclusive="true">
+    <uk-text-uppercase jcr:primaryType="kes:ComponentVariation"
+                       jcr:title="Uppercase"
+                       inline="true"/>
     <uk-text-capitalize jcr:primaryType="kes:ComponentVariation"
                         jcr:title="Capitalize"
                         inline="true"/>
     <uk-text-lowercase jcr:primaryType="kes:ComponentVariation"
                        jcr:title="Lowercase"
                        inline="true"/>
-    <uk-text-uppercase jcr:primaryType="kes:ComponentVariation"
-                       jcr:title="Uppercase"
-                       inline="true"/>
-
 </jcr:root>
