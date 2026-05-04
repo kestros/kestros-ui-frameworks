@@ -113,33 +113,9 @@ body {
   margin: 0 auto 2rem;
   font-weight: 400;
 }
-/* Default button styling inside hero — visible without variations */
+/* Hero button spacing only — visual styling comes from button variations */
 .league-hero .btn {
-  margin: 0 0.5rem;
-  padding: 0.65rem 1.75rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  color: #ffffff;
-  background: transparent;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-.league-hero .btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #ffffff;
-  color: #ffffff;
-}
-.league-hero .btn:first-child {
-  background: var(--league-accent);
-  border-color: var(--league-accent);
-  color: var(--league-dark);
-}
-.league-hero .btn:first-child:hover {
-  background: var(--league-gold);
-  border-color: var(--league-gold);
+  margin: 0 0.4rem;
 }
 
 /* ─── Section defaults ──────────────────────────────────────────────── */
