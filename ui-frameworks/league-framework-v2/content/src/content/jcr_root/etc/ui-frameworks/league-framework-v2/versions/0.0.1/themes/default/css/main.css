@@ -70,7 +70,7 @@ body {
   background: var(--league-hero-bg);
   color: #ffffff;
   text-align: center;
-  padding: 5rem 0 4.5rem;
+  padding: 3.5rem 0 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -213,13 +213,10 @@ body {
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
-/* Empty table state */
-.table tbody:empty::after,
-.table tbody tr:only-child td:empty::after {
-  content: '';
-}
-.table tbody {
-  min-height: 60px;
+/* Empty table cells — reduce wasted space when data isn't rendering */
+.table td:empty {
+  padding: 0.3rem 0.85rem;
+  height: 1.2rem;
 }
 .table thead th {
   background: var(--league-dark);
