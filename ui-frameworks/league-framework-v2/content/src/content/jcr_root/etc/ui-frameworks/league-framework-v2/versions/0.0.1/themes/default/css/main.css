@@ -1,5 +1,5 @@
-/* League Framework v2 0.0.1 — Bootstrap 5 base
- * Brand layer for the Meridian Premier League sample site.
+/* League Framework v2 — Bootstrap 5 brand layer
+ * Meridian Premier League sample site.
  */
 
 :root {
@@ -8,101 +8,253 @@
   --league-primary: #0d5c3c;
   --league-primary-dark: #074428;
   --league-accent: #f4d35e;
-  --league-muted: #f0f2f5;
-  --league-border: #e4e7ed;
-  --league-text-muted: #7b8393;
+  --league-gold: #c8a415;
+  --league-muted: #f4f5f7;
+  --league-border: #e2e5eb;
+  --league-text-muted: #6b7280;
+  --league-hero-bg: linear-gradient(135deg, #10131a 0%, #142231 40%, #1a3040 70%, #0d5c3c 100%);
 }
 
 /* ─── Base ───────────────────────────────────────────────────────────── */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Helvetica, Arial, sans-serif;
   color: var(--league-ink);
+  line-height: 1.6;
+  background: #ffffff;
 }
 
 /* ─── Navbar ─────────────────────────────────────────────────────────── */
 .navbar {
   background: var(--league-dark) !important;
-  padding: 0.5rem 1.5rem;
+  padding: 0.55rem 0;
   position: sticky;
   top: 0;
   z-index: 1030;
-  transition: padding 0.25s ease, box-shadow 0.25s ease;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 2px solid var(--league-primary);
 }
 .navbar.nav-scrolled {
-  padding: 0.25rem 1.5rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  padding: 0.25rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 .navbar-brand {
   color: #ffffff !important;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.15s ease;
 }
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #ffffff !important;
+  color: var(--league-accent) !important;
 }
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
-/* ─── Sections ───────────────────────────────────────────────────────── */
-section, .section {
-  padding: 2.5rem 0;
+/* ─── Hero section ───────────────────────────────────────────────────── */
+.league-hero {
+  background: var(--league-hero-bg);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 0 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.league-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 120%, rgba(13, 92, 60, 0.3), transparent),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0, transparent 119px,
+      rgba(255, 255, 255, 0.02) 119px,
+      rgba(255, 255, 255, 0.02) 120px
+    );
+  pointer-events: none;
+}
+.league-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--league-primary), var(--league-accent), var(--league-primary));
+}
+.league-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+.league-hero .component-text p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-weight: 400;
+}
+/* Default button styling inside hero — visible without variations */
+.league-hero .btn {
+  margin: 0 0.5rem;
+  padding: 0.65rem 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  background: transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.league-hero .btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.league-hero .btn:first-child {
+  background: var(--league-accent);
+  border-color: var(--league-accent);
+  color: var(--league-dark);
+}
+.league-hero .btn:first-child:hover {
+  background: var(--league-gold);
+  border-color: var(--league-gold);
+}
+
+/* ─── Section defaults ──────────────────────────────────────────────── */
+.py-4 > .container > h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.py-4 > .container > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--league-primary);
+  border-radius: 2px;
+}
+
+/* ─── Alternating section backgrounds ────────────────────────────────── */
+.bg-light, .bg-league-muted {
+  background: var(--league-muted) !important;
+}
+
+/* ─── Tables ─────────────────────────────────────────────────────────── */
+.table {
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}
+.table thead th {
+  background: var(--league-dark);
+  color: #ffffff;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 0.85rem;
+}
+.table thead th:first-child {
+  border-radius: 6px 0 0 0;
+}
+.table thead th:last-child {
+  border-radius: 0 6px 0 0;
+}
+.table td {
+  vertical-align: middle;
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--league-border);
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+.table tbody tr:hover {
+  background-color: rgba(13, 92, 60, 0.04);
+}
+/* First column bold (rank/position) */
+.table td:first-child {
+  font-weight: 700;
+  color: var(--league-primary);
+  text-align: center;
+  width: 3rem;
+}
+/* Last column bold (points) */
+.table td:last-child {
+  font-weight: 800;
+  font-size: 0.95rem;
 }
 
 /* ─── Cards ──────────────────────────────────────────────────────────── */
 .card {
-  border: 1px solid var(--league-border);
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
+  background: #ffffff;
 }
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+.card-body {
+  padding: 1.25rem;
 }
 .card-title {
   font-weight: 700;
+  font-size: 1rem;
   color: var(--league-ink);
+  margin-bottom: 0.35rem;
 }
 .card-text {
   color: var(--league-text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 .card-img-top {
   height: 160px;
   object-fit: cover;
+  background: linear-gradient(135deg, var(--league-dark) 0%, var(--league-primary) 100%);
 }
-
-/* ─── Tables ─────────────────────────────────────────────────────────── */
-.table thead th {
-  border-bottom: 2px solid var(--league-ink);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--league-ink);
-}
-.table td {
-  vertical-align: middle;
-}
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: rgba(0, 0, 0, 0.02);
+/* Card grid spacing */
+.row-cols-1 > * {
+  margin-bottom: 1.5rem;
 }
 
 /* ─── Buttons ────────────────────────────────────────────────────────── */
+.btn {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  border-radius: 5px;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease;
+}
 .btn-primary {
   background: var(--league-primary);
   border-color: var(--league-primary);
@@ -118,56 +270,142 @@ section, .section {
 .btn-outline-primary:hover {
   background: var(--league-primary);
   border-color: var(--league-primary);
+  color: #ffffff;
 }
-.btn-link {
-  color: var(--league-primary);
-  text-decoration: none;
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
-.btn-link:hover {
-  color: var(--league-primary-dark);
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
 }
 
 /* ─── Links ──────────────────────────────────────────────────────────── */
 a { color: var(--league-primary); }
 a:hover { color: var(--league-primary-dark); }
 
+/* Section "see full" links */
+.py-4 > .container > a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--league-primary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.py-4 > .container > a:hover {
+  border-bottom-color: var(--league-primary);
+}
+
+/* ─── Headings ───────────────────────────────────────────────────────── */
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--league-ink);
+}
+h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+h3 {
+  font-size: 1.2rem;
+}
+
 /* ─── Footer ─────────────────────────────────────────────────────────── */
+footer {
+  border-top: 3px solid var(--league-primary);
+}
+footer h4, footer h5 {
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.6) !important;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: block;
+  padding: 0.2rem 0;
+  transition: color 0.15s ease;
+}
+footer a:hover {
+  color: var(--league-accent) !important;
+}
+footer .component-text p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* Footer brand description */
+footer .component-text:first-of-type p {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+}
+
+/* Also handle the inherited-content-area wrapper for footer fallback */
 body > div.component-inherited-content-area:last-of-type {
   background: var(--league-dark);
   color: rgba(255, 255, 255, 0.72);
-  padding: 2.5rem 2rem 1.5rem;
-}
-body > div.component-inherited-content-area:last-of-type h4,
-body > div.component-inherited-content-area:last-of-type h5 {
-  color: #ffffff;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-}
-body > div.component-inherited-content-area:last-of-type a {
-  color: rgba(255, 255, 255, 0.72);
-  text-decoration: none;
-}
-body > div.component-inherited-content-area:last-of-type a:hover {
-  color: #ffffff;
-}
-body > div.component-inherited-content-area:last-of-type .component-text p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
 }
 
-/* ─── Page header ────────────────────────────────────────────────────── */
-.page-header {
+/* ─── Page header band ───────────────────────────────────────────────── */
+.league-page-header {
   background: var(--league-muted);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+  border-bottom: 3px solid var(--league-primary);
 }
-.page-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
+.league-page-header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin-bottom: 0.25rem;
+}
+.league-page-header p {
+  color: var(--league-text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ─── Link list ──────────────────────────────────────────────────────── */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* ─── Utility ────────────────────────────────────────────────────────── */
 .text-muted { color: var(--league-text-muted) !important; }
 .bg-league-dark { background: var(--league-dark) !important; color: #ffffff; }
+.bg-league-muted { background: var(--league-muted) !important; }
+.text-league-accent { color: var(--league-accent) !important; }
+.border-league { border-color: var(--league-border) !important; }
+
+/* ─── Responsive ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .league-hero h1 {
+    font-size: 2.2rem;
+  }
+  .league-hero .btn {
+    margin: 0.3rem;
+    padding: 0.55rem 1.25rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+  }
+}

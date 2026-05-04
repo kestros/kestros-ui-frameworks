@@ -2,5 +2,8 @@
 <workspaceFilter version="1.0">
 
     <filter root="/etc/ui-frameworks/league-framework-v2"/>
+    <filter root="/apps/kestros/commons/components">
+        <include pattern="^/apps/kestros/commons/components(/.*/lfv2(/.*)?)?$"/>
+    </filter>
 
 </workspaceFilter>
