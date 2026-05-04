@@ -159,6 +159,42 @@ body {
   border-radius: 2px;
 }
 
+/* ─── Dark sections ─────────────────────────────────────────────────── */
+.bg-league-dark h2,
+.bg-league-dark h3,
+.bg-league-dark h4 {
+  color: #ffffff;
+}
+.bg-league-dark .card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.bg-league-dark .card-title,
+.bg-league-dark .card h3 {
+  color: #ffffff;
+}
+.bg-league-dark .card-text,
+.bg-league-dark .card p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.bg-league-dark a {
+  color: var(--league-accent);
+}
+.bg-league-dark a:hover {
+  color: #ffffff;
+}
+.bg-league-dark .py-4 > .container > h2::after,
+.bg-league-dark h2::after {
+  background: var(--league-accent);
+}
+.bg-league-dark .table thead th {
+  background: rgba(255, 255, 255, 0.1);
+}
+.bg-league-dark .table td {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
 /* ─── Alternating section backgrounds ────────────────────────────────── */
 .bg-light, .bg-league-muted {
   background: var(--league-muted) !important;
