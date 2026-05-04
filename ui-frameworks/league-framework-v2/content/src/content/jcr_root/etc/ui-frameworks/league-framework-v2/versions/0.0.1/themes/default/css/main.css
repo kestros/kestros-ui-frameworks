@@ -199,11 +199,6 @@ body {
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
-/* Empty table cells — reduce wasted space when data isn't rendering */
-.table td:empty {
-  padding: 0.3rem 0.85rem;
-  height: 1.2rem;
-}
 .table thead th {
   background: var(--league-dark);
   color: #ffffff;
@@ -225,23 +220,15 @@ body {
   padding: 0.7rem 0.85rem;
   border-bottom: 1px solid var(--league-border);
 }
-.table tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.015);
+/* table-striped variation: tint odd rows. Bootstrap provides this; theme tunes opacity. */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0.018);
+  color: inherit;
 }
-.table tbody tr:hover {
-  background-color: rgba(13, 92, 60, 0.04);
-}
-/* First column bold (rank/position) */
-.table td:first-child {
-  font-weight: 700;
-  color: var(--league-primary);
-  text-align: center;
-  width: 3rem;
-}
-/* Last column bold (points) */
-.table td:last-child {
-  font-weight: 800;
-  font-size: 0.95rem;
+/* table-hover variation: highlight on hover with league green tint. */
+.table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: rgba(13, 92, 60, 0.06);
+  color: inherit;
 }
 
 /* ─── Cards ──────────────────────────────────────────────────────────── */
