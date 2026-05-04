@@ -47,11 +47,11 @@ body {
 }
 .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.7) !important;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 0.7rem !important;
   transition: color 0.15s ease;
 }
 .navbar-nav .nav-link:hover,
@@ -150,7 +150,7 @@ body {
 .py-4 > .container > h2 {
   position: relative;
   padding-bottom: 0.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 .py-4 > .container > h2::after {
   content: '';
@@ -161,6 +161,16 @@ body {
   height: 3px;
   background: var(--league-primary);
   border-radius: 2px;
+}
+/* Section subtitle text (text component directly after h2) */
+.py-4 > .container > .component-text:first-of-type p {
+  color: var(--league-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+  max-width: 720px;
+}
+.bg-league-dark .py-4 > .container > .component-text:first-of-type p {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ─── Dark sections ─────────────────────────────────────────────────── */
@@ -382,6 +392,25 @@ h2 {
 }
 h3 {
   font-size: 1.2rem;
+}
+
+/* ─── Stat numbers (big h3 used as stat display) ────────────────────── */
+.row h3 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--league-primary);
+  margin-bottom: 0.15rem;
+}
+.bg-league-dark .row h3 {
+  color: var(--league-accent);
+}
+/* Grid column text in dark sections */
+.bg-league-dark .col .component-text p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+}
+.bg-league-dark .col h4 {
+  margin-bottom: 0.5rem;
 }
 
 /* ─── Footer ─────────────────────────────────────────────────────────── */
