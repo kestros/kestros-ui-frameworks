@@ -1,6 +1,9 @@
 <sly data-sly-use.section="${'io.kestros.cms.components.basic.core.structure.section.SectionDataSourceComponent'}"/>
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
-<div class="league-hero text-center text-white py-5 ${section.inlineVariations}" data-sly-element="${section.elementType}">
+<sly data-sly-set.bgStyle="${'background-image:url({0});background-size:cover;background-position:center' @ format=[section.backgroundImage]}"/>
+<div class="league-hero text-center text-white py-5 ${section.inlineVariations}"
+     data-sly-element="${section.elementType}"
+     data-sly-attribute.style="${section.backgroundImage ? bgStyle : ''}">
     <div class="container py-4">
         <sly data-sly-call="${includes.contentArea}"/>
     </div>
