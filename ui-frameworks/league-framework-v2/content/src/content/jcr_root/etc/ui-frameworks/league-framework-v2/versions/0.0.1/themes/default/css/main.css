@@ -145,15 +145,14 @@ body {
   margin-bottom: 1.5rem;
   max-width: 720px;
 }
-.bg-league-dark .py-4 > .container > .component-text:first-of-type p {
-  color: rgba(255, 255, 255, 0.6);
-}
-
 /* ─── Dark sections ─────────────────────────────────────────────────── */
 .bg-league-dark h2,
 .bg-league-dark h3,
 .bg-league-dark h4 {
   color: #ffffff;
+}
+.bg-league-dark p {
+  color: rgba(255, 255, 255, 0.75);
 }
 .bg-league-dark .card {
   background: rgba(255, 255, 255, 0.08);
