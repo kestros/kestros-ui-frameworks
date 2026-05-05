@@ -502,3 +502,8 @@ ul {
     margin-bottom: 1.5rem;
   }
 }
+
+/* ─── Equal-height cards in card-list grids ─────────────────────────── */
+[class*="row-cols-md-"] > .col > .card {
+  height: 100%;
+}
