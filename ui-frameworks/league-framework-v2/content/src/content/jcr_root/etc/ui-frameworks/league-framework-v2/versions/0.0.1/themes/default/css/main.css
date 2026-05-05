@@ -167,10 +167,10 @@ body {
 .bg-league-dark .card p {
   color: rgba(255, 255, 255, 0.65);
 }
-.bg-league-dark a {
+.bg-league-dark a:not(.btn) {
   color: var(--league-accent);
 }
-.bg-league-dark a:hover {
+.bg-league-dark a:not(.btn):hover {
   color: #ffffff;
 }
 .bg-league-dark .py-4 > .container > h2::after,
