@@ -583,6 +583,49 @@ p.muted,
   color: #5a5e6a;
 }
 
+/* ─── Heading variation: stat-number ────────────────────────────────── */
+/* Oversized numeric display for stat counters. Used for the season-at-a-
+   glance numbers, player tallies, etc. Higher specificity overrides the
+   default h2/h3 sizing and the framework's underline accent. */
+.stat-number,
+.py-4 .stat-number {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--league-primary);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0;
+}
+.stat-number::after,
+.py-4 .stat-number::after {
+  content: none;
+}
+.bg-league-dark .stat-number {
+  color: var(--league-accent);
+}
+.bg-league-accent .stat-number {
+  color: var(--league-primary-dark);
+}
+
+/* ─── Heading variation: accent-bar-gold ────────────────────────────── */
+/* Swaps the heading underline accent from league-green to league-gold. */
+h2.accent-bar-gold::after,
+.py-4 > .container > h2.accent-bar-gold::after {
+  background: var(--league-accent);
+}
+
+/* ─── Heading variation: centered ───────────────────────────────────── */
+/* Centers the heading text and shifts the accent bar to centre. */
+.centered,
+.py-4 > .container > h2.centered {
+  text-align: center;
+}
+.py-4 > .container > h2.centered::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* ─── Card-list variation: cards-shadow ─────────────────────────────── */
 /* Soft shadow on every card in the list, lifting them off the
    surrounding section background. Applied at the row level and

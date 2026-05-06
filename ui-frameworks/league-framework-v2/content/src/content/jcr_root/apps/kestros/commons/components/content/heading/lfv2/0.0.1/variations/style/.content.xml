@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Style"
+          jcr:description="League-branded heading treatments."
+          mutuallyExclusive="{Boolean}false">
+    <stat-number jcr:primaryType="kes:ComponentVariation"
+                 jcr:title="Stat Number"
+                 jcr:description="Oversized league-gold numeric display, for season-at-a-glance counts and player tallies."
+                 inline="true"/>
+    <accent-bar-gold jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Accent Bar (Gold)"
+                     jcr:description="Replaces the section heading's underline accent with the league gold rather than the primary green."
+                     inline="true"/>
+    <centered jcr:primaryType="kes:ComponentVariation"
+              jcr:title="Centered"
+              jcr:description="Centers the heading text and accent bar."
+              inline="true"/>
+</jcr:root>
