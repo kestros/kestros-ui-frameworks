@@ -626,6 +626,29 @@ h2.accent-bar-gold::after,
   transform: translateX(-50%);
 }
 
+/* ─── Section variation: section-compact ────────────────────────────── */
+/* Reduced vertical padding for callouts and CTA blocks that shouldn't
+   command full section height. Override the framework's default py-4. */
+.py-4.section-compact {
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+}
+.py-4.section-compact > .container > h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+}
+
+/* ─── Section variation: section-relaxed ────────────────────────────── */
+/* Extra vertical padding -- for hero-adjacent or feature sections that
+   should feel airy. */
+.py-4.section-relaxed {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+.py-4.section-relaxed > .container > h2 {
+  margin-bottom: 2rem;
+}
+
 /* ─── Card-list variation: cards-shadow ─────────────────────────────── */
 /* Soft shadow on every card in the list, lifting them off the
    surrounding section background. Applied at the row level and

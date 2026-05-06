@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:kes="http://kestros.io/kes/1.0"
+          jcr:primaryType="kes:ComponentVariationGroup"
+          jcr:title="Spacing"
+          jcr:description="Vertical breathing room for the section."
+          mutuallyExclusive="{Boolean}true">
+    <section-compact jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Compact"
+                     jcr:description="Reduced vertical padding -- for callouts, newsletter blocks, and sections that don't need to dominate the page."
+                     inline="true"/>
+    <section-relaxed jcr:primaryType="kes:ComponentVariation"
+                     jcr:title="Relaxed"
+                     jcr:description="Extra vertical padding -- for hero-adjacent sections or feature blocks that should feel airy."
+                     inline="true"/>
+</jcr:root>
