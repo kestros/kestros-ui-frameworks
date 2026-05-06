@@ -507,3 +507,89 @@ ul {
 [class*="row-cols-md-"] > .col > .card {
   height: 100%;
 }
+
+/* ─── Text variation: lead ──────────────────────────────────────────── */
+/* Larger, more confident subtitle text. Used on hero subtitle and key
+   section subtitles. Defeats the small/muted .py-4 subtitle styling. */
+.lead,
+.py-4 > .container > .component-text:first-of-type p.lead,
+.league-hero p.lead {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--league-ink);
+  margin-bottom: 1.25rem;
+  max-width: 760px;
+}
+.bg-league-dark .lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+.league-hero .lead {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.35rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Text variation: overline ──────────────────────────────────────── */
+/* Small uppercase pretitle that sits just above an h2. Used to label
+   sections in the editorial style of premierleague.com / mlssoccer.com.
+   Higher-specificity selectors below override the framework's default
+   first-text-after-h2 muted treatment for both light and dark sections. */
+p.overline,
+.py-4 > .container > .component-text p.overline,
+.py-4 > .container > .component-text:first-of-type p.overline,
+.bg-league-dark .py-4 > .container > .component-text p.overline,
+.league-hero .container p.overline {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--league-primary);
+  margin: 0 0 0.35rem 0;
+  max-width: none;
+  line-height: 1.4;
+}
+.bg-league-dark p.overline {
+  color: var(--league-accent);
+}
+.bg-league-accent p.overline {
+  color: var(--league-primary-dark);
+}
+
+/* ─── Section layout: accent ────────────────────────────────────────── */
+/* Brand-tinted callout section. A third visual tone alongside the
+   default white sections and the dark sections — used for newsletter /
+   call-to-action blocks that need to break the page rhythm. */
+.bg-league-accent {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(13, 92, 60, 0.08), transparent 45%),
+    radial-gradient(circle at 88% 80%, rgba(244, 211, 94, 0.18), transparent 50%),
+    linear-gradient(135deg, #fff8db 0%, #fef0bd 60%, #fce29a 100%);
+  border-top: 3px solid var(--league-primary);
+  border-bottom: 3px solid var(--league-primary);
+}
+.bg-league-accent h2,
+.bg-league-accent h3,
+.bg-league-accent h4 {
+  color: var(--league-dark);
+}
+.bg-league-accent h2::after {
+  background: var(--league-primary-dark);
+}
+.bg-league-accent p {
+  color: #2c2f3a;
+}
+.bg-league-accent .btn-warning {
+  background: var(--league-primary);
+  border-color: var(--league-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(13, 92, 60, 0.3);
+}
+.bg-league-accent .btn-warning:hover {
+  background: var(--league-primary-dark);
+  border-color: var(--league-primary-dark);
+}
