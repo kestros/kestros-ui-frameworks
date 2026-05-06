@@ -560,6 +560,64 @@ p.overline,
   color: var(--league-primary-dark);
 }
 
+/* ─── Text variation: muted ─────────────────────────────────────────── */
+/* De-emphasised inline text. For dates, captions, byline metadata that
+   shouldn't compete with the headline or body copy. Same higher-specificity
+   selectors as overline so the framework's first-text-after-h2 rule
+   doesn't override. */
+p.muted,
+.py-4 > .container > .component-text p.muted,
+.py-4 > .container > .component-text:first-of-type p.muted,
+.bg-league-dark .py-4 > .container > .component-text p.muted,
+.league-hero .container p.muted {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--league-text-muted);
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+}
+.bg-league-dark p.muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+.bg-league-accent p.muted {
+  color: #5a5e6a;
+}
+
+/* ─── Card-list variation: cards-shadow ─────────────────────────────── */
+/* Soft shadow on every card in the list, lifting them off the
+   surrounding section background. Applied at the row level and
+   cascaded into descendant cards so authors set it once per list. */
+.row.cards-shadow > .col > .card,
+.row.cards-shadow > .col > * > .card {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 18px rgba(16, 19, 26, 0.08);
+  transition: box-shadow 0.18s ease;
+}
+.bg-league-dark .row.cards-shadow > .col > .card,
+.bg-league-dark .row.cards-shadow > .col > * > .card {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* ─── Card-list variation: cards-hover-lift ─────────────────────────── */
+/* Hover affordance for clickable card lists -- subtle upward
+   translation plus a stronger shadow. Composes with cards-shadow. */
+.row.cards-hover-lift > .col > .card,
+.row.cards-hover-lift > .col > * > .card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
+}
+.row.cards-hover-lift > .col > .card:hover,
+.row.cards-hover-lift > .col > * > .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(16, 19, 26, 0.18);
+}
+.bg-league-dark .row.cards-hover-lift > .col > .card:hover,
+.bg-league-dark .row.cards-hover-lift > .col > * > .card:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
 /* ─── Section layout: accent ────────────────────────────────────────── */
 /* Brand-tinted callout section. A third visual tone alongside the
    default white sections and the dark sections — used for newsletter /

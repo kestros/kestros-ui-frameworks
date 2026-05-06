@@ -13,4 +13,8 @@
               jcr:title="Overline"
               jcr:description="Small uppercase pretitle label that sits above an h2."
               inline="true"/>
+    <muted jcr:primaryType="kes:ComponentVariation"
+           jcr:title="Muted"
+           jcr:description="De-emphasised text -- smaller, lighter -- for dates, captions, byline-style metadata."
+           inline="true"/>
 </jcr:root>
