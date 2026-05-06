@@ -356,17 +356,8 @@ h3 {
   font-size: 1.2rem;
 }
 
-/* ─── Stat numbers (big h3 used as stat display) ────────────────────── */
-.row h3 {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: var(--league-primary);
-  margin-bottom: 0.15rem;
-}
-.bg-league-dark .row h3 {
-  color: var(--league-accent);
-}
-/* Grid column text in dark sections */
+/* Grid column text in dark sections — readability adapt for any text
+   inside a column on dark; not a semantic override of meaning. */
 .bg-league-dark .col .component-text p {
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.9rem;
@@ -706,14 +697,4 @@ h2.accent-bar-gold::after,
 }
 .bg-league-accent p {
   color: #2c2f3a;
-}
-.bg-league-accent .btn-warning {
-  background: var(--league-primary);
-  border-color: var(--league-primary);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(13, 92, 60, 0.3);
-}
-.bg-league-accent .btn-warning:hover {
-  background: var(--league-primary-dark);
-  border-color: var(--league-primary-dark);
 }
