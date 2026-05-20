@@ -24,8 +24,9 @@
 
     <parent>
         <groupId>io.kestros.cms</groupId>
-        <artifactId>kestros-vendor-libraries</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>kestros-site-parent</artifactId>
+        <version>0.1.2</version>
+        <relativePath/>
     </parent>
 
     <groupId>io.kestros.samples</groupId>
