@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "kes:UiFramework",
+  "jcr:title": "Empty UI Framework 0.0.1",
+  "jcr:description": "Config-only framework with no component view overlays. Assigns a framework to sites without adding CSS classes.",
+  "kes:uiFrameworkCode": "empty",
+  "kes:vendorLibraries": []
+}

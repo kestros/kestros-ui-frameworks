@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "kes:ManagedUiFramework",
+  "jcr:title": "Empty",
+  "jcr:description": "Config-only framework with no component view overlays. Assigns a framework to sites without adding CSS classes.",
+  "kes:uiFrameworkCode": "empty"
+}

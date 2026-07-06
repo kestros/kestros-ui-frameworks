@@ -2,5 +2,6 @@
 <workspaceFilter version="1.0">
 
   <filter root="/etc/ui-frameworks/empty-framework"/>
+  <filter root="/libs/kestros/ui-frameworks/empty-framework"/>
 
 </workspaceFilter>
