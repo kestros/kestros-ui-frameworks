@@ -16,4 +16,5 @@
     <h4 jcr:primaryType="kes:ComponentVariation" jcr:title="h4" inline="true"/>
     <h1 jcr:primaryType="kes:ComponentVariation" jcr:title="h1" inline="true"/>
     <h2 jcr:primaryType="kes:ComponentVariation" jcr:title="h2" inline="true"/>
+    <mb-0 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-0" inline="true"/>
 </jcr:root>
