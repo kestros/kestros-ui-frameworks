@@ -8,4 +8,8 @@
     <text-uppercase jcr:primaryType="kes:ComponentVariation" jcr:title="text-uppercase" inline="true"/>
     <fw-bold jcr:primaryType="kes:ComponentVariation" jcr:title="fw-bold" inline="true"/>
     <opacity-50 jcr:primaryType="kes:ComponentVariation" jcr:title="opacity-50" inline="true"/>
+    <story-category jcr:primaryType="kes:ComponentVariation" jcr:title="story-category" inline="true"/>
+    <text-muted jcr:primaryType="kes:ComponentVariation" jcr:title="text-muted" inline="true"/>
+    <small jcr:primaryType="kes:ComponentVariation" jcr:title="small" inline="true"/>
+    <card-text jcr:primaryType="kes:ComponentVariation" jcr:title="card-text" inline="true"/>
 </jcr:root>

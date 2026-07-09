@@ -20,6 +20,7 @@
     <mb-4 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-4" inline="true"/>
     <mb-5 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-5" inline="true"/>
     <mb-0 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-0" inline="true"/>
+    <mb-2 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-2" inline="true"/>
     <bg-transparent jcr:primaryType="kes:ComponentVariation" jcr:title="bg-transparent" inline="true"/>
     <text-center jcr:primaryType="kes:ComponentVariation" jcr:title="text-center" inline="true"/>
     <text-white jcr:primaryType="kes:ComponentVariation" jcr:title="text-white" inline="true"/>
@@ -32,4 +33,5 @@
     <d-flex jcr:primaryType="kes:ComponentVariation" jcr:title="d-flex" inline="true"/>
     <justify-content-between jcr:primaryType="kes:ComponentVariation" jcr:title="justify-content-between" inline="true"/>
     <align-items-center jcr:primaryType="kes:ComponentVariation" jcr:title="align-items-center" inline="true"/>
+    <pt-3 jcr:primaryType="kes:ComponentVariation" jcr:title="pt-3" inline="true"/>
 </jcr:root>
