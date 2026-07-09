@@ -19,4 +19,5 @@
     <mb-1 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-1" inline="true"/>
     <mb-0 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-0" inline="true"/>
     <result-date jcr:primaryType="kes:ComponentVariation" jcr:title="result-date" inline="true"/>
+    <fw-semibold jcr:primaryType="kes:ComponentVariation" jcr:title="fw-semibold" inline="true"/>
 </jcr:root>

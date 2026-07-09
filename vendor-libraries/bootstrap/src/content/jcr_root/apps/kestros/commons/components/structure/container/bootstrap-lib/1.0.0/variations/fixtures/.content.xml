@@ -3,4 +3,7 @@
     <fixture-row jcr:primaryType="kes:ComponentVariation" jcr:title="fixture-row" inline="true"/>
     <fixture-club jcr:primaryType="kes:ComponentVariation" jcr:title="fixture-club" inline="true"/>
     <away jcr:primaryType="kes:ComponentVariation" jcr:title="away" inline="true"/>
+    <fixture-vs jcr:primaryType="kes:ComponentVariation" jcr:title="fixture-vs" inline="true"/>
+    <fixture-time jcr:primaryType="kes:ComponentVariation" jcr:title="fixture-time" inline="true"/>
+    <ms-2 jcr:primaryType="kes:ComponentVariation" jcr:title="ms-2" inline="true"/>
 </jcr:root>
