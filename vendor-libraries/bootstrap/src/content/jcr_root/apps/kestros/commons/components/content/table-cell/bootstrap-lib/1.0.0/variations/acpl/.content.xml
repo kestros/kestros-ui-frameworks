@@ -3,4 +3,5 @@
     <d-flex jcr:primaryType="kes:ComponentVariation" jcr:title="Flex" inline="true"/>
     <align-items-center jcr:primaryType="kes:ComponentVariation" jcr:title="Align Center" inline="true"/>
     <gap-2 jcr:primaryType="kes:ComponentVariation" jcr:title="Gap" inline="true"/>
+    <fw-bold jcr:primaryType="kes:ComponentVariation" jcr:title="fw-bold" inline="true"/>
 </jcr:root>
