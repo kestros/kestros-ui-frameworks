@@ -8,9 +8,6 @@
     <fw-bolder jcr:primaryType="kes:ComponentVariation"
                jcr:title="Bolder"
                inline="true"/>
-    <fw-semibold jcr:primaryType="kes:ComponentVariation"
-                 jcr:title="Semibold"
-                 inline="true"/>
     <fw-medium jcr:primaryType="kes:ComponentVariation"
                jcr:title="Medium"
                inline="true"/>

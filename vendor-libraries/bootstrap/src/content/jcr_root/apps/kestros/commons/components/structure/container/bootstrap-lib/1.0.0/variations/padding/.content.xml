@@ -17,17 +17,11 @@
     <p-3 jcr:primaryType="kes:ComponentVariation"
          jcr:title="p-3"
          inline="true"/>
-    <p-4 jcr:primaryType="kes:ComponentVariation"
-         jcr:title="p-4"
-         inline="true"/>
     <p-5 jcr:primaryType="kes:ComponentVariation"
          jcr:title="p-5"
          inline="true"/>
     <py-1 jcr:primaryType="kes:ComponentVariation"
           jcr:title="py-1"
-          inline="true"/>
-    <py-3 jcr:primaryType="kes:ComponentVariation"
-          jcr:title="py-3"
           inline="true"/>
     <py-5 jcr:primaryType="kes:ComponentVariation"
           jcr:title="py-5"

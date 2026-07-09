@@ -5,10 +5,8 @@
     <score-num jcr:primaryType="kes:ComponentVariation" jcr:title="score-num" inline="true"/>
     <club-name jcr:primaryType="kes:ComponentVariation" jcr:title="club-name" inline="true"/>
     <formation-col jcr:primaryType="kes:ComponentVariation" jcr:title="formation-col" inline="true"/>
-    <col-md-5 jcr:primaryType="kes:ComponentVariation" jcr:title="col-md-5" inline="true"/>
     <col-md-2 jcr:primaryType="kes:ComponentVariation" jcr:title="col-md-2" inline="true"/>
     <col-md-6 jcr:primaryType="kes:ComponentVariation" jcr:title="col-md-6" inline="true"/>
     <text-md-end jcr:primaryType="kes:ComponentVariation" jcr:title="text-md-end" inline="true"/>
     <text-md-start jcr:primaryType="kes:ComponentVariation" jcr:title="text-md-start" inline="true"/>
-    <justify-content-center jcr:primaryType="kes:ComponentVariation" jcr:title="justify-content-center" inline="true"/>
-</jcr:root>
+    </jcr:root>
