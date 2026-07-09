@@ -8,4 +8,6 @@
     <hero-headline jcr:primaryType="kes:ComponentVariation" jcr:title="hero-headline" inline="true"/>
     <card-title jcr:primaryType="kes:ComponentVariation" jcr:title="card-title" inline="true"/>
     <h5 jcr:primaryType="kes:ComponentVariation" jcr:title="h5" inline="true"/>
+    <mb-4 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-4" inline="true"/>
+    <mb-1 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-1" inline="true"/>
 </jcr:root>

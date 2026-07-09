@@ -12,4 +12,10 @@
     <text-muted jcr:primaryType="kes:ComponentVariation" jcr:title="text-muted" inline="true"/>
     <small jcr:primaryType="kes:ComponentVariation" jcr:title="small" inline="true"/>
     <card-text jcr:primaryType="kes:ComponentVariation" jcr:title="card-text" inline="true"/>
+    <hero-dek jcr:primaryType="kes:ComponentVariation" jcr:title="hero-dek" inline="true"/>
+    <section-heading jcr:primaryType="kes:ComponentVariation" jcr:title="section-heading" inline="true"/>
+    <mb-2 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-2" inline="true"/>
+    <mb-auto jcr:primaryType="kes:ComponentVariation" jcr:title="mb-auto" inline="true"/>
+    <mb-1 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-1" inline="true"/>
+    <mb-0 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-0" inline="true"/>
 </jcr:root>

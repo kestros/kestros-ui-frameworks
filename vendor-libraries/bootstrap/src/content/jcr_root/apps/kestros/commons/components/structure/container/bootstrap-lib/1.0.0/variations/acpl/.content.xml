@@ -34,4 +34,15 @@
     <justify-content-between jcr:primaryType="kes:ComponentVariation" jcr:title="justify-content-between" inline="true"/>
     <align-items-center jcr:primaryType="kes:ComponentVariation" jcr:title="align-items-center" inline="true"/>
     <pt-3 jcr:primaryType="kes:ComponentVariation" jcr:title="pt-3" inline="true"/>
+    <story-card jcr:primaryType="kes:ComponentVariation" jcr:title="story-card" inline="true"/>
+    <flex-column jcr:primaryType="kes:ComponentVariation" jcr:title="flex-column" inline="true"/>
+    <mt-2 jcr:primaryType="kes:ComponentVariation" jcr:title="mt-2" inline="true"/>
+    <pt-2 jcr:primaryType="kes:ComponentVariation" jcr:title="pt-2" inline="true"/>
+    <border-top jcr:primaryType="kes:ComponentVariation" jcr:title="border-top" inline="true"/>
+    <gap-2 jcr:primaryType="kes:ComponentVariation" jcr:title="gap-2" inline="true"/>
+    <mt-3 jcr:primaryType="kes:ComponentVariation" jcr:title="mt-3" inline="true"/>
+    <gap-3 jcr:primaryType="kes:ComponentVariation" jcr:title="gap-3" inline="true"/>
+    <flex-wrap jcr:primaryType="kes:ComponentVariation" jcr:title="flex-wrap" inline="true"/>
+    <small jcr:primaryType="kes:ComponentVariation" jcr:title="small" inline="true"/>
+    <text-muted jcr:primaryType="kes:ComponentVariation" jcr:title="text-muted" inline="true"/>
 </jcr:root>
