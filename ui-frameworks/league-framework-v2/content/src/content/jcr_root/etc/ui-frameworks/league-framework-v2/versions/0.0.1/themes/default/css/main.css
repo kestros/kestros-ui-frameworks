@@ -214,7 +214,7 @@
 /* ---- Hero overlay ---- */
 .hero-wrap {
   position: relative;
-  min-height: 420px;
+  min-height: 460px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
