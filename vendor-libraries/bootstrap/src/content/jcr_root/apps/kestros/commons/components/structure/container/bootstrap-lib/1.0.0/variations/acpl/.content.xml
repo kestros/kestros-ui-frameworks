@@ -29,4 +29,7 @@
     <py-2 jcr:primaryType="kes:ComponentVariation" jcr:title="py-2" inline="true"/>
     <py-4 jcr:primaryType="kes:ComponentVariation" jcr:title="py-4" inline="true"/>
     <container-fluid jcr:primaryType="kes:ComponentVariation" jcr:title="container-fluid" inline="true"/>
+    <d-flex jcr:primaryType="kes:ComponentVariation" jcr:title="d-flex" inline="true"/>
+    <justify-content-between jcr:primaryType="kes:ComponentVariation" jcr:title="justify-content-between" inline="true"/>
+    <align-items-center jcr:primaryType="kes:ComponentVariation" jcr:title="align-items-center" inline="true"/>
 </jcr:root>
