@@ -20,4 +20,8 @@
     <mb-0 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-0" inline="true"/>
     <result-date jcr:primaryType="kes:ComponentVariation" jcr:title="result-date" inline="true"/>
     <fw-semibold jcr:primaryType="kes:ComponentVariation" jcr:title="fw-semibold" inline="true"/>
+    <d-none jcr:primaryType="kes:ComponentVariation" jcr:title="d-none" inline="true"/>
+    <d-sm-inline jcr:primaryType="kes:ComponentVariation" jcr:title="d-sm-inline" inline="true"/>
+    <d-inline jcr:primaryType="kes:ComponentVariation" jcr:title="d-inline" inline="true"/>
+    <d-sm-none jcr:primaryType="kes:ComponentVariation" jcr:title="d-sm-none" inline="true"/>
 </jcr:root>

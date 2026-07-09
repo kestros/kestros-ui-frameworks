@@ -51,4 +51,5 @@
     <col-md-7 jcr:primaryType="kes:ComponentVariation" jcr:title="col-md-7" inline="true"/>
     <p-4 jcr:primaryType="kes:ComponentVariation" jcr:title="p-4" inline="true"/>
     <mb-3 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-3" inline="true"/>
+    <hero-overlay jcr:primaryType="kes:ComponentVariation" jcr:title="hero-overlay" inline="true"/>
 </jcr:root>
