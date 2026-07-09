@@ -24,4 +24,5 @@
     <d-sm-inline jcr:primaryType="kes:ComponentVariation" jcr:title="d-sm-inline" inline="true"/>
     <d-inline jcr:primaryType="kes:ComponentVariation" jcr:title="d-inline" inline="true"/>
     <d-sm-none jcr:primaryType="kes:ComponentVariation" jcr:title="d-sm-none" inline="true"/>
+    <form-label jcr:primaryType="kes:ComponentVariation" jcr:title="form-label" inline="true"/>
 </jcr:root>
