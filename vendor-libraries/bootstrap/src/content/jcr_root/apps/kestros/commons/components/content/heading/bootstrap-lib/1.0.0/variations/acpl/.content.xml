@@ -10,4 +10,6 @@
     <h5 jcr:primaryType="kes:ComponentVariation" jcr:title="h5" inline="true"/>
     <mb-4 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-4" inline="true"/>
     <mb-1 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-1" inline="true"/>
+    <mb-2 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-2" inline="true"/>
+    <mb-3 jcr:primaryType="kes:ComponentVariation" jcr:title="mb-3" inline="true"/>
 </jcr:root>
