@@ -2,4 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:kes="http://kestros.io/kes/1.0" jcr:primaryType="kes:ComponentVariationGroup" jcr:title="ACPL">
     <hero-img jcr:primaryType="kes:ComponentVariation" jcr:title="Hero Image" inline="true"/>
     <card-img-top jcr:primaryType="kes:ComponentVariation" jcr:title="Card Image Top" inline="true"/>
+    <crest-sm jcr:primaryType="kes:ComponentVariation" jcr:title="Crest Small" inline="true"/>
+    <crest-md jcr:primaryType="kes:ComponentVariation" jcr:title="Crest Medium" inline="true"/>
+    <me-2 jcr:primaryType="kes:ComponentVariation" jcr:title="Margin End" inline="true"/>
 </jcr:root>
