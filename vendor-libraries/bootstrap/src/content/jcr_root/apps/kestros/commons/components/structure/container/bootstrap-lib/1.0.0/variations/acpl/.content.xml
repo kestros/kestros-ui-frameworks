@@ -24,4 +24,9 @@
     <text-center jcr:primaryType="kes:ComponentVariation" jcr:title="text-center" inline="true"/>
     <text-white jcr:primaryType="kes:ComponentVariation" jcr:title="text-white" inline="true"/>
     <h6 jcr:primaryType="kes:ComponentVariation" jcr:title="h6" inline="true"/>
+    <acpl-footer jcr:primaryType="kes:ComponentVariation" jcr:title="acpl-footer" inline="true"/>
+    <acpl-title-strip jcr:primaryType="kes:ComponentVariation" jcr:title="acpl-title-strip" inline="true"/>
+    <py-2 jcr:primaryType="kes:ComponentVariation" jcr:title="py-2" inline="true"/>
+    <py-4 jcr:primaryType="kes:ComponentVariation" jcr:title="py-4" inline="true"/>
+    <container-fluid jcr:primaryType="kes:ComponentVariation" jcr:title="container-fluid" inline="true"/>
 </jcr:root>
