@@ -479,6 +479,6 @@
    in tight/inline contexts so rows, cells and selects match the mock's <span> layout. */
 .fixture-row p, .result-row p, .fixture-club p, .result-club p, .fixture-vs p,
 .form-select p, .form-select, table td p, table th p, .card-header p,
-.acpl-title-strip p, .team-header p, .badge p { margin-bottom: 0; }
+.acpl-title-strip p, .team-header p, .badge p, .bg-primary .d-flex p, .result-club p { margin-bottom: 0; }
 .form-select { display: flex; align-items: center; }
 .form-select p { line-height: 1.2; }
