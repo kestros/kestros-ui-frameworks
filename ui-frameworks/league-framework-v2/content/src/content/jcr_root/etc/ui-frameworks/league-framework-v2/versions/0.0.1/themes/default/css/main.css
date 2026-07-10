@@ -205,6 +205,17 @@
 .squad-name:hover { text-decoration: underline !important; }
 .table-acpl a.squad-name, .table-acpl a[href*="player.html"] { cursor: pointer; }
 
+/* Standings: center numeric columns, keep the Club column (2nd) left-aligned */
+.table-acpl th, .table-acpl td { text-align: center; vertical-align: middle; }
+.table-acpl th:nth-child(2), .table-acpl td:nth-child(2) { text-align: left; }
+
+/* Standings promotion/relegation key */
+.standings-key { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: .75rem; font-size: .8rem; }
+.standings-key .key-item { display: flex; align-items: center; gap: .5rem; }
+.key-swatch { display: inline-block; width: 14px; height: 16px; border-radius: 2px; }
+.key-promotion { background: #1B6E3A; }
+.key-relegation { background: var(--acpl-crimson); }
+
 /* ============ styles.css ============ */
 /* ============================================================
    ACPL Bootstrap-Classic — styles.css
