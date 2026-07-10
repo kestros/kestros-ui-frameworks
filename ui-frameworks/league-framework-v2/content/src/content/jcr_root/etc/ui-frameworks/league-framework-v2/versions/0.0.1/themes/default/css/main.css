@@ -276,41 +276,44 @@
 
 /* ---- Fixture row ---- */
 .fixture-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: .75rem;
+  gap: 1rem;
   padding: .85rem 1rem;
   border-bottom: 1px solid var(--acpl-border);
   background: #fff;
 }
+.fixture-row.fixture-row-full { grid-template-columns: 1fr 2.5rem 1fr 70px auto; }
 .fixture-row:last-child { border-bottom: none; }
-.fixture-club { flex: 1; display: flex; align-items: center; gap: .5rem; font-weight: 600; }
+.fixture-club { display: flex; align-items: center; gap: .5rem; min-width: 0; font-weight: 600; }
 .fixture-club.away { justify-content: flex-end; flex-direction: row-reverse; }
-.fixture-vs { flex: 0 0 2.5rem; text-align: center; color: #aaa; font-size: .85rem; font-weight: 700; }
-.fixture-time { flex: 0 0 80px; text-align: right; font-size: .82rem; color: #6c757d; }
+.fixture-vs { text-align: center; color: #aaa; font-size: .85rem; font-weight: 700; }
+.fixture-time { text-align: right; font-size: .82rem; color: #6c757d; }
 .fixture-date { font-size: .72rem; color: #adb5bd; }
 
 /* ---- Result row ---- */
 .result-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: .75rem;
+  gap: 1rem;
   padding: .85rem 1rem;
   border-bottom: 1px solid var(--acpl-border);
   background: #fff;
 }
 .result-row:last-child { border-bottom: none; }
-.result-club { flex: 1; display: flex; align-items: center; gap: .5rem; font-weight: 600; font-size: .9rem; }
+.result-club { display: flex; align-items: center; gap: .5rem; min-width: 0; font-weight: 600; font-size: .9rem; }
 .result-club.away { justify-content: flex-end; flex-direction: row-reverse; }
 .result-score-box {
-  flex: 0 0 70px;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 900;
   color: var(--acpl-navy);
   line-height: 1;
+  white-space: nowrap;
 }
-.result-date { font-size: .72rem; color: #adb5bd; text-align: center; margin-top: .15rem; }
+.result-date { font-size: .72rem; color: #adb5bd; text-align: center; margin-top: .15rem; white-space: nowrap; }
 
 /* ---- Formation grid ---- */
 .formation-col { display: flex; flex-direction: column; gap: .5rem; }
