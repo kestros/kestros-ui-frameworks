@@ -13,7 +13,7 @@
 
     <groupId>io.kestros.vendor-libraries</groupId>
     <artifactId>kestros-semantic-ui</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.1-SNAPSHOT</version>
     <name>Kestros Semantic UI</name>
     <packaging>bundle</packaging>
 
