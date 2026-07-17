@@ -31,7 +31,7 @@
 
     <groupId>io.kestros.samples</groupId>
     <artifactId>kestros-empty-ui-framework</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <name>Kestros - Empty UI Framework</name>
     <description></description>
