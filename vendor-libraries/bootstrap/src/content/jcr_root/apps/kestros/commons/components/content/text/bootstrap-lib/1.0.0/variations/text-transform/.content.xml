@@ -8,9 +8,6 @@
     <text-lowercase jcr:primaryType="kes:ComponentVariation"
                     jcr:title="Lowercase"
                     inline="true"/>
-    <text-uppercase jcr:primaryType="kes:ComponentVariation"
-                    jcr:title="Uppercase"
-                    inline="true"/>
     <text-capitalize jcr:primaryType="kes:ComponentVariation"
                      jcr:title="Capitalize"
                      inline="true"/>

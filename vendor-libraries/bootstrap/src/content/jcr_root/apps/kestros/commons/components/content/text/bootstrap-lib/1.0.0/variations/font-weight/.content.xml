@@ -5,15 +5,9 @@
           jcr:title="Font Weight"
           jcr:description=""
           mutuallyExclusive="{Boolean}true">
-    <fw-bold jcr:primaryType="kes:ComponentVariation"
-             jcr:title="Bold"
-             inline="true"/>
     <fw-bolder jcr:primaryType="kes:ComponentVariation"
                jcr:title="Bolder"
                inline="true"/>
-    <fw-semibold jcr:primaryType="kes:ComponentVariation"
-                 jcr:title="Semibold"
-                 inline="true"/>
     <fw-medium jcr:primaryType="kes:ComponentVariation"
                jcr:title="Medium"
                inline="true"/>
