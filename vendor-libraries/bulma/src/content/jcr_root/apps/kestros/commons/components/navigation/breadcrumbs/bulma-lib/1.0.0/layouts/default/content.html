@@ -1,7 +1,7 @@
 <sly data-sly-use.breadcrumbs="${'io.kestros.cms.components.basic.core.navigation.breadcrumbs.BreadCrumbsDataSourceComponent'}"/>
 <nav class="breadcrumb ${breadcrumbs.inlineVariations}" aria-label="breadcrumbs">
     <ul>
-        <li data-sly-list.crumb="${breadcrumbs.linkElements}" class="${crumb.lastItem ? 'is-active' : ''}">
+        <li data-sly-repeat.crumb="${breadcrumbs.linkElements}" class="${crumb.lastItem ? 'is-active' : ''}">
             <a href="${crumb.href}" data-sly-attribute.aria-current="${crumb.lastItem ? 'page' : ''}">${crumb.text}</a>
         </li>
     </ul>
