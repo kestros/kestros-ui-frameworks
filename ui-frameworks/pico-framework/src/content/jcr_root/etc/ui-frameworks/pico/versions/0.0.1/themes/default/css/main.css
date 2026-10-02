@@ -1,0 +1,151 @@
+/*
+ * Pico 0.0.1 default theme.
+ * Pico styles semantic HTML and has no class for these layouts, so the kes-* rules live here
+ * rather than inline in the views.
+ */
+
+/* Alert */
+.kes-alert {
+  padding: var(--pico-spacing);
+  border-left: 0.25rem solid var(--pico-primary);
+}
+.kes-alert > :last-child {
+  margin-bottom: 0;
+}
+
+/* Card */
+.kes-card .kes-card-img {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--pico-spacing);
+}
+.kes-card-img-bottom .kes-card-img {
+  margin-top: var(--pico-spacing);
+  margin-bottom: 0;
+}
+.kes-card-horizontal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--pico-grid-column-gap);
+  align-items: start;
+}
+.kes-card-horizontal .kes-card-img {
+  margin-bottom: 0;
+}
+.kes-card-img-overlay {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+.kes-card-img-overlay .kes-card-img {
+  margin: 0;
+}
+.kes-card-img-overlay .kes-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--pico-spacing);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+}
+.kes-card-img-overlay .kes-card-overlay h3 {
+  color: inherit;
+}
+
+/* Card list */
+.kes-card-list {
+  display: grid;
+  gap: var(--pico-grid-column-gap);
+}
+.kes-cols-1 { grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .kes-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .kes-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .kes-cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Grid ratios. Pico's .grid gives equal columns only. */
+@media (min-width: 768px) {
+  .grid.kes-grid-25-75 { grid-template-columns: 1fr 3fr; }
+  .grid.kes-grid-75-25 { grid-template-columns: 3fr 1fr; }
+  .grid.kes-grid-33-66 { grid-template-columns: 1fr 2fr; }
+  .grid.kes-grid-66-33 { grid-template-columns: 2fr 1fr; }
+}
+
+/* Link list */
+.kes-list-group {
+  padding: 0;
+  border: var(--pico-border-width) solid var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+}
+.kes-list-group li {
+  list-style: none;
+  margin: 0;
+  padding: calc(var(--pico-spacing) / 2) var(--pico-spacing);
+}
+.kes-list-group li + li {
+  border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+}
+.kes-list-group-flush {
+  border: 0;
+  border-radius: 0;
+}
+
+/* Navigation: pills and tabs */
+.kes-nav-pills ul,
+.kes-nav-tabs ul {
+  gap: calc(var(--pico-spacing) / 2);
+}
+.kes-nav-pills a {
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+  background: var(--pico-secondary-background);
+  color: var(--pico-secondary-inverse);
+}
+.kes-nav-pills a[aria-current="page"] {
+  background: var(--pico-primary-background);
+  color: var(--pico-primary-inverse);
+}
+.kes-nav-tabs {
+  border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
+}
+.kes-nav-tabs a {
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+}
+.kes-nav-tabs a[aria-current="page"] {
+  border-bottom-color: var(--pico-primary);
+}
+
+/* Top navigation: centered */
+nav.kes-nav-centered {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Accordion */
+.kes-accordion details {
+  margin-bottom: 0;
+  padding: calc(var(--pico-spacing) / 2) 0;
+  border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
+}
+.kes-accordion-flush details {
+  border-bottom: 0;
+}
+
+/* Video embed ratios */
+.kes-ratio {
+  position: relative;
+  width: 100%;
+}
+.kes-ratio > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.kes-ratio-16x9 { aspect-ratio: 16 / 9; }
+.kes-ratio-21x9 { aspect-ratio: 21 / 9; }
+.kes-ratio-1x1 { aspect-ratio: 1 / 1; }

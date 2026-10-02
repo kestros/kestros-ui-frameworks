@@ -1,0 +1,6 @@
+<sly data-sly-use.nav="${'io.kestros.cms.components.basic.core.navigation.nav.NavigationDataSourceComponent'}"/>
+<nav class="flex border-b border-gray-200 *:-mb-px *:border-b-2 *:border-transparent *:px-4 *:py-2 hover:*:border-gray-400 ${nav.inlineVariations}">
+    <sly data-sly-list.item="${nav.navigationLinks}">
+        <sly data-sly-resource="${item}"/>
+    </sly>
+</nav>
