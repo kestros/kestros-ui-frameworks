@@ -5,9 +5,6 @@
           jcr:title="Shape"
           jcr:description=""
           mutuallyExclusive="{Boolean}true">
-    <rounded jcr:primaryType="kes:ComponentVariation"
-             jcr:title="Rounded"
-             inline="true"/>
     <rounded-circle jcr:primaryType="kes:ComponentVariation"
                     jcr:title="Circle"
                     inline="true"/>

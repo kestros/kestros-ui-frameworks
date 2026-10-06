@@ -35,7 +35,4 @@
     <text-body-secondary jcr:primaryType="kes:ComponentVariation"
                          jcr:title="Body Secondary"
                          inline="true"/>
-    <text-white jcr:primaryType="kes:ComponentVariation"
-                jcr:title="White"
-                inline="true"/>
-</jcr:root>
+    </jcr:root>
