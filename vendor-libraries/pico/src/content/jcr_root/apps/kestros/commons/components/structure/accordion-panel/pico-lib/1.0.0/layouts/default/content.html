@@ -1,0 +1,8 @@
+<sly data-sly-use.accordionPanel="${'io.kestros.cms.components.basic.core.structure.accordion.AccordionPanelDataSourceComponent'}"/>
+<sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
+<details class="${accordionPanel.inlineVariations}" data-sly-attribute.open="${accordionPanel.expanded}">
+    <summary>${accordionPanel.title}</summary>
+    <div>
+        <sly data-sly-call="${includes.contentArea}"/>
+    </div>
+</details>

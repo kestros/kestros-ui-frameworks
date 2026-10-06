@@ -1,0 +1,6 @@
+<sly data-sly-use.accordion="${'io.kestros.cms.components.basic.core.structure.accordion.AccordionDataSourceComponent'}"/>
+<div class="divide-y divide-gray-200 rounded border border-gray-200 ${accordion.inlineVariations}">
+    <sly data-sly-list.panel="${accordion.panels}">
+        <sly data-sly-resource="${panel}"/>
+    </sly>
+</div>
