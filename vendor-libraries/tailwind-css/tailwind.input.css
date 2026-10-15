@@ -1,0 +1,15 @@
+/* Input for tailwind.config.js. No @tailwind base: preflight.css ships separately. */
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * A variation's node name is its class, and a JCR name cannot contain '/'.
+ * A package holding <w-1/2> fails to install as a whole, so fraction widths are spelt with '-'.
+ */
+@layer utilities {
+  .w-1-2 { @apply w-1/2; }
+  .w-1-3 { @apply w-1/3; }
+  .w-2-3 { @apply w-2/3; }
+  .w-1-4 { @apply w-1/4; }
+  .w-3-4 { @apply w-3/4; }
+}

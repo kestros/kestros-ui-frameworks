@@ -1,0 +1,4 @@
+<sly data-sly-use.videoEmbed="${'io.kestros.cms.components.basic.core.content.videoembed.VideoEmbedDataSourceComponent'}"/>
+<div class="aspect-[21/9] *:h-full *:w-full ${videoEmbed.inlineVariations}">
+    ${videoEmbed.videoEmbedCode @ context='html'}
+</div>

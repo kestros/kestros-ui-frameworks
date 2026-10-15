@@ -1,0 +1,3 @@
+<sly data-sly-use.crumb="${'io.kestros.cms.components.basic.core.navigation.breadcrumbs.BreadCrumbDataSourceComponent'}"/>
+<a data-sly-test="${!crumb.lastItem}" class="text-blue-600 hover:underline ${crumb.inlineVariations}" href="${crumb.href}">${crumb.text}</a>
+<span data-sly-test="${crumb.lastItem}" class="text-gray-500 ${crumb.inlineVariations}" aria-current="page">${crumb.text}</span>
