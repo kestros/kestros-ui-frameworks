@@ -3,5 +3,5 @@
 <sly data-sly-use.includes="/libs/kestros/commons/components/includes.html"/>
 
 <div class="nova-button-group ${buttonGroup.inlineVariations}">
-    <sly data-sly-call="${includes.contentArea}"/>
+    <sly data-sly-call="${includes.contentArea @ component = buttonGroup}"/>
 </div>
