@@ -20,6 +20,7 @@
   <modules>
     <module>semantic-ui-framework</module>
     <module>bootstrap-framework</module>
+    <module>pico-framework</module>
     <module>bulma-framework</module>
     <module>empty-framework</module>
     <module>tailwind-framework</module>

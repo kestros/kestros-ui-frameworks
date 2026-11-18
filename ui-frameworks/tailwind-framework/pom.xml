@@ -15,7 +15,8 @@
 
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Tailwind Framework</name>
+    <name>Kestros Tailwind Framework</name>
+    <description>Tailwind CSS UI framework for Kestros sites. Uses the Tailwind CSS vendor library (tailwind-css/1.0.0).</description>
 
     <packaging>bundle</packaging>
 

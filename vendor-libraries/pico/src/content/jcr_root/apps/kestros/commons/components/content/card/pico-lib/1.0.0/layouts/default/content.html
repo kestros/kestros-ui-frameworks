@@ -1,0 +1,7 @@
+<sly data-sly-use.card="${'io.kestros.cms.components.basic.core.content.card.CardDataSourceComponent'}"/>
+<article class="kes-card ${card.inlineVariations}">
+    <img data-sly-test="${card.imageElement}" src="${card.imageElement.imagePath}" class="kes-card-img" alt="${card.imageElement.altText}"/>
+    <h3 data-sly-test="${card.titleElement}">${card.titleElement.headingText}</h3>
+    <p data-sly-test="${card.description}">${card.description}</p>
+    <footer data-sly-test="${card.buttonGroup}"><sly data-sly-resource="${card.buttonGroup}"/></footer>
+</article>
