@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
+    <filter root="/etc/ui-frameworks/bulma"/>
+    <!-- Former code of this framework. The package carries nothing here, so installing it removes the old node. -->
     <filter root="/etc/ui-frameworks/bloom"/>
 </workspaceFilter>
