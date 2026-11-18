@@ -6,5 +6,5 @@
           jcr:title="Bootstrap 0.0.1"
           jcr:description="Generic usage of the Bootstrap framework, with FontAwesome providing icons."
           kes:uiFrameworkCode="bootstrap"
-          kes:vendorLibraries="[bootstrap/1.0.0,font-awesome/1.0.0]"
+          kes:vendorLibraries="[bootstrap/1.0.0]"
           fontAwesomeIcon="fab fa-bootstrap"/>
