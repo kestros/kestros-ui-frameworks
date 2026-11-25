@@ -1,0 +1,4 @@
+<sly data-sly-use.topNavItem="${'io.kestros.cms.components.basic.core.navigation.topnav.TopNavigationItemDataSourceComponent'}"/>
+<li class="${topNavItem.inlineVariations}">
+    <a href="${topNavItem.href}" data-sly-attribute.aria-current="${topNavItem.active ? 'page' : ''}">${topNavItem.text}</a>
+</li>
