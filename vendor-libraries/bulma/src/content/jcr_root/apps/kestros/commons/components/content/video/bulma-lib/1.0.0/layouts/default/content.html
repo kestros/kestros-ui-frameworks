@@ -1,0 +1,7 @@
+<sly data-sly-use.video="${'io.kestros.cms.components.basic.core.content.video.VideoDataSourceComponent'}"/>
+<figure class="image ${video.inlineVariations}">
+    <video controls>
+        <source src="${video.videoSource}"/>
+        ${video.fallbackText}
+    </video>
+</figure>
